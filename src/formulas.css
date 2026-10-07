@@ -1,0 +1,228 @@
+.equation.equation-card {
+  margin: 18px 0;
+  padding: 14px 15px 16px;
+  min-width: 0;
+  color: #ecf2f5;
+  font-size: 14px;
+  border: 1px solid #354457;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #14202a, #0e1520);
+  box-shadow: inset 3px 0 0 #8dceca;
+  overflow: visible;
+}
+.equation-card .equation-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+.equation-card .equation-title {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #b3c9d6;
+}
+.equation-card .equation-expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 0 0 auto;
+  padding: 4px 5px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #b9d6d6;
+  font-size: 10px;
+  line-height: 1.2;
+  transition:
+    color 160ms,
+    background 160ms;
+}
+.equation-card .equation-expand:hover {
+  color: #f5fffe;
+  background: #293e48;
+}
+.equation-card .equation-math {
+  padding: 2px 0 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #6a888c transparent;
+}
+.equation.equation-card .katex-display {
+  margin: 0;
+  text-align: left;
+}
+.equation.equation-card .katex-display > .katex {
+  padding: 3px 2px;
+  text-align: left;
+}
+.equation.equation-card .katex {
+  font-size: 1.13em;
+}
+.presenter .equation.equation-card {
+  font-size: 16px;
+}
+.equation-card .equation-expand:focus-visible,
+.equation-card .equation-math:focus-visible,
+.formula-dialog .formula-dialog-close:focus-visible,
+.formula-dialog .formula-dialog-equation:focus-visible {
+  outline: 2px solid #91ece2;
+  outline-offset: 4px;
+}
+dialog.formula-dialog {
+  width: min(840px, calc(100vw - 40px));
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 30px 34px;
+  border: 1px solid #57717d;
+  border-radius: 17px;
+  color: #ebf2f7;
+  background: linear-gradient(140deg, #182735, #101823 65%);
+  box-shadow:
+    0 24px 110px #000a,
+    inset 0 1px #ffffff0c;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6a888c transparent;
+}
+dialog.formula-dialog::backdrop {
+  background: #030811c9;
+  backdrop-filter: blur(7px);
+}
+.formula-dialog .formula-dialog-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.formula-dialog .formula-dialog-kicker {
+  display: block;
+  margin-bottom: 9px;
+  color: #9fcecd;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.formula-dialog .formula-dialog-heading h2 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  color: #f4f7fb;
+}
+.formula-dialog .formula-dialog-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  margin-top: -5px;
+  border: 1px solid #4a6070;
+  border-radius: 8px;
+  color: #e4f4f4;
+  background: #172735;
+}
+.formula-dialog .formula-dialog-close:hover {
+  background: #2b4652;
+}
+.formula-dialog p.formula-description {
+  max-width: 650px;
+  margin: 16px 0 0;
+  color: #b9cbd8;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.formula-dialog .formula-dialog-equation {
+  margin: 24px 0;
+  padding: 25px 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #6a888c transparent;
+  border: 1px solid #365261;
+  border-radius: 10px;
+  background: #0b141ee0;
+  color: #f0f7fa;
+  font-size: clamp(18px, 2.6vw, 25px);
+}
+.formula-dialog .formula-dialog-equation .katex-display {
+  margin: 0;
+}
+.formula-dialog .formula-dialog-equation .katex-display > .katex {
+  padding: 5px;
+  text-align: center;
+}
+.formula-dialog .formula-symbols h3 {
+  margin: 0 0 16px;
+  color: #d6e9ea;
+  font-size: 13px;
+  font-weight: 600;
+}
+.formula-dialog .formula-symbols dl {
+  margin: 0;
+}
+.formula-dialog .formula-symbols dl > div {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  padding: 11px 0;
+  border-top: 1px solid #283a47;
+}
+.formula-dialog .formula-symbols dt {
+  margin: 0;
+  color: #e2f2f0;
+  font-size: 15px;
+}
+.formula-dialog .formula-symbols dd {
+  margin: 0;
+  color: #aec4d4;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.formula-dialog p.formula-dialog-hint {
+  margin: 23px 0 0;
+  color: #8eabba;
+  font-size: 11px;
+  line-height: 1.5;
+}
+@media (min-width: 1650px) {
+  .equation.equation-card {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .equation.equation-card {
+    padding: 13px 13px 15px;
+  }
+  dialog.formula-dialog {
+    width: calc(100vw - 24px);
+    max-height: calc(100dvh - 28px);
+    padding: 22px 20px;
+    border-radius: 13px;
+  }
+  .formula-dialog .formula-dialog-heading h2 {
+    font-size: 23px;
+  }
+  .formula-dialog .formula-dialog-equation {
+    padding: 22px 12px;
+  }
+  .formula-dialog .formula-dialog-equation .katex-display > .katex {
+    text-align: left;
+  }
+  .formula-dialog .formula-symbols dl > div {
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .equation-card .equation-expand {
+    transition: none;
+  }
+  dialog.formula-dialog::backdrop {
+    backdrop-filter: none;
+  }
+}

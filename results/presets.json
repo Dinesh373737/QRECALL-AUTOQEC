@@ -1,0 +1,4105 @@
+[
+  {
+    "id": "easy",
+    "label": "Easy recall",
+    "description": "A trusted 4\u00d74 cue with six erased pixels recovers the source under all three displayed methods.",
+    "config": {
+      "schema_version": "1.0",
+      "revision": 0,
+      "rows": 4,
+      "cols": 4,
+      "memories": [
+        [
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "cue": [
+        -1,
+        null,
+        null,
+        null,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        -1,
+        null,
+        null
+      ],
+      "mode": "erasure",
+      "seed": 2133222644,
+      "temperature": 0.45,
+      "cue_strength": 0.25,
+      "depth": 1,
+      "gammas": [
+        3.129233305484195
+      ],
+      "betas": [
+        -0.6434907776932138
+      ],
+      "shots": 1024,
+      "burn_in": 24,
+      "samples": 256,
+      "thinning": 1,
+      "max_sweeps": 32,
+      "update_order": "sequential",
+      "noise": {
+        "enabled": false,
+        "gate_error": 0.01,
+        "readout_error": 0.02
+      },
+      "observed_mask": null,
+      "trusted_mask": null,
+      "reliability": null,
+      "biases": null
+    },
+    "target_index": 0,
+    "verified_claim": "Nearest memory, Hopfield, Gibbs mode and QAOA sample mode recover the source for this recorded seed.",
+    "verification": {
+      "curation_seed": 5102026,
+      "search_trials": 2,
+      "created_utc": "2026-10-06T05:47:55.942154+00:00",
+      "evidence": {
+        "quantum_counts": {
+          "0": 72,
+          "1": 2,
+          "2": 1,
+          "3": 8,
+          "4": 2,
+          "5": 3,
+          "6": 2,
+          "7": 12,
+          "8": 50,
+          "11": 9,
+          "12": 24,
+          "14": 1,
+          "16": 2,
+          "17": 1,
+          "18": 3,
+          "19": 6,
+          "20": 190,
+          "21": 2,
+          "22": 4,
+          "23": 47,
+          "24": 25,
+          "26": 1,
+          "28": 41,
+          "29": 8,
+          "30": 4,
+          "31": 10,
+          "32": 2,
+          "33": 7,
+          "34": 9,
+          "35": 122,
+          "36": 2,
+          "37": 4,
+          "38": 4,
+          "39": 17,
+          "41": 12,
+          "42": 4,
+          "43": 27,
+          "44": 2,
+          "45": 1,
+          "46": 1,
+          "47": 2,
+          "48": 1,
+          "49": 3,
+          "50": 6,
+          "51": 22,
+          "52": 8,
+          "53": 70,
+          "54": 54,
+          "55": 58,
+          "56": 2,
+          "59": 1,
+          "60": 5,
+          "61": 9,
+          "62": 5,
+          "63": 34
+        },
+        "optimizer": {
+          "method": "COBYLA",
+          "objective": "ideal expected conditioned energy",
+          "budget": 24,
+          "evaluations": 24,
+          "success": false,
+          "stop_reason": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "seed": 2133222644,
+          "initial_gammas": [
+            2.5760702070033465
+          ],
+          "initial_betas": [
+            -0.9462860923994412
+          ],
+          "best_objective": -5.479095095058611
+        },
+        "optimizer_history": [
+          {
+            "evaluation": 1,
+            "objective": -3.5665207643640877,
+            "best_objective": -3.5665207643640877,
+            "gammas": [
+              2.5760702070033465
+            ],
+            "betas": [
+              -0.9462860923994412
+            ]
+          },
+          {
+            "evaluation": 2,
+            "objective": -5.104806605603059,
+            "best_objective": -5.104806605603059,
+            "gammas": [
+              3.0760702070033465
+            ],
+            "betas": [
+              -0.9462860923994412
+            ]
+          },
+          {
+            "evaluation": 3,
+            "objective": -5.32420424247115,
+            "best_objective": -5.32420424247115,
+            "gammas": [
+              3.0760702070033465
+            ],
+            "betas": [
+              -0.44628609239944117
+            ]
+          },
+          {
+            "evaluation": 4,
+            "objective": -4.0637312848134375,
+            "best_objective": -5.32420424247115,
+            "gammas": [
+              3.141592653589793
+            ],
+            "betas": [
+              0.04940212512577524
+            ]
+          },
+          {
+            "evaluation": 5,
+            "objective": -5.471783917361521,
+            "best_objective": -5.471783917361521,
+            "gammas": [
+              3.141592653589793
+            ],
+            "betas": [
+              -0.687546965715705
+            ]
+          },
+          {
+            "evaluation": 6,
+            "objective": -5.29967514896904,
+            "best_objective": -5.471783917361521,
+            "gammas": [
+              3.141592653589793
+            ],
+            "betas": [
+              -0.43754696571570495
+            ]
+          },
+          {
+            "evaluation": 7,
+            "objective": -5.45682206784185,
+            "best_objective": -5.471783917361521,
+            "gammas": [
+              3.204092653589793
+            ],
+            "betas": [
+              -0.687546965715705
+            ]
+          },
+          {
+            "evaluation": 8,
+            "objective": -5.36187311522338,
+            "best_objective": -5.471783917361521,
+            "gammas": [
+              3.100537685997855
+            ],
+            "betas": [
+              -0.8056125815232926
+            ]
+          },
+          {
+            "evaluation": 9,
+            "objective": -5.478997972865528,
+            "best_objective": -5.478997972865528,
+            "gammas": [
+              3.1301061040546316
+            ],
+            "betas": [
+              -0.6388842574086627
+            ]
+          },
+          {
+            "evaluation": 10,
+            "objective": -5.470316584003705,
+            "best_objective": -5.478997972865528,
+            "gammas": [
+              3.083417073777922
+            ],
+            "betas": [
+              -0.6209919559407
+            ]
+          },
+          {
+            "evaluation": 11,
+            "objective": -5.474797409939612,
+            "best_objective": -5.478997972865528,
+            "gammas": [
+              3.141592653589793
+            ],
+            "betas": [
+              -0.6166793214759408
+            ]
+          },
+          {
+            "evaluation": 12,
+            "objective": -5.478888761795275,
+            "best_objective": -5.478997972865528,
+            "gammas": [
+              3.135657338037812
+            ],
+            "betas": [
+              -0.6417558947924531
+            ]
+          },
+          {
+            "evaluation": 13,
+            "objective": -5.478723884693625,
+            "best_objective": -5.478997972865528,
+            "gammas": [
+              3.1232452118235905
+            ],
+            "betas": [
+              -0.6493330926449001
+            ]
+          },
+          {
+            "evaluation": 14,
+            "objective": -5.478721471387875,
+            "best_objective": -5.478997972865528,
+            "gammas": [
+              3.129335850472952
+            ],
+            "betas": [
+              -0.6339439427000728
+            ]
+          },
+          {
+            "evaluation": 15,
+            "objective": -5.479075102127778,
+            "best_objective": -5.479075102127778,
+            "gammas": [
+              3.1269272578999594
+            ],
+            "betas": [
+              -0.6427436533620376
+            ]
+          },
+          {
+            "evaluation": 16,
+            "objective": -5.4788776245418,
+            "best_objective": -5.479075102127778,
+            "gammas": [
+              3.121966464647503
+            ],
+            "betas": [
+              -0.6433685776025552
+            ]
+          },
+          {
+            "evaluation": 17,
+            "objective": -5.479084220188266,
+            "best_objective": -5.479084220188266,
+            "gammas": [
+              3.128491401919293
+            ],
+            "betas": [
+              -0.644693897830504
+            ]
+          },
+          {
+            "evaluation": 18,
+            "objective": -5.4790573609675635,
+            "best_objective": -5.479084220188266,
+            "gammas": [
+              3.1277287078498417
+            ],
+            "betas": [
+              -0.6456842501700399
+            ]
+          },
+          {
+            "evaluation": 19,
+            "objective": -5.4790836766763595,
+            "best_objective": -5.479084220188266,
+            "gammas": [
+              3.1287715158613127
+            ],
+            "betas": [
+              -0.6449096202898958
+            ]
+          },
+          {
+            "evaluation": 20,
+            "objective": -5.479092224106545,
+            "best_objective": -5.479092224106545,
+            "gammas": [
+              3.1288817683632826
+            ],
+            "betas": [
+              -0.6441043098053486
+            ]
+          },
+          {
+            "evaluation": 21,
+            "objective": -5.479095095058611,
+            "best_objective": -5.479095095058611,
+            "gammas": [
+              3.129233305484195
+            ],
+            "betas": [
+              -0.6434907776932138
+            ]
+          },
+          {
+            "evaluation": 22,
+            "objective": -5.4790938752692675,
+            "best_objective": -5.479095095058611,
+            "gammas": [
+              3.128712097504061
+            ],
+            "betas": [
+              -0.6430129259992287
+            ]
+          },
+          {
+            "evaluation": 23,
+            "objective": -5.479092728837996,
+            "best_objective": -5.479095095058611,
+            "gammas": [
+              3.129864873590066
+            ],
+            "betas": [
+              -0.6431727812661165
+            ]
+          },
+          {
+            "evaluation": 24,
+            "objective": -5.4790943085768165,
+            "best_objective": -5.479095095058611,
+            "gammas": [
+              3.1291104076269645
+            ],
+            "betas": [
+              -0.6438222835252714
+            ]
+          }
+        ],
+        "minimum_energy": -11.0,
+        "ground_states": [
+          20
+        ],
+        "free_indices": [
+          1,
+          2,
+          3,
+          11,
+          14,
+          15
+        ]
+      },
+      "comparison": {
+        "schema_version": "1.0",
+        "target_index": 0,
+        "config_hash": "eac1973dfa1e1bba",
+        "bit_error_scope": "all pixels; free-pixel error is also reported",
+        "methods": {
+          "hopfield": {
+            "method": "hopfield",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "decision": {
+              "state_integer": 20,
+              "tied_states": [],
+              "tie_rule": "solver's deterministic state"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.0,
+            "expected_energy": -11.0,
+            "expected_energy_gap": 0.0,
+            "sampled_energy": null,
+            "target_probability": 1.0,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "deterministic decision distribution",
+            "sample_count": 0,
+            "resources": {
+              "updates": 12,
+              "bit_updates": 12,
+              "flips": 1,
+              "sweeps": 2,
+              "runtime_seconds": 0.0008076249796431512,
+              "duration_ms": 0.8076249796431512
+            },
+            "runtime_seconds": 0.0008076249796431512
+          },
+          "gibbs": {
+            "method": "gibbs",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "decision": {
+              "state_integer": 20,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 142,
+              "sample_count": 256
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.0,
+            "expected_energy": -10.9326171875,
+            "expected_energy_gap": 0.0673828125,
+            "sampled_energy": -10.9326171875,
+            "target_probability": 0.5546875,
+            "empirical_target_probability": 0.5546875,
+            "target_compatible_with_constraints": true,
+            "probability_source": "empirical retained samples",
+            "sample_count": 256,
+            "resources": {
+              "updates": 1680,
+              "gibbs_draws": 1680,
+              "sweeps": 280,
+              "samples": 256,
+              "runtime_seconds": 0.09885041700908914,
+              "duration_ms": 98.85041700908914
+            },
+            "runtime_seconds": 0.09885041700908914
+          },
+          "quantum": {
+            "method": "quantum",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "decision": {
+              "state_integer": 20,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 190,
+              "sample_count": 1024
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.0,
+            "expected_energy": -5.479095095058611,
+            "expected_energy_gap": 5.520904904941389,
+            "sampled_energy": -5.4283447265625,
+            "target_probability": 0.2032848531957675,
+            "empirical_target_probability": 0.185546875,
+            "target_compatible_with_constraints": true,
+            "probability_source": "ideal statevector; noisy empirical probabilities are separate",
+            "sample_count": 1024,
+            "resources": {
+              "qubits": 6,
+              "shots": 1024,
+              "requested_shots": 1024,
+              "gate_count": 33,
+              "circuit_depth": 12,
+              "compiled_gate_counts": {
+                "rzz": 15,
+                "h": 6,
+                "rz": 6,
+                "rx": 6,
+                "measure": 6,
+                "barrier": 1
+              },
+              "compilation_ms": 31.86062499298714,
+              "simulation_ms": 2.153332985471934,
+              "duration_ms": 67.67445799778216,
+              "optimizer_evaluations": 24,
+              "optimization_ms": 27.825750003103167
+            },
+            "runtime_seconds": 0.06767445799778216
+          },
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "decision": {
+              "state_integer": 20,
+              "tied_states": [
+                0
+              ],
+              "tie_rule": "minimum observation score; lowest memory-bank index on ties"
+            },
+            "ties": [
+              0
+            ],
+            "tied_memory_indices": [
+              0
+            ],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.0,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "memory_comparisons": 3,
+              "observed_pixel_comparisons": 30
+            },
+            "runtime_seconds": 2.28749995585531e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "decision": {
+              "state_integer": 20,
+              "tied_states": [],
+              "tie_rule": "minimum conditioned energy; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.0,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 64,
+              "free_variables": 6
+            },
+            "runtime_seconds": 5.0125003326684237e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "decision": {
+              "state_integer": 20,
+              "tied_states": [],
+              "tie_rule": "analytic Gibbs mode; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.0,
+            "expected_energy": -10.930880250405535,
+            "expected_energy_gap": 0.06911974959446532,
+            "sampled_energy": null,
+            "target_probability": 0.5662067734622779,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "exact finite-state Gibbs distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 64,
+              "free_variables": 6
+            },
+            "runtime_seconds": 5.0125003326684237e-05
+          }
+        },
+        "references": {
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "memory_index": 0,
+            "tied_memory_indices": [
+              0
+            ],
+            "ties": [
+              0
+            ],
+            "scores": [
+              0.0,
+              1.0,
+              5.0
+            ],
+            "observed_indices": [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13
+            ],
+            "score": "Hamming on observed pixels",
+            "decision_rule": "minimum observation score; lowest memory-bank index on ties",
+            "resources": {
+              "memory_comparisons": 3,
+              "observed_pixel_comparisons": 30
+            },
+            "runtime_seconds": 2.28749995585531e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "energy": -11.0,
+            "ties": [],
+            "ground_states": [
+              20
+            ],
+            "decision_rule": "minimum conditioned energy; lowest local basis integer on ties",
+            "resources": {
+              "enumerated_states": 64,
+              "free_variables": 6
+            },
+            "runtime_seconds": 5.0125003326684237e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 20,
+            "probabilities": [
+              2.7856810686997163e-06,
+              8.157309023334192e-09,
+              8.157309023334192e-09,
+              1.2646972485965084e-10,
+              0.0005458095853639062,
+              9.170266740851794e-07,
+              9.170266740851794e-07,
+              8.157309023334192e-09,
+              6.409784978794599e-06,
+              1.0769220545634346e-08,
+              1.0769220545634346e-08,
+              9.579640637914437e-11,
+              0.0007205738784556467,
+              6.946157274293729e-07,
+              6.946157274293729e-07,
+              3.545151887779655e-09,
+              0.0005458095853639062,
+              9.170266740851794e-07,
+              9.170266740851794e-07,
+              8.157309023334192e-09,
+              0.5662067734622779,
+              0.0005458095853639062,
+              0.0005458095853639062,
+              2.7856810686997163e-06,
+              0.0007205738784556467,
+              6.946157274293729e-07,
+              6.946157274293729e-07,
+              3.545151887779655e-09,
+              0.42888188635983643,
+              0.00023720786798514488,
+              0.00023720786798514488,
+              6.946157274293729e-07,
+              8.157309023334192e-09,
+              1.2646972485965084e-10,
+              1.2646972485965084e-10,
+              1.03812671910693e-11,
+              9.170266740851794e-07,
+              8.157309023334192e-09,
+              8.157309023334192e-09,
+              3.8418110210005395e-10,
+              1.0769220545634346e-08,
+              9.579640637914437e-11,
+              9.579640637914437e-11,
+              4.511680123272031e-12,
+              6.946157274293729e-07,
+              3.545151887779655e-09,
+              3.545151887779655e-09,
+              9.579640637914437e-11,
+              9.170266740851794e-07,
+              8.157309023334192e-09,
+              8.157309023334192e-09,
+              3.8418110210005395e-10,
+              0.0005458095853639062,
+              2.7856810686997163e-06,
+              2.7856810686997163e-06,
+              7.527413328036044e-08,
+              6.946157274293729e-07,
+              3.545151887779655e-09,
+              3.545151887779655e-09,
+              9.579640637914437e-11,
+              0.00023720786798514488,
+              6.946157274293729e-07,
+              6.946157274293729e-07,
+              1.0769220545634346e-08
+            ],
+            "expected_energy": -10.930880250405535,
+            "temperature": 0.45,
+            "ties": [],
+            "decision_rule": "analytic Gibbs mode; lowest local basis integer on ties",
+            "probability_source": "exact finite-state Gibbs distribution",
+            "resources": {
+              "enumerated_states": 64,
+              "free_variables": 6
+            },
+            "runtime_seconds": 5.0125003326684237e-05
+          }
+        },
+        "warnings": [
+          "Small-system simulator experiment; no quantum advantage or hardware speedup is established.",
+          "Gibbs retained draws from one chain can be correlated; they are not independent recovery trials.",
+          "Lower conditioned energy and recovery of the source memory answer different questions."
+        ],
+        "decision_rule": "Hopfield converged state; Gibbs/QAOA modal retained/sample counts; lowest local basis integer on count ties"
+      },
+      "purpose": "curated explanatory illustration; excluded from independent benchmark"
+    }
+  },
+  {
+    "id": "interference",
+    "label": "Memory interference",
+    "description": "The shared Hebbian model prefers a state other than the generating memory; a lower energy can mean worse recall.",
+    "config": {
+      "schema_version": "1.0",
+      "revision": 0,
+      "rows": 2,
+      "cols": 4,
+      "memories": [
+        [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      ],
+      "cue": [
+        -1,
+        null,
+        -1,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "mode": "erasure",
+      "seed": 3744520210,
+      "temperature": 0.45,
+      "cue_strength": 0.25,
+      "depth": 1,
+      "gammas": [
+        -0.6789717772122843
+      ],
+      "betas": [
+        -1.4348292202205186
+      ],
+      "shots": 1024,
+      "burn_in": 24,
+      "samples": 256,
+      "thinning": 1,
+      "max_sweeps": 32,
+      "update_order": "sequential",
+      "noise": {
+        "enabled": false,
+        "gate_error": 0.01,
+        "readout_error": 0.02
+      },
+      "observed_mask": null,
+      "trusted_mask": null,
+      "reliability": null,
+      "biases": null
+    },
+    "target_index": 1,
+    "verified_claim": "The source is 0.250 normalized energy units above the exact conditioned minimum.",
+    "verification": {
+      "curation_seed": 5102026,
+      "search_trials": 2,
+      "created_utc": "2026-10-06T05:47:56.084368+00:00",
+      "evidence": {
+        "quantum_counts": {
+          "0": 14,
+          "1": 46,
+          "2": 17,
+          "3": 16,
+          "4": 36,
+          "5": 78,
+          "6": 38,
+          "7": 42,
+          "8": 12,
+          "9": 26,
+          "10": 19,
+          "11": 14,
+          "12": 22,
+          "13": 58,
+          "14": 42,
+          "15": 35,
+          "16": 55,
+          "17": 33,
+          "18": 47,
+          "19": 18,
+          "20": 45,
+          "21": 37,
+          "22": 81,
+          "23": 24,
+          "24": 22,
+          "25": 11,
+          "26": 22,
+          "27": 11,
+          "28": 14,
+          "29": 19,
+          "30": 46,
+          "31": 24
+        },
+        "optimizer": {
+          "method": "COBYLA",
+          "objective": "ideal expected conditioned energy",
+          "budget": 24,
+          "evaluations": 24,
+          "success": false,
+          "stop_reason": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "seed": 3744520210,
+          "initial_gammas": [
+            -1.0703059591785482
+          ],
+          "initial_betas": [
+            -0.9490004648612831
+          ],
+          "best_objective": -0.3951658297058497
+        },
+        "optimizer_history": [
+          {
+            "evaluation": 1,
+            "objective": 0.17254385162401797,
+            "best_objective": 0.17254385162401797,
+            "gammas": [
+              -1.0703059591785482
+            ],
+            "betas": [
+              -0.9490004648612831
+            ]
+          },
+          {
+            "evaluation": 2,
+            "objective": 0.2171969450427911,
+            "best_objective": 0.17254385162401797,
+            "gammas": [
+              -0.5703059591785482
+            ],
+            "betas": [
+              -0.9490004648612831
+            ]
+          },
+          {
+            "evaluation": 3,
+            "objective": 0.8322652208041964,
+            "best_objective": 0.17254385162401797,
+            "gammas": [
+              -1.0703059591785482
+            ],
+            "betas": [
+              -0.4490004648612831
+            ]
+          },
+          {
+            "evaluation": 4,
+            "objective": -0.3853836118371228,
+            "best_objective": -0.3853836118371228,
+            "gammas": [
+              -1.1040710928983513
+            ],
+            "betas": [
+              -1.4478590778418388
+            ]
+          },
+          {
+            "evaluation": 5,
+            "objective": -0.3750000000000001,
+            "best_objective": -0.3853836118371228,
+            "gammas": [
+              -2.096485538994262
+            ],
+            "betas": [
+              -1.5707963267948966
+            ]
+          },
+          {
+            "evaluation": 6,
+            "objective": -0.37499999999999956,
+            "best_objective": -0.3853836118371228,
+            "gammas": [
+              -0.6194202569144918
+            ],
+            "betas": [
+              -1.5707963267948966
+            ]
+          },
+          {
+            "evaluation": 7,
+            "objective": -0.375,
+            "best_objective": -0.3853836118371228,
+            "gammas": [
+              -1.3217553431780944
+            ],
+            "betas": [
+              -1.5707963267948966
+            ]
+          },
+          {
+            "evaluation": 8,
+            "objective": -0.37740992631957526,
+            "best_objective": -0.3853836118371228,
+            "gammas": [
+              -1.0393153214626634
+            ],
+            "betas": [
+              -1.5547781597017618
+            ]
+          },
+          {
+            "evaluation": 9,
+            "objective": -0.3860353072011306,
+            "best_objective": -0.3860353072011306,
+            "gammas": [
+              -1.0826872765263666
+            ],
+            "betas": [
+              -1.434907923554701
+            ]
+          },
+          {
+            "evaluation": 10,
+            "objective": -0.37961223860501425,
+            "best_objective": -0.3860353072011306,
+            "gammas": [
+              -1.0904863456632856
+            ],
+            "betas": [
+              -1.3855199237916254
+            ]
+          },
+          {
+            "evaluation": 11,
+            "objective": -0.3870081088815006,
+            "best_objective": -0.3870081088815006,
+            "gammas": [
+              -1.0498204335999293
+            ],
+            "betas": [
+              -1.4725877674509926
+            ]
+          },
+          {
+            "evaluation": 12,
+            "objective": -0.3886803133433756,
+            "best_objective": -0.3886803133433756,
+            "gammas": [
+              -0.9998273253954096
+            ],
+            "betas": [
+              -1.4717576276728903
+            ]
+          },
+          {
+            "evaluation": 13,
+            "objective": -0.3919938523696268,
+            "best_objective": -0.3919938523696268,
+            "gammas": [
+              -0.900315167150216
+            ],
+            "betas": [
+              -1.461892012568725
+            ]
+          },
+          {
+            "evaluation": 14,
+            "objective": -0.3949557329665752,
+            "best_objective": -0.3949557329665752,
+            "gammas": [
+              -0.7008990953931342
+            ],
+            "betas": [
+              -1.4466201323644279
+            ]
+          },
+          {
+            "evaluation": 15,
+            "objective": -0.374999999999999,
+            "best_objective": -0.3949557329665752,
+            "gammas": [
+              -0.5441181248107116
+            ],
+            "betas": [
+              -1.5707963267948966
+            ]
+          },
+          {
+            "evaluation": 16,
+            "objective": -0.37969757422150646,
+            "best_objective": -0.3949557329665752,
+            "gammas": [
+              -0.6994807979682184
+            ],
+            "betas": [
+              -1.3466301907082068
+            ]
+          },
+          {
+            "evaluation": 17,
+            "objective": -0.38965348931225574,
+            "best_objective": -0.3949557329665752,
+            "gammas": [
+              -0.6923433454099314
+            ],
+            "betas": [
+              -1.4958826855080167
+            ]
+          },
+          {
+            "evaluation": 18,
+            "objective": -0.3950238551429921,
+            "best_objective": -0.3950238551429921,
+            "gammas": [
+              -0.6762678188213398
+            ],
+            "betas": [
+              -1.4423422573728264
+            ]
+          },
+          {
+            "evaluation": 19,
+            "objective": -0.39210604759568723,
+            "best_objective": -0.3950238551429921,
+            "gammas": [
+              -0.6835553323061982
+            ],
+            "betas": [
+              -1.3928761867060753
+            ]
+          },
+          {
+            "evaluation": 20,
+            "objective": -0.3934036078340179,
+            "best_objective": -0.3950238551429921,
+            "gammas": [
+              -0.6708474537053472
+            ],
+            "betas": [
+              -1.4667475773258476
+            ]
+          },
+          {
+            "evaluation": 21,
+            "objective": -0.3951429838715959,
+            "best_objective": -0.3951429838715959,
+            "gammas": [
+              -0.6778891028365246
+            ],
+            "betas": [
+              -1.4299478458038124
+            ]
+          },
+          {
+            "evaluation": 22,
+            "objective": -0.39470892199000873,
+            "best_objective": -0.3951429838715959,
+            "gammas": [
+              -0.6765231722299618
+            ],
+            "betas": [
+              -1.4175227005902524
+            ]
+          },
+          {
+            "evaluation": 23,
+            "objective": -0.3951335038185724,
+            "best_objective": -0.3951429838715959,
+            "gammas": [
+              -0.6754040737938126
+            ],
+            "betas": [
+              -1.430221031925125
+            ]
+          },
+          {
+            "evaluation": 24,
+            "objective": -0.3951658297058497,
+            "best_objective": -0.3951658297058497,
+            "gammas": [
+              -0.6789717772122843
+            ],
+            "betas": [
+              -1.4348292202205186
+            ]
+          }
+        ],
+        "minimum_energy": -2.75,
+        "ground_states": [
+          26
+        ],
+        "free_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "source_energy_gap": 0.25
+      },
+      "comparison": {
+        "schema_version": "1.0",
+        "target_index": 1,
+        "config_hash": "02bd04e55c7e057e",
+        "bit_error_scope": "all pixels; free-pixel error is also reported",
+        "methods": {
+          "hopfield": {
+            "method": "hopfield",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              1
+            ],
+            "state_integer": 9,
+            "decision": {
+              "state_integer": 9,
+              "tied_states": [],
+              "tie_rule": "solver's deterministic state"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -2.5,
+            "energy_gap": 0.25,
+            "expected_energy": -2.5,
+            "expected_energy_gap": 0.25,
+            "sampled_energy": null,
+            "target_probability": 1.0,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "deterministic decision distribution",
+            "sample_count": 0,
+            "resources": {
+              "updates": 10,
+              "bit_updates": 10,
+              "flips": 3,
+              "sweeps": 2,
+              "runtime_seconds": 0.0006252920138649642,
+              "duration_ms": 0.6252920138649642
+            },
+            "runtime_seconds": 0.0006252920138649642
+          },
+          "gibbs": {
+            "method": "gibbs",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 26,
+            "decision": {
+              "state_integer": 26,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 95,
+              "sample_count": 256
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.375,
+            "free_bit_error_rate": 0.6,
+            "unintended_memory": true,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              3
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -2.75,
+            "energy_gap": 0.0,
+            "expected_energy": -2.306640625,
+            "expected_energy_gap": 0.443359375,
+            "sampled_energy": -2.306640625,
+            "target_probability": 0.12109375,
+            "empirical_target_probability": 0.12109375,
+            "target_compatible_with_constraints": true,
+            "probability_source": "empirical retained samples",
+            "sample_count": 256,
+            "resources": {
+              "updates": 1400,
+              "gibbs_draws": 1400,
+              "sweeps": 280,
+              "samples": 256,
+              "runtime_seconds": 0.07317099999636412,
+              "duration_ms": 73.17099999636412
+            },
+            "runtime_seconds": 0.07317099999636412
+          },
+          "quantum": {
+            "method": "quantum",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              1
+            ],
+            "state_integer": 22,
+            "decision": {
+              "state_integer": 22,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 81,
+              "sample_count": 1024
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.625,
+            "free_bit_error_rate": 1.0,
+            "unintended_memory": false,
+            "spurious_state": true,
+            "matched_memory_indices": [],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": 0.25,
+            "energy_gap": 3.0,
+            "expected_energy": -0.3951658297058497,
+            "expected_energy_gap": 2.35483417029415,
+            "sampled_energy": -0.305908203125,
+            "target_probability": 0.03221968647642907,
+            "empirical_target_probability": 0.025390625,
+            "target_compatible_with_constraints": true,
+            "probability_source": "ideal statevector; noisy empirical probabilities are separate",
+            "sample_count": 1024,
+            "resources": {
+              "qubits": 5,
+              "shots": 1024,
+              "requested_shots": 1024,
+              "gate_count": 25,
+              "circuit_depth": 10,
+              "compiled_gate_counts": {
+                "rzz": 10,
+                "h": 5,
+                "rz": 5,
+                "rx": 5,
+                "measure": 5,
+                "barrier": 1
+              },
+              "compilation_ms": 34.25950001110323,
+              "simulation_ms": 1.8348750018049031,
+              "duration_ms": 64.87829197430983,
+              "optimizer_evaluations": 24,
+              "optimization_ms": 24.632499989820644
+            },
+            "runtime_seconds": 0.06487829197430983
+          },
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              1
+            ],
+            "state_integer": 9,
+            "decision": {
+              "state_integer": 9,
+              "tied_states": [
+                1,
+                3
+              ],
+              "tie_rule": "minimum observation score; lowest memory-bank index on ties"
+            },
+            "ties": [
+              1,
+              3
+            ],
+            "tied_memory_indices": [
+              1,
+              3
+            ],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -2.5,
+            "energy_gap": 0.25,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "memory_comparisons": 5,
+              "observed_pixel_comparisons": 15
+            },
+            "runtime_seconds": 1.737498678267002e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 26,
+            "decision": {
+              "state_integer": 26,
+              "tied_states": [],
+              "tie_rule": "minimum conditioned energy; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.375,
+            "free_bit_error_rate": 0.6,
+            "unintended_memory": true,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              3
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -2.75,
+            "energy_gap": 0.0,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 32,
+              "free_variables": 5
+            },
+            "runtime_seconds": 4.549999721348286e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 26,
+            "decision": {
+              "state_integer": 26,
+              "tied_states": [],
+              "tie_rule": "analytic Gibbs mode; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.375,
+            "free_bit_error_rate": 0.6,
+            "unintended_memory": true,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              3
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -2.75,
+            "energy_gap": 0.0,
+            "expected_energy": -2.3287942555865273,
+            "expected_energy_gap": 0.4212057444134727,
+            "sampled_energy": null,
+            "target_probability": 0.19424846698024054,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "exact finite-state Gibbs distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 32,
+              "free_variables": 5
+            },
+            "runtime_seconds": 4.549999721348286e-05
+          }
+        },
+        "references": {
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "final_state": [
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              1
+            ],
+            "memory_index": 1,
+            "tied_memory_indices": [
+              1,
+              3
+            ],
+            "ties": [
+              1,
+              3
+            ],
+            "scores": [
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              2.0
+            ],
+            "observed_indices": [
+              0,
+              2,
+              7
+            ],
+            "score": "Hamming on observed pixels",
+            "decision_rule": "minimum observation score; lowest memory-bank index on ties",
+            "resources": {
+              "memory_comparisons": 5,
+              "observed_pixel_comparisons": 15
+            },
+            "runtime_seconds": 1.737498678267002e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 26,
+            "energy": -2.75,
+            "ties": [],
+            "ground_states": [
+              26
+            ],
+            "decision_rule": "minimum conditioned energy; lowest local basis integer on ties",
+            "resources": {
+              "enumerated_states": 32,
+              "free_variables": 5
+            },
+            "runtime_seconds": 4.549999721348286e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 26,
+            "probabilities": [
+              0.0002472071649374938,
+              0.003975892329548073,
+              0.00043085959229622353,
+              0.0002472071649374938,
+              5.059854969070553e-06,
+              0.0002472071649374938,
+              2.6789351790565364e-05,
+              4.66914023033337e-05,
+              0.003975892329548073,
+              0.19424846698024054,
+              0.021050322380532387,
+              0.03668879630116515,
+              0.0002472071649374938,
+              0.03668879630116515,
+              0.003975892329548073,
+              0.021050322380532387,
+              0.03668879630116515,
+              0.021050322380532387,
+              0.19424846698024054,
+              0.003975892329548073,
+              2.6789351790565364e-05,
+              4.66914023033337e-05,
+              0.00043085959229622353,
+              2.6789351790565364e-05,
+              0.021050322380532387,
+              0.03668879630116515,
+              0.3385574010706154,
+              0.021050322380532387,
+              4.66914023033337e-05,
+              0.0002472071649374938,
+              0.0022811818245619276,
+              0.00043085959229622353
+            ],
+            "expected_energy": -2.3287942555865273,
+            "temperature": 0.45,
+            "ties": [],
+            "decision_rule": "analytic Gibbs mode; lowest local basis integer on ties",
+            "probability_source": "exact finite-state Gibbs distribution",
+            "resources": {
+              "enumerated_states": 32,
+              "free_variables": 5
+            },
+            "runtime_seconds": 4.549999721348286e-05
+          }
+        },
+        "warnings": [
+          "Small-system simulator experiment; no quantum advantage or hardware speedup is established.",
+          "Gibbs retained draws from one chain can be correlated; they are not independent recovery trials.",
+          "Lower conditioned energy and recovery of the source memory answer different questions.",
+          "The available cue gives a nearest-memory tie; the bank-index tie rule does not use the target."
+        ],
+        "decision_rule": "Hopfield converged state; Gibbs/QAOA modal retained/sample counts; lowest local basis integer on count ties"
+      },
+      "purpose": "curated explanatory illustration; excluded from independent benchmark"
+    }
+  },
+  {
+    "id": "ambiguous",
+    "label": "Ambiguous cue",
+    "description": "The observed pixels are shared by two stored memories; the cue cannot reveal the generating identity.",
+    "config": {
+      "schema_version": "1.0",
+      "revision": 0,
+      "rows": 4,
+      "cols": 4,
+      "memories": [
+        [
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "cue": [
+        null,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "mode": "erasure",
+      "seed": 1877714188,
+      "temperature": 0.45,
+      "cue_strength": 0.25,
+      "depth": 1,
+      "gammas": [
+        2.5756768373941203
+      ],
+      "betas": [
+        -0.5210155334684886
+      ],
+      "shots": 1024,
+      "burn_in": 24,
+      "samples": 256,
+      "thinning": 1,
+      "max_sweeps": 32,
+      "update_order": "sequential",
+      "noise": {
+        "enabled": false,
+        "gate_error": 0.01,
+        "readout_error": 0.02
+      },
+      "observed_mask": null,
+      "trusted_mask": null,
+      "reliability": null,
+      "biases": null
+    },
+    "target_index": 1,
+    "verified_claim": "Stored memories 0 and 1 tie exactly on every available observation; no target-based tie resolution is used.",
+    "verification": {
+      "curation_seed": 5102026,
+      "search_trials": 1,
+      "created_utc": "2026-10-06T05:47:56.170660+00:00",
+      "evidence": {
+        "quantum_counts": {
+          "0": 41,
+          "1": 316,
+          "2": 623,
+          "3": 44
+        },
+        "optimizer": {
+          "method": "COBYLA",
+          "objective": "ideal expected conditioned energy",
+          "budget": 24,
+          "evaluations": 24,
+          "success": false,
+          "stop_reason": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "seed": 1877714188,
+          "initial_gammas": [
+            0.20955860119175068
+          ],
+          "initial_betas": [
+            -0.73468234111295
+          ],
+          "best_objective": -11.29402373044614
+        },
+        "optimizer_history": [
+          {
+            "evaluation": 1,
+            "objective": -11.078954348481734,
+            "best_objective": -11.078954348481734,
+            "gammas": [
+              0.20955860119175068
+            ],
+            "betas": [
+              -0.73468234111295
+            ]
+          },
+          {
+            "evaluation": 2,
+            "objective": -11.120400187359254,
+            "best_objective": -11.120400187359254,
+            "gammas": [
+              0.7095586011917507
+            ],
+            "betas": [
+              -0.73468234111295
+            ]
+          },
+          {
+            "evaluation": 3,
+            "objective": -11.122101253314632,
+            "best_objective": -11.122101253314632,
+            "gammas": [
+              0.7095586011917507
+            ],
+            "betas": [
+              -0.23468234111295005
+            ]
+          },
+          {
+            "evaluation": 4,
+            "objective": -11.152411770474664,
+            "best_objective": -11.152411770474664,
+            "gammas": [
+              1.2091379983717527
+            ],
+            "betas": [
+              -0.21417805099439635
+            ]
+          },
+          {
+            "evaluation": 5,
+            "objective": -11.164536767223424,
+            "best_objective": -11.164536767223424,
+            "gammas": [
+              2.2075623164190374
+            ],
+            "betas": [
+              -0.15806315874809052
+            ]
+          },
+          {
+            "evaluation": 6,
+            "objective": -11.053406415994877,
+            "best_objective": -11.164536767223424,
+            "gammas": [
+              2.3792647722951
+            ],
+            "betas": [
+              0.827085696322111
+            ]
+          },
+          {
+            "evaluation": 7,
+            "objective": -11.259694005822931,
+            "best_objective": -11.259694005822931,
+            "gammas": [
+              2.28696229153496
+            ],
+            "betas": [
+              -0.6517185486220296
+            ]
+          },
+          {
+            "evaluation": 8,
+            "objective": -11.0625,
+            "best_objective": -11.259694005822931,
+            "gammas": [
+              2.681038474104811
+            ],
+            "betas": [
+              -1.5707963267948966
+            ]
+          },
+          {
+            "evaluation": 9,
+            "objective": -11.221197909711925,
+            "best_objective": -11.259694005822931,
+            "gammas": [
+              2.58058985478873
+            ],
+            "betas": [
+              -0.24701760459341293
+            ]
+          },
+          {
+            "evaluation": 10,
+            "objective": -11.25627806616982,
+            "best_objective": -11.259694005822931,
+            "gammas": [
+              1.8181806335066708
+            ],
+            "betas": [
+              -0.47781122532525755
+            ]
+          },
+          {
+            "evaluation": 11,
+            "objective": -11.14986234842107,
+            "best_objective": -11.259694005822931,
+            "gammas": [
+              2.2198066307638866
+            ],
+            "betas": [
+              -0.8925299213318759
+            ]
+          },
+          {
+            "evaluation": 12,
+            "objective": -11.256922575502848,
+            "best_objective": -11.259694005822931,
+            "gammas": [
+              2.3471651347124216
+            ],
+            "betas": [
+              -0.668507463814798
+            ]
+          },
+          {
+            "evaluation": 13,
+            "objective": -11.284250810044728,
+            "best_objective": -11.284250810044728,
+            "gammas": [
+              2.308278817017094
+            ],
+            "betas": [
+              -0.5285495357114378
+            ]
+          },
+          {
+            "evaluation": 14,
+            "objective": -11.275258338164235,
+            "best_objective": -11.284250810044728,
+            "gammas": [
+              2.314039300414012
+            ],
+            "betas": [
+              -0.4036823389340863
+            ]
+          },
+          {
+            "evaluation": 15,
+            "objective": -11.281820113671085,
+            "best_objective": -11.284250810044728,
+            "gammas": [
+              2.2583211183434986
+            ],
+            "betas": [
+              -0.5306058292795461
+            ]
+          },
+          {
+            "evaluation": 16,
+            "objective": -11.28199851115727,
+            "best_objective": -11.284250810044728,
+            "gammas": [
+              2.309306963801148
+            ],
+            "betas": [
+              -0.5535283850482355
+            ]
+          },
+          {
+            "evaluation": 17,
+            "objective": -11.285862840295525,
+            "best_objective": -11.285862840295525,
+            "gammas": [
+              2.330193019140015
+            ],
+            "betas": [
+              -0.4836077094766732
+            ]
+          },
+          {
+            "evaluation": 18,
+            "objective": -11.28711893320925,
+            "best_objective": -11.28711893320925,
+            "gammas": [
+              2.378614504221802
+            ],
+            "betas": [
+              -0.4711433690418849
+            ]
+          },
+          {
+            "evaluation": 19,
+            "objective": -11.28355072036281,
+            "best_objective": -11.28711893320925,
+            "gammas": [
+              2.4078171314709316
+            ],
+            "betas": [
+              -0.43055757643229825
+            ]
+          },
+          {
+            "evaluation": 20,
+            "objective": -11.288428149159317,
+            "best_objective": -11.288428149159317,
+            "gammas": [
+              2.3889817280915766
+            ],
+            "betas": [
+              -0.49389244966581275
+            ]
+          },
+          {
+            "evaluation": 21,
+            "objective": -11.288943406578285,
+            "best_objective": -11.288943406578285,
+            "gammas": [
+              2.4056153105967537
+            ],
+            "betas": [
+              -0.5125558880693724
+            ]
+          },
+          {
+            "evaluation": 22,
+            "objective": -11.289936625673391,
+            "best_objective": -11.289936625673391,
+            "gammas": [
+              2.4296213156431845
+            ],
+            "betas": [
+              -0.5055765097510156
+            ]
+          },
+          {
+            "evaluation": 23,
+            "objective": -11.291555282248735,
+            "best_objective": -11.291555282248735,
+            "gammas": [
+              2.4787642931212805
+            ],
+            "betas": [
+              -0.4963587136702082
+            ]
+          },
+          {
+            "evaluation": 24,
+            "objective": -11.29402373044614,
+            "best_objective": -11.29402373044614,
+            "gammas": [
+              2.5756768373941203
+            ],
+            "betas": [
+              -0.5210155334684886
+            ]
+          }
+        ],
+        "minimum_energy": -11.5,
+        "ground_states": [
+          2
+        ],
+        "free_indices": [
+          0,
+          11
+        ],
+        "tied_memory_indices": [
+          0,
+          1
+        ]
+      },
+      "comparison": {
+        "schema_version": "1.0",
+        "target_index": 1,
+        "config_hash": "2cf71cd07eab9780",
+        "bit_error_scope": "all pixels; free-pixel error is also reported",
+        "methods": {
+          "hopfield": {
+            "method": "hopfield",
+            "diagnostic": false,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "decision": {
+              "state_integer": 2,
+              "tied_states": [],
+              "tie_rule": "solver's deterministic state"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.5,
+            "energy_gap": 0.0,
+            "expected_energy": -11.5,
+            "expected_energy_gap": 0.0,
+            "sampled_energy": null,
+            "target_probability": 1.0,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "deterministic decision distribution",
+            "sample_count": 0,
+            "resources": {
+              "updates": 4,
+              "bit_updates": 4,
+              "flips": 1,
+              "sweeps": 2,
+              "runtime_seconds": 0.00036208401434123516,
+              "duration_ms": 0.36208401434123516
+            },
+            "runtime_seconds": 0.00036208401434123516
+          },
+          "gibbs": {
+            "method": "gibbs",
+            "diagnostic": false,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "decision": {
+              "state_integer": 2,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 132,
+              "sample_count": 256
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.5,
+            "energy_gap": 0.0,
+            "expected_energy": -11.22509765625,
+            "expected_energy_gap": 0.27490234375,
+            "sampled_energy": -11.22509765625,
+            "target_probability": 0.515625,
+            "empirical_target_probability": 0.515625,
+            "target_compatible_with_constraints": true,
+            "probability_source": "empirical retained samples",
+            "sample_count": 256,
+            "resources": {
+              "updates": 560,
+              "gibbs_draws": 560,
+              "sweeps": 280,
+              "samples": 256,
+              "runtime_seconds": 0.032980708027025685,
+              "duration_ms": 32.980708027025685
+            },
+            "runtime_seconds": 0.032980708027025685
+          },
+          "quantum": {
+            "method": "quantum",
+            "diagnostic": false,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "decision": {
+              "state_integer": 2,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 623,
+              "sample_count": 1024
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.5,
+            "energy_gap": 0.0,
+            "expected_energy": -11.29402373044614,
+            "expected_energy_gap": 0.20597626955385984,
+            "sampled_energy": -11.2938232421875,
+            "target_probability": 0.6078284769153591,
+            "empirical_target_probability": 0.6083984375,
+            "target_compatible_with_constraints": true,
+            "probability_source": "ideal statevector; noisy empirical probabilities are separate",
+            "sample_count": 1024,
+            "resources": {
+              "qubits": 2,
+              "shots": 1024,
+              "requested_shots": 1024,
+              "gate_count": 7,
+              "circuit_depth": 4,
+              "compiled_gate_counts": {
+                "h": 2,
+                "rz": 2,
+                "rx": 2,
+                "measure": 2,
+                "rzz": 1,
+                "barrier": 1
+              },
+              "compilation_ms": 31.74812500947155,
+              "simulation_ms": 1.543082995340228,
+              "duration_ms": 51.739374990575016,
+              "optimizer_evaluations": 24,
+              "optimization_ms": 15.988708008080721
+            },
+            "runtime_seconds": 0.051739374990575016
+          },
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 1,
+            "decision": {
+              "state_integer": 1,
+              "tied_states": [
+                0,
+                1
+              ],
+              "tie_rule": "minimum observation score; lowest memory-bank index on ties"
+            },
+            "ties": [
+              0,
+              1
+            ],
+            "tied_memory_indices": [
+              0,
+              1
+            ],
+            "recovery": false,
+            "bit_error_rate": 0.125,
+            "free_bit_error_rate": 1.0,
+            "unintended_memory": true,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.0,
+            "energy_gap": 0.5,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "memory_comparisons": 3,
+              "observed_pixel_comparisons": 42
+            },
+            "runtime_seconds": 1.8834020011126995e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "decision": {
+              "state_integer": 2,
+              "tied_states": [],
+              "tie_rule": "minimum conditioned energy; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.5,
+            "energy_gap": 0.0,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 4,
+              "free_variables": 2
+            },
+            "runtime_seconds": 4.066599649377167e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "decision": {
+              "state_integer": 2,
+              "tied_states": [],
+              "tie_rule": "analytic Gibbs mode; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              1
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -11.5,
+            "energy_gap": 0.0,
+            "expected_energy": -11.239434634855167,
+            "expected_energy_gap": 0.2605653651448332,
+            "sampled_energy": null,
+            "target_probability": 0.5470766559798721,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "exact finite-state Gibbs distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 4,
+              "free_variables": 2
+            },
+            "runtime_seconds": 4.066599649377167e-05
+          }
+        },
+        "references": {
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "memory_index": 0,
+            "tied_memory_indices": [
+              0,
+              1
+            ],
+            "ties": [
+              0,
+              1
+            ],
+            "scores": [
+              0.0,
+              0.0,
+              6.0
+            ],
+            "observed_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15
+            ],
+            "score": "Hamming on observed pixels",
+            "decision_rule": "minimum observation score; lowest memory-bank index on ties",
+            "resources": {
+              "memory_comparisons": 3,
+              "observed_pixel_comparisons": 42
+            },
+            "runtime_seconds": 1.8834020011126995e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "energy": -11.5,
+            "ties": [],
+            "ground_states": [
+              2
+            ],
+            "decision_rule": "minimum conditioned energy; lowest local basis integer on ties",
+            "resources": {
+              "enumerated_states": 4,
+              "free_variables": 2
+            },
+            "runtime_seconds": 4.066599649377167e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 2,
+            "probabilities": [
+              0.1364147725390781,
+              0.18009379894197178,
+              0.5470766559798721,
+              0.1364147725390781
+            ],
+            "expected_energy": -11.239434634855167,
+            "temperature": 0.45,
+            "ties": [],
+            "decision_rule": "analytic Gibbs mode; lowest local basis integer on ties",
+            "probability_source": "exact finite-state Gibbs distribution",
+            "resources": {
+              "enumerated_states": 4,
+              "free_variables": 2
+            },
+            "runtime_seconds": 4.066599649377167e-05
+          }
+        },
+        "warnings": [
+          "Small-system simulator experiment; no quantum advantage or hardware speedup is established.",
+          "Gibbs retained draws from one chain can be correlated; they are not independent recovery trials.",
+          "Lower conditioned energy and recovery of the source memory answer different questions.",
+          "The available cue gives a nearest-memory tie; the bank-index tie rule does not use the target."
+        ],
+        "decision_rule": "Hopfield converged state; Gibbs/QAOA modal retained/sample counts; lowest local basis integer on count ties"
+      },
+      "purpose": "curated explanatory illustration; excluded from independent benchmark"
+    }
+  },
+  {
+    "id": "quantum-worse",
+    "label": "Quantum worse",
+    "description": "For this soft noisy cue, Hopfield recovers the source and the bounded depth-one QAOA mode does not.",
+    "config": {
+      "schema_version": "1.0",
+      "revision": 0,
+      "rows": 2,
+      "cols": 4,
+      "memories": [
+        [
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "cue": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "mode": "noisy",
+      "seed": 1443881629,
+      "temperature": 0.45,
+      "cue_strength": 0.25,
+      "depth": 1,
+      "gammas": [
+        0.7426926674993773
+      ],
+      "betas": [
+        1.0436516498217525
+      ],
+      "shots": 1024,
+      "burn_in": 24,
+      "samples": 256,
+      "thinning": 1,
+      "max_sweeps": 32,
+      "update_order": "sequential",
+      "noise": {
+        "enabled": false,
+        "gate_error": 0.01,
+        "readout_error": 0.02
+      },
+      "observed_mask": null,
+      "trusted_mask": null,
+      "reliability": null,
+      "biases": null
+    },
+    "target_index": 0,
+    "verified_claim": "Hopfield recovers the source; modal QAOA recall fails after 24 ideal-energy objective evaluations for this recorded seed.",
+    "verification": {
+      "curation_seed": 5102026,
+      "search_trials": 1,
+      "created_utc": "2026-10-06T05:47:56.401648+00:00",
+      "evidence": {
+        "quantum_counts": {
+          "0": 1,
+          "2": 3,
+          "3": 1,
+          "4": 1,
+          "5": 3,
+          "7": 1,
+          "11": 1,
+          "12": 1,
+          "13": 1,
+          "15": 1,
+          "18": 2,
+          "19": 3,
+          "20": 31,
+          "21": 1,
+          "22": 85,
+          "24": 2,
+          "27": 1,
+          "28": 9,
+          "29": 1,
+          "30": 28,
+          "31": 1,
+          "32": 2,
+          "33": 2,
+          "34": 1,
+          "36": 4,
+          "37": 2,
+          "38": 2,
+          "41": 3,
+          "42": 1,
+          "43": 5,
+          "44": 1,
+          "45": 1,
+          "46": 2,
+          "47": 2,
+          "48": 3,
+          "50": 1,
+          "52": 4,
+          "53": 1,
+          "54": 7,
+          "55": 6,
+          "56": 1,
+          "58": 5,
+          "59": 2,
+          "60": 4,
+          "62": 6,
+          "63": 2,
+          "70": 3,
+          "78": 1,
+          "80": 2,
+          "82": 1,
+          "84": 1,
+          "85": 1,
+          "86": 1,
+          "87": 2,
+          "91": 1,
+          "92": 1,
+          "93": 1,
+          "95": 2,
+          "97": 5,
+          "98": 3,
+          "99": 5,
+          "100": 1,
+          "101": 2,
+          "102": 2,
+          "103": 1,
+          "104": 3,
+          "105": 13,
+          "106": 4,
+          "107": 22,
+          "108": 3,
+          "109": 3,
+          "111": 2,
+          "113": 1,
+          "115": 3,
+          "116": 5,
+          "118": 2,
+          "120": 1,
+          "121": 1,
+          "123": 2,
+          "124": 2,
+          "125": 1,
+          "126": 2,
+          "127": 1,
+          "128": 1,
+          "129": 3,
+          "130": 1,
+          "132": 1,
+          "133": 2,
+          "135": 2,
+          "136": 1,
+          "137": 1,
+          "141": 1,
+          "144": 1,
+          "145": 6,
+          "146": 2,
+          "147": 1,
+          "148": 97,
+          "149": 4,
+          "150": 27,
+          "152": 2,
+          "153": 1,
+          "154": 1,
+          "156": 6,
+          "157": 2,
+          "158": 8,
+          "160": 8,
+          "161": 7,
+          "164": 12,
+          "165": 9,
+          "166": 2,
+          "168": 3,
+          "169": 2,
+          "170": 2,
+          "171": 2,
+          "172": 7,
+          "173": 2,
+          "174": 1,
+          "175": 1,
+          "176": 10,
+          "177": 7,
+          "178": 2,
+          "180": 38,
+          "181": 3,
+          "182": 6,
+          "184": 3,
+          "185": 2,
+          "186": 2,
+          "188": 3,
+          "189": 2,
+          "190": 6,
+          "191": 1,
+          "193": 1,
+          "196": 2,
+          "200": 2,
+          "201": 5,
+          "205": 1,
+          "208": 3,
+          "209": 2,
+          "210": 1,
+          "212": 2,
+          "213": 4,
+          "215": 1,
+          "216": 1,
+          "221": 2,
+          "224": 9,
+          "225": 114,
+          "226": 3,
+          "227": 1,
+          "228": 3,
+          "229": 7,
+          "230": 2,
+          "232": 2,
+          "233": 117,
+          "234": 1,
+          "235": 13,
+          "236": 1,
+          "238": 3,
+          "240": 4,
+          "241": 14,
+          "243": 1,
+          "244": 7,
+          "245": 3,
+          "246": 4,
+          "247": 3,
+          "248": 3,
+          "249": 1,
+          "251": 1,
+          "252": 6,
+          "253": 2,
+          "254": 2,
+          "255": 1
+        },
+        "optimizer": {
+          "method": "COBYLA",
+          "objective": "ideal expected conditioned energy",
+          "budget": 24,
+          "evaluations": 24,
+          "success": false,
+          "stop_reason": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "seed": 1443881629,
+          "initial_gammas": [
+            0.640113301584981
+          ],
+          "initial_betas": [
+            0.40910915433694967
+          ],
+          "best_objective": -2.401410267200802
+        },
+        "optimizer_history": [
+          {
+            "evaluation": 1,
+            "objective": 0.8285262776658905,
+            "best_objective": 0.8285262776658905,
+            "gammas": [
+              0.640113301584981
+            ],
+            "betas": [
+              0.40910915433694967
+            ]
+          },
+          {
+            "evaluation": 2,
+            "objective": 0.27409252387971,
+            "best_objective": 0.27409252387971,
+            "gammas": [
+              1.140113301584981
+            ],
+            "betas": [
+              0.40910915433694967
+            ]
+          },
+          {
+            "evaluation": 3,
+            "objective": -1.850836223212392,
+            "best_objective": -1.850836223212392,
+            "gammas": [
+              1.140113301584981
+            ],
+            "betas": [
+              0.9091091543369496
+            ]
+          },
+          {
+            "evaluation": 4,
+            "objective": -0.6158359648855511,
+            "best_objective": -1.850836223212392,
+            "gammas": [
+              1.2663465298405359
+            ],
+            "betas": [
+              1.3929119778964871
+            ]
+          },
+          {
+            "evaluation": 5,
+            "objective": -1.3934562699903539,
+            "best_objective": -1.850836223212392,
+            "gammas": [
+              1.3637746236938193
+            ],
+            "betas": [
+              0.797414870720793
+            ]
+          },
+          {
+            "evaluation": 6,
+            "objective": -1.7428515101465878,
+            "best_objective": -1.850836223212392,
+            "gammas": [
+              1.1121897306809418
+            ],
+            "betas": [
+              0.85319382380974
+            ]
+          },
+          {
+            "evaluation": 7,
+            "objective": -2.019336556280628,
+            "best_objective": -2.019336556280628,
+            "gammas": [
+              1.097152682561092
+            ],
+            "betas": [
+              1.0264947804292623
+            ]
+          },
+          {
+            "evaluation": 8,
+            "objective": -1.761617279743195,
+            "best_objective": -2.019336556280628,
+            "gammas": [
+              1.1382621317767005
+            ],
+            "betas": [
+              1.1445414372442237
+            ]
+          },
+          {
+            "evaluation": 9,
+            "objective": -2.10859803327655,
+            "best_objective": -2.10859803327655,
+            "gammas": [
+              1.047322626365105
+            ],
+            "betas": [
+              1.022375860728082
+            ]
+          },
+          {
+            "evaluation": 10,
+            "objective": -2.182695817348882,
+            "best_objective": -2.182695817348882,
+            "gammas": [
+              1.001032608710778
+            ],
+            "betas": [
+              1.0412765026632675
+            ]
+          },
+          {
+            "evaluation": 11,
+            "objective": -2.3225000345366458,
+            "best_objective": -2.3225000345366458,
+            "gammas": [
+              0.9033816771942327
+            ],
+            "betas": [
+              1.0197289836888939
+            ]
+          },
+          {
+            "evaluation": 12,
+            "objective": -2.381410736395507,
+            "best_objective": -2.381410736395507,
+            "gammas": [
+              0.7065543747899478
+            ],
+            "betas": [
+              1.0552115572744183
+            ]
+          },
+          {
+            "evaluation": 13,
+            "objective": -1.8487787717472242,
+            "best_objective": -2.381410736395507,
+            "gammas": [
+              0.6515159402254665
+            ],
+            "betas": [
+              0.8629337095625945
+            ]
+          },
+          {
+            "evaluation": 14,
+            "objective": -2.237030060745673,
+            "best_objective": -2.381410736395507,
+            "gammas": [
+              0.7135431744342224
+            ],
+            "betas": [
+              1.1549670417328288
+            ]
+          },
+          {
+            "evaluation": 15,
+            "objective": -2.358823074765178,
+            "best_objective": -2.381410736395507,
+            "gammas": [
+              0.6816155036753451
+            ],
+            "betas": [
+              1.056958757185487
+            ]
+          },
+          {
+            "evaluation": 16,
+            "objective": -2.378888856490163,
+            "best_objective": -2.381410736395507,
+            "gammas": [
+              0.7300510540945486
+            ],
+            "betas": [
+              1.0110764684939848
+            ]
+          },
+          {
+            "evaluation": 17,
+            "objective": -2.3895781030983496,
+            "best_objective": -2.3895781030983496,
+            "gammas": [
+              0.728059249383006
+            ],
+            "betas": [
+              1.0679606893522045
+            ]
+          },
+          {
+            "evaluation": 18,
+            "objective": -2.3840764404122323,
+            "best_objective": -2.3895781030983496,
+            "gammas": [
+              0.7480621163850011
+            ],
+            "betas": [
+              1.0829568659216002
+            ]
+          },
+          {
+            "evaluation": 19,
+            "objective": -2.384717405830611,
+            "best_objective": -2.3895781030983496,
+            "gammas": [
+              0.724310205240657
+            ],
+            "betas": [
+              1.0729614061027033
+            ]
+          },
+          {
+            "evaluation": 20,
+            "objective": -2.3963124934573843,
+            "best_objective": -2.3963124934573843,
+            "gammas": [
+              0.7325509032011293
+            ],
+            "betas": [
+              1.0562955684364943
+            ]
+          },
+          {
+            "evaluation": 21,
+            "objective": -2.398670821347904,
+            "best_objective": -2.398670821347904,
+            "gammas": [
+              0.7353633603589897
+            ],
+            "betas": [
+              1.0441160739997288
+            ]
+          },
+          {
+            "evaluation": 22,
+            "objective": -2.3924946768975417,
+            "best_objective": -2.398670821347904,
+            "gammas": [
+              0.7257166773898869
+            ],
+            "betas": [
+              1.0361667653698152
+            ]
+          },
+          {
+            "evaluation": 23,
+            "objective": -2.399689049549351,
+            "best_objective": -2.399689049549351,
+            "gammas": [
+              0.7377992592463428
+            ],
+            "betas": [
+              1.0446785654313009
+            ]
+          },
+          {
+            "evaluation": 24,
+            "objective": -2.401410267200802,
+            "best_objective": -2.401410267200802,
+            "gammas": [
+              0.7426926674993773
+            ],
+            "betas": [
+              1.0436516498217525
+            ]
+          }
+        ],
+        "minimum_energy": -6.25,
+        "ground_states": [
+          233
+        ],
+        "free_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "comparison": {
+        "schema_version": "1.0",
+        "target_index": 0,
+        "config_hash": "78defeed569a0859",
+        "bit_error_scope": "all pixels; free-pixel error is also reported",
+        "methods": {
+          "hopfield": {
+            "method": "hopfield",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 107,
+            "decision": {
+              "state_integer": 107,
+              "tied_states": [],
+              "tie_rule": "solver's deterministic state"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -5.25,
+            "energy_gap": 1.0,
+            "expected_energy": -5.25,
+            "expected_energy_gap": 1.0,
+            "sampled_energy": null,
+            "target_probability": 1.0,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "deterministic decision distribution",
+            "sample_count": 0,
+            "resources": {
+              "updates": 16,
+              "bit_updates": 16,
+              "flips": 1,
+              "sweeps": 2,
+              "runtime_seconds": 0.0009120840113610029,
+              "duration_ms": 0.9120840113610029
+            },
+            "runtime_seconds": 0.0009120840113610029
+          },
+          "gibbs": {
+            "method": "gibbs",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "state_integer": 233,
+            "decision": {
+              "state_integer": 233,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 200,
+              "sample_count": 256
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.25,
+            "free_bit_error_rate": 0.25,
+            "unintended_memory": false,
+            "spurious_state": true,
+            "matched_memory_indices": [],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -6.25,
+            "energy_gap": 0.0,
+            "expected_energy": -5.9921875,
+            "expected_energy_gap": 0.2578125,
+            "sampled_energy": -5.9921875,
+            "target_probability": 0.0625,
+            "empirical_target_probability": 0.0625,
+            "target_compatible_with_constraints": true,
+            "probability_source": "empirical retained samples",
+            "sample_count": 256,
+            "resources": {
+              "updates": 2240,
+              "gibbs_draws": 2240,
+              "sweeps": 280,
+              "samples": 256,
+              "runtime_seconds": 0.11412745801499113,
+              "duration_ms": 114.12745801499113
+            },
+            "runtime_seconds": 0.11412745801499113
+          },
+          "quantum": {
+            "method": "quantum",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "state_integer": 233,
+            "decision": {
+              "state_integer": 233,
+              "tied_states": [],
+              "tie_rule": "lowest local basis integer",
+              "modal_count": 117,
+              "sample_count": 1024
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.25,
+            "free_bit_error_rate": 0.25,
+            "unintended_memory": false,
+            "spurious_state": true,
+            "matched_memory_indices": [],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -6.25,
+            "energy_gap": 0.0,
+            "expected_energy": -2.401410267200802,
+            "expected_energy_gap": 3.848589732799198,
+            "sampled_energy": -2.368408203125,
+            "target_probability": 0.022521826739374258,
+            "empirical_target_probability": 0.021484375,
+            "target_compatible_with_constraints": true,
+            "probability_source": "ideal statevector; noisy empirical probabilities are separate",
+            "sample_count": 1024,
+            "resources": {
+              "qubits": 8,
+              "shots": 1024,
+              "requested_shots": 1024,
+              "gate_count": 52,
+              "circuit_depth": 16,
+              "compiled_gate_counts": {
+                "rzz": 28,
+                "h": 8,
+                "rz": 8,
+                "rx": 8,
+                "measure": 8,
+                "barrier": 1
+              },
+              "compilation_ms": 48.537082999246195,
+              "simulation_ms": 2.400917001068592,
+              "duration_ms": 106.88249999657273,
+              "optimizer_evaluations": 24,
+              "optimization_ms": 37.13070900994353
+            },
+            "runtime_seconds": 0.10688249999657273
+          },
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "diagnostic": false,
+            "final_state": [
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "state_integer": 107,
+            "decision": {
+              "state_integer": 107,
+              "tied_states": [
+                0
+              ],
+              "tie_rule": "minimum observation score; lowest memory-bank index on ties"
+            },
+            "ties": [
+              0
+            ],
+            "tied_memory_indices": [
+              0
+            ],
+            "recovery": true,
+            "bit_error_rate": 0.0,
+            "free_bit_error_rate": 0.0,
+            "unintended_memory": false,
+            "spurious_state": false,
+            "matched_memory_indices": [
+              0
+            ],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -5.25,
+            "energy_gap": 1.0,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "memory_comparisons": 3,
+              "observed_pixel_comparisons": 24
+            },
+            "runtime_seconds": 1.420799526385963e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "state_integer": 233,
+            "decision": {
+              "state_integer": 233,
+              "tied_states": [],
+              "tie_rule": "minimum conditioned energy; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.25,
+            "free_bit_error_rate": 0.25,
+            "unintended_memory": false,
+            "spurious_state": true,
+            "matched_memory_indices": [],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -6.25,
+            "energy_gap": 0.0,
+            "expected_energy": null,
+            "expected_energy_gap": null,
+            "sampled_energy": null,
+            "target_probability": null,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "not a sampled distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 256,
+              "free_variables": 8
+            },
+            "runtime_seconds": 5.412500468082726e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "state_integer": 233,
+            "decision": {
+              "state_integer": 233,
+              "tied_states": [],
+              "tie_rule": "analytic Gibbs mode; lowest local basis integer on ties"
+            },
+            "ties": [],
+            "tied_memory_indices": [],
+            "recovery": false,
+            "bit_error_rate": 0.25,
+            "free_bit_error_rate": 0.25,
+            "unintended_memory": false,
+            "spurious_state": true,
+            "matched_memory_indices": [],
+            "constraints_satisfied": true,
+            "violations": [],
+            "energy": -6.25,
+            "energy_gap": 0.0,
+            "expected_energy": -5.87082572331302,
+            "expected_energy_gap": 0.3791742766869799,
+            "sampled_energy": null,
+            "target_probability": 0.07349890910377034,
+            "empirical_target_probability": null,
+            "target_compatible_with_constraints": true,
+            "probability_source": "exact finite-state Gibbs distribution",
+            "sample_count": 0,
+            "resources": {
+              "enumerated_states": 256,
+              "free_variables": 8
+            },
+            "runtime_seconds": 5.412500468082726e-05
+          }
+        },
+        "references": {
+          "nearest_memory": {
+            "method": "nearest_memory",
+            "final_state": [
+              -1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "memory_index": 0,
+            "tied_memory_indices": [
+              0
+            ],
+            "ties": [
+              0
+            ],
+            "scores": [
+              1.0,
+              4.0,
+              5.0
+            ],
+            "observed_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "score": "reliability-weighted Hamming on observations",
+            "decision_rule": "minimum observation score; lowest memory-bank index on ties",
+            "resources": {
+              "memory_comparisons": 3,
+              "observed_pixel_comparisons": 24
+            },
+            "runtime_seconds": 1.420799526385963e-05
+          },
+          "exact_minimum": {
+            "method": "exact_minimum",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "state_integer": 233,
+            "energy": -6.25,
+            "ties": [],
+            "ground_states": [
+              233
+            ],
+            "decision_rule": "minimum conditioned energy; lowest local basis integer on ties",
+            "resources": {
+              "enumerated_states": 256,
+              "free_variables": 8
+            },
+            "runtime_seconds": 5.412500468082726e-05
+          },
+          "exact_gibbs": {
+            "method": "exact_gibbs",
+            "diagnostic": true,
+            "final_state": [
+              -1,
+              1,
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "state_integer": 233,
+            "probabilities": [
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              6.302486696776766e-07,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              5.366728622113885e-05,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              5.8158177194685124e-06,
+              1.0136441037673583e-05,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              9.353719608706028e-05,
+              5.8158177194685124e-06,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              5.366728622113885e-05,
+              1.0984660777579901e-06,
+              0.0004952317540318049,
+              1.0984660777579901e-06,
+              0.07349890910377034,
+              5.366728622113885e-05,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              9.353719608706028e-05,
+              5.8158177194685124e-06,
+              9.353719608706028e-05,
+              6.302486696776766e-07,
+              0.04217025051875788,
+              9.353719608706028e-05,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.0984660777579901e-06,
+              7.401406212226632e-09,
+              1.2899977489831349e-08,
+              1.1903859742294261e-07,
+              6.82988024711995e-08,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              1.0984660777579901e-06,
+              5.366728622113885e-05,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              6.302486696776766e-07,
+              1.0984660777579901e-06,
+              7.401406212226632e-09,
+              1.2899977489831349e-08,
+              1.1903859742294261e-07,
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              7.401406212226632e-09,
+              5.8158177194685124e-06,
+              1.1903859742294261e-07,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              6.302486696776766e-07,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              1.2899977489831349e-08,
+              1.0136441037673583e-05,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              5.8158177194685124e-06,
+              6.302486696776766e-07,
+              1.0136441037673583e-05,
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              6.302486696776766e-07,
+              6.302486696776766e-07,
+              9.353719608706028e-05,
+              1.0136441037673583e-05,
+              0.0004952317540318049,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              5.8158177194685124e-06,
+              1.0136441037673583e-05,
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              6.302486696776766e-07,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              5.366728622113885e-05,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              5.8158177194685124e-06,
+              1.0136441037673583e-05,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              9.353719608706028e-05,
+              5.8158177194685124e-06,
+              6.302486696776766e-07,
+              0.0008631438805110645,
+              1.0984660777579901e-06,
+              0.0004952317540318049,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.0984660777579901e-06,
+              1.0136441037673583e-05,
+              0.04217025051875788,
+              5.366728622113885e-05,
+              0.07349890910377034,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              1.0984660777579901e-06,
+              5.366728622113885e-05,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.0984660777579901e-06,
+              7.401406212226632e-09,
+              1.2899977489831349e-08,
+              1.1903859742294261e-07,
+              6.82988024711995e-08,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              1.0984660777579901e-06,
+              5.366728622113885e-05,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              6.302486696776766e-07,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              6.82988024711995e-08,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              6.82988024711995e-08,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              9.353719608706028e-05,
+              6.302486696776766e-07,
+              0.0004952317540318049,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.82988024711995e-08,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              5.8158177194685124e-06,
+              1.1903859742294261e-07,
+              9.353719608706028e-05,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              7.401406212226632e-09,
+              1.2899977489831349e-08,
+              1.1903859742294261e-07,
+              5.366728622113885e-05,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              7.401406212226632e-09,
+              1.1903859742294261e-07,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              7.401406212226632e-09,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              1.2899977489831349e-08,
+              1.1903859742294261e-07,
+              7.401406212226632e-09,
+              7.401406212226632e-09,
+              1.1903859742294261e-07,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              1.2899977489831349e-08,
+              7.401406212226632e-09,
+              6.82988024711995e-08,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              9.353719608706028e-05,
+              1.1903859742294261e-07,
+              5.8158177194685124e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              0.0004952317540318049,
+              6.302486696776766e-07,
+              9.353719608706028e-05,
+              6.82988024711995e-08,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              6.82988024711995e-08,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              1.0984660777579901e-06,
+              6.82988024711995e-08,
+              6.82988024711995e-08,
+              1.0984660777579901e-06,
+              1.1903859742294261e-07,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              6.82988024711995e-08,
+              6.302486696776766e-07,
+              1.1903859742294261e-07,
+              1.0136441037673583e-05,
+              0.04217025051875788,
+              6.302486696776766e-07,
+              0.0008631438805110645,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              5.366728622113885e-05,
+              0.6782342882943704,
+              1.0136441037673583e-05,
+              0.04217025051875788,
+              1.1903859742294261e-07,
+              5.366728622113885e-05,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              1.2899977489831349e-08,
+              6.302486696776766e-07,
+              1.2899977489831349e-08,
+              6.82988024711995e-08,
+              7.401406212226632e-09,
+              1.2899977489831349e-08,
+              1.1903859742294261e-07,
+              5.366728622113885e-05,
+              6.82988024711995e-08,
+              1.0136441037673583e-05,
+              7.401406212226632e-09,
+              1.1903859742294261e-07,
+              1.2899977489831349e-08,
+              6.82988024711995e-08
+            ],
+            "expected_energy": -5.87082572331302,
+            "temperature": 0.45,
+            "ties": [],
+            "decision_rule": "analytic Gibbs mode; lowest local basis integer on ties",
+            "probability_source": "exact finite-state Gibbs distribution",
+            "resources": {
+              "enumerated_states": 256,
+              "free_variables": 8
+            },
+            "runtime_seconds": 5.412500468082726e-05
+          }
+        },
+        "warnings": [
+          "Small-system simulator experiment; no quantum advantage or hardware speedup is established.",
+          "Gibbs retained draws from one chain can be correlated; they are not independent recovery trials.",
+          "Lower conditioned energy and recovery of the source memory answer different questions."
+        ],
+        "decision_rule": "Hopfield converged state; Gibbs/QAOA modal retained/sample counts; lowest local basis integer on count ties"
+      },
+      "purpose": "curated explanatory illustration; excluded from independent benchmark"
+    }
+  }
+]

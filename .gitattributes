@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Preserve generated CSV bytes and their conventional CRLF records.
+*.csv -text whitespace=cr-at-eol
+*.png -text
+*.jpg -text
+*.jpeg -text
