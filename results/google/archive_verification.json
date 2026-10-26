@@ -1,0 +1,10 @@
+{
+ "path": "google_qec3v5_experiment_data.zip",
+ "bytes": 315490804,
+ "md5": "a7fd8b481c3087090093106382dc217d",
+ "sha256": "ef569742126b305e163cc7fccbf6275e03bdd54d090dffb1aef12a78af0a74c4",
+ "expected_md5": "a7fd8b481c3087090093106382dc217d",
+ "expected_bytes": 315490804,
+ "verified": true,
+ "checked_utc": "2026-10-26T15:52:35+00:00"
+}

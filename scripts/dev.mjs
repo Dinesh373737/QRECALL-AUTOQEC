@@ -56,7 +56,7 @@ function launch(command, args) {
 }
 process.on("SIGINT", () => stop());
 process.on("SIGTERM", () => stop());
-console.log("Starting the QRecall scientific engine…");
+console.log("Starting the QRecall AutoQEC scientific engine…");
 launch(python, [
   "-m",
   "uvicorn",
@@ -67,7 +67,8 @@ launch(python, [
   "8000",
 ]);
 let ready = false;
-const readinessDeadline = Date.now() + 30_000;
+const readinessDeadline = Date.now() + 150_000;
+let lastNotice = Date.now();
 while (Date.now() < readinessDeadline && !exiting) {
   try {
     const response = await fetch("http://127.0.0.1:8000/api/health", {
@@ -81,6 +82,10 @@ while (Date.now() < readinessDeadline && !exiting) {
       break;
     }
   } catch {}
+  if (Date.now() - lastNotice > 10_000) {
+    lastNotice = Date.now();
+    console.log("Still loading the scientific libraries (Qiskit, Stim, PyMatching)…");
+  }
   if (!exiting && Date.now() < readinessDeadline)
     await new Promise((resolve) =>
       setTimeout(resolve, Math.min(300, readinessDeadline - Date.now())),
@@ -88,7 +93,7 @@ while (Date.now() < readinessDeadline && !exiting) {
 }
 if (!ready) {
   console.error(
-    "The scientific engine did not start within 30 seconds. Review the error above, then try again.",
+    "The scientific engine did not start within 150 seconds. Review the error above, then try again.",
   );
   stop(1);
 } else if (!exiting)

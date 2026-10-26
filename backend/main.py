@@ -26,6 +26,7 @@ from .core.thermal import run_gibbs
 from .core.quantum import run_quantum, optimize_angles, CancelledComputation
 from .core.diagnostics import experiment_diagnostics
 from .core.evaluation import evaluate_experiment, reference_results, run_benchmark, get_presets, benchmark_csv
+from .qec_api import router as autoqec_router
 
 logger = logging.getLogger("qrecall")
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -34,6 +35,8 @@ logging.getLogger("qiskit").setLevel(logging.WARNING)
 
 @asynccontextmanager
 async def lifespan(_app):
+    from .hardware import explanations
+    explanations.warm_pool()  # spawn the live-solver worker processes in the background
     # Shutdown cooperates with the same cancellation checks as the user button.
     yield
     with job_lock:
@@ -41,13 +44,16 @@ async def lifespan(_app):
             if job["status"] in ("queued", "running"):
                 job["cancel"].set()
     executor.shutdown(wait=False, cancel_futures=True)
+    from .hardware import explanations
+    if explanations._pool is not None:
+        explanations._pool.shutdown(wait=False, cancel_futures=True)
 
 
-app = FastAPI(title="QRecall scientific API", version="1.0", docs_url="/api/docs", openapi_url="/api/openapi.json", lifespan=lifespan)
+app = FastAPI(title="QRecall AutoQEC scientific API", version="2.0", docs_url="/api/docs", openapi_url="/api/openapi.json", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
                    allow_methods=["GET", "POST", "DELETE"], allow_headers=["Content-Type", "X-Request-ID"])
 
-PACKAGES = ("numpy", "scipy", "qiskit", "qiskit-aer", "fastapi", "pydantic")
+PACKAGES = ("numpy", "scipy", "qiskit", "qiskit-aer", "stim", "pymatching", "fastapi", "pydantic")
 VERSIONS = {name: version(name) for name in PACKAGES}
 executor = ThreadPoolExecutor(max_workers=2, thread_name_prefix="qrecall-job")
 job_lock = Lock()
@@ -145,7 +151,9 @@ def run_experiment(config: dict, quantum_override: dict | None = None) -> dict:
 @app.get("/api/health")
 def health():
     return {"status": "ok", "schema_version": "1.0", "versions": VERSIONS,
-            "max_free_qubits": 8, "execution": "local scientific simulation"}
+            "max_free_qubits": 8, "execution": "local scientific simulation",
+            "modules": {"qec_studio": "simulation", "google_hardware": "experimental data (Zenodo 10.5281/zenodo.6804040)",
+                        "legacy_memory_lab": "available at /legacy.html"}}
 
 
 @app.post("/api/experiment", response_model=ExperimentResult)
@@ -325,5 +333,7 @@ def export_benchmark(job_id: str):
     return Response(benchmark_csv(result), media_type="text/csv",
                     headers={"Content-Disposition": f'attachment; filename="qrecall-benchmark-{job_id[:8]}.csv"'})
 
+
+app.include_router(autoqec_router)
 
 logger.info(json.dumps({"event": "scientific_api_loaded", "versions": VERSIONS, "max_free_qubits": 8}))

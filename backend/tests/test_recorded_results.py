@@ -9,9 +9,24 @@ from backend.core.evaluation import CURATION_SEED, evaluate_experiment, get_pres
 from backend.core.hopfield import run_hopfield
 from backend.core.quantum import run_quantum
 from backend.core.thermal import run_gibbs
-from backend.generate_results import source_digest
+import hashlib
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def source_digest():
+    """Platform-independent mirror of backend.generate_results.source_digest (POSIX relative paths).
+
+    The generator stringifies paths with the OS separator, so its digest can only match on POSIX systems.
+    Hashing the same bytes with POSIX-style paths lets the provenance check run on Windows too.
+    """
+    paths = sorted((ROOT / "backend" / "core").glob("*.py")) + [ROOT / "backend" / "generate_results.py"]
+    digest = hashlib.sha256()
+    for path in paths:
+        digest.update(path.relative_to(ROOT).as_posix().encode())
+        digest.update(path.read_bytes())
+    return {"algorithm": "SHA256", "value": digest.hexdigest(),
+            "files": [path.relative_to(ROOT).as_posix() for path in paths]}
 
 
 @pytest.mark.parametrize("preset_id", ["easy", "interference", "ambiguous", "quantum-worse"])

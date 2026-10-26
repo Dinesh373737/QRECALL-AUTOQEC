@@ -1,0 +1,442 @@
+{
+ "provenance": {
+  "dataset_doi": "10.5281/zenodo.6804040",
+  "record": "https://zenodo.org/records/6804040",
+  "title": "Data for \"Suppressing quantum errors by scaling a surface code logical qubit\"",
+  "license": "CC-BY-4.0",
+  "archive": {
+   "path": "google_qec3v5_experiment_data.zip",
+   "bytes": 315490804,
+   "md5": "a7fd8b481c3087090093106382dc217d",
+   "sha256": "ef569742126b305e163cc7fccbf6275e03bdd54d090dffb1aef12a78af0a74c4",
+   "expected_md5": "a7fd8b481c3087090093106382dc217d",
+   "expected_bytes": 315490804,
+   "verified": true,
+   "checked_utc": "2026-10-26T15:52:35+00:00"
+  },
+  "versions": {
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "stim": "1.16.0",
+   "pymatching": "2.4.0",
+   "qiskit": "2.5.2"
+  },
+  "created_utc": "2026-10-26T19:34:34+00:00",
+  "data_kind": "experimental measurements from Google's Sycamore processor (not simulated)"
+ },
+ "probes": [
+  {
+   "experiment": "surface_code_bZ_d3_r19_center_3_5",
+   "disagreements": 13,
+   "probed": 13,
+   "ours_equals_exact_optimum": 13,
+   "google_equals_exact_optimum": 0,
+   "gap_disagreeing_median": 0.10149186731992188,
+   "gap_agreeing_median": 0.5221841216698522,
+   "control_ours_equals_exact_optimum": 40,
+   "control_probed": 40,
+   "shots": [
+    {
+     "shot": 4049,
+     "gap": 0.10149186731992188,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 5259,
+     "gap": 0.10149186731992188,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 5321,
+     "gap": 0.10149186731990767,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 6434,
+     "gap": 0.4477039872312645,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 7412,
+     "gap": 0.10149186731992188,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 19916,
+     "gap": 0.10149186731992188,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 23693,
+     "gap": 0.15334617121010297,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 26671,
+     "gap": 0.10149186731992188,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 29022,
+     "gap": 0.10149186731990767,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 39293,
+     "gap": 0.13501239373678686,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 43801,
+     "gap": 0.10149186731992188,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 47427,
+     "gap": 0.44770398723125027,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 48725,
+     "gap": 0.10149186731990767,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    }
+   ],
+   "method": "Exact MILP on PyMatching's float edge weights (min-weight T-join); complementary gap = min weight with the opposite observable minus the minimum weight."
+  },
+  {
+   "experiment": "surface_code_bX_d3_r25_center_3_5",
+   "disagreements": 57,
+   "probed": 20,
+   "ours_equals_exact_optimum": 20,
+   "google_equals_exact_optimum": 0,
+   "gap_disagreeing_median": 0.026610960303145248,
+   "gap_agreeing_median": 0.5662184394977103,
+   "control_ours_equals_exact_optimum": 40,
+   "control_probed": 40,
+   "shots": [
+    {
+     "shot": 4,
+     "gap": 0.5415891736042795,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 56,
+     "gap": 1.1260160251159164,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 738,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 1548,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 3192,
+     "gap": 0.5415891736042795,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 3376,
+     "gap": 0.026610960303131037,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 3640,
+     "gap": 0.02296516152293293,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 3882,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 5990,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 6375,
+     "gap": 0.8472076214975459,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 6769,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 7360,
+     "gap": 0.1208356505250947,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 7579,
+     "gap": 0.05207863628753273,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 8301,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 10288,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 10318,
+     "gap": 0.26184475091226034,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 11022,
+     "gap": 0.2974729215255252,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 12298,
+     "gap": 0.026610960303145248,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 13393,
+     "gap": 0.017728498833520234,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 15361,
+     "gap": 0.3099711958957556,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    }
+   ],
+   "method": "Exact MILP on PyMatching's float edge weights (min-weight T-join); complementary gap = min weight with the opposite observable minus the minimum weight."
+  },
+  {
+   "experiment": "surface_code_bZ_d5_r13_center_5_5",
+   "disagreements": 47,
+   "probed": 20,
+   "ours_equals_exact_optimum": 20,
+   "google_equals_exact_optimum": 0,
+   "gap_disagreeing_median": 0.3108483865220464,
+   "gap_agreeing_median": 1.7892122529208905,
+   "control_ours_equals_exact_optimum": 40,
+   "control_probed": 40,
+   "shots": [
+    {
+     "shot": 781,
+     "gap": 0.16046428004369773,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 1688,
+     "gap": 0.1635324532177549,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 3339,
+     "gap": 1.2551108003397076,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 3743,
+     "gap": 0.7009948386626945,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 4384,
+     "gap": 0.2899637304492586,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 5470,
+     "gap": 0.25656296894680963,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 6045,
+     "gap": 1.1858407117709078,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 8495,
+     "gap": 0.33173304259483416,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 9947,
+     "gap": 0.07475022699634337,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 10581,
+     "gap": 0.2354219473480441,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 12828,
+     "gap": 0.17393002059435503,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 13267,
+     "gap": 0.8930518967307819,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 13618,
+     "gap": 1.1122315094815889,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 13872,
+     "gap": 0.7040605995025544,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 15325,
+     "gap": 0.0023634589895777935,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 17092,
+     "gap": 0.5197146711725793,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 17712,
+     "gap": 0.09633853260891101,
+     "optimal_prediction": 1,
+     "ours": 1,
+     "google": 0
+    },
+    {
+     "shot": 17843,
+     "gap": 0.1537220272379045,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 19310,
+     "gap": 0.6538900792469917,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    },
+    {
+     "shot": 19803,
+     "gap": 0.5510428182180078,
+     "optimal_prediction": 0,
+     "ours": 0,
+     "google": 1
+    }
+   ],
+   "method": "Exact MILP on PyMatching's float edge weights (min-weight T-join); complementary gap = min weight with the opposite observable minus the minimum weight."
+  }
+ ]
+}

@@ -43,7 +43,7 @@ async function ready(page: Page) {
 
 async function open(page: Page) {
   const response = experimentResponse(page);
-  await page.goto("/");
+  await page.goto("/legacy.html");
   const result = await (await response).json();
   await ready(page);
   return result;
@@ -784,7 +784,7 @@ test("failed computation explains the error and retry recovers", async ({
       }),
     });
   });
-  await page.goto("/");
+  await page.goto("/legacy.html");
   await expect(page.getByRole("alert")).toContainText(
     "local scientific engine is unavailable",
   );

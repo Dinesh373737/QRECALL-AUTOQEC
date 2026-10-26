@@ -5,3 +5,6 @@
 *.png -text
 *.jpg -text
 *.jpeg -text
+
+# Google experimental data subset: keep every byte exactly as extracted (hashes in manifest.json).
+data/google_subset/** -text -diff

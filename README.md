@@ -1,135 +1,133 @@
 <div align="center">
 
-# QRecall
+# QRecall AutoQEC
 
-### See how a memory finds its way back.
+### Understand quantum errors. Explain recovery decisions. Optimize resources. Benchmark on real quantum hardware.
 
-An interactive laboratory connecting associative memory, thermal sampling and quantum circuits through one shared energy model.
+An interactive, scientifically defensible quantum error-correction laboratory — from a three-qubit code you can
+step through gate by gate, to genuine shots measured on Google's superconducting processor.
 
-[**Launch the live demo**](https://qrecall.graysea-2c087476.eastasia.azurecontainerapps.io/) · [Quick tour](docs/QUICK_TOUR.md) · [Mathematical specification](MATH_SPEC.md) · [Measured results](docs/BENCHMARK.md)
+[Scientific documentation](docs/autoqec/SCIENCE.md) · [Dataset pipeline](docs/autoqec/DATASET.md) · [API](docs/autoqec/API.md) · [Judge demo](docs/autoqec/DEMO_GUIDE.md) · [Engineering report](docs/autoqec/ENGINEERING_REPORT.md) · [Architecture](docs/autoqec/ARCHITECTURE.md)
 
-[![CI](https://github.com/Siddhanthkjain2005/QRecall/actions/workflows/ci.yml/badge.svg)](https://github.com/Siddhanthkjain2005/QRecall/actions/workflows/ci.yml)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![Qiskit](https://img.shields.io/badge/Quantum-Qiskit%20%2B%20Aer-6929C4)
+![Qiskit](https://img.shields.io/badge/Qiskit-2.5%20%2B%20Aer-6929C4)
+![Stim](https://img.shields.io/badge/Stim-1.16-0f9d58)
+![PyMatching](https://img.shields.io/badge/PyMatching-2.4-1f6feb)
+![Data](https://img.shields.io/badge/data-Zenodo%2010.5281%2Fzenodo.6804040-teal)
 
 </div>
 
-![QRecall: linked 3D memory network, equations and editable experiment](docs/screenshots/qrecall-overview.png)
+![AutoQEC overview](docs/screenshots/autoqec-overview.jpg)
 
-## Why QRecall?
+## What it is
 
-Memory-recovery algorithms often produce an answer without revealing how they reached it. Quantum explanations can be equally disconnected: a circuit diagram, a probability plot and an equation rarely refer to the same inspectable experiment.
+Quantum error correction protects a logical qubit with many physical qubits and repeated parity checks
+(syndromes). A decoder turns syndromes into a correction — usually as a black box. AutoQEC makes that
+decision inspectable, tests whether its explanations are trustworthy, and validates the ideas on Google
+Quantum AI's published hardware data.
 
-QRecall links them. Store binary patterns, erase or corrupt a cue, then follow the actual computation from pixels to weighted connections, local fields, conditioned energy, Ising Hamiltonian, gates and measured reconstruction. Pause at any step and inspect the numbers behind the animation.
+| Module | What it shows | Data |
+|---|---|---|
+| **1 · QEC Interactive Studio** | *How* decoding works: three-qubit bit-flip code, explicit likelihood (energy) decoder, exact references, circuits and resource trade-offs | Simulation (Qiskit statevector / Aer, seeded) |
+| **2 · Google Hardware Analyzer** | *How* decoding performs on real hardware: PyMatching vs exact Ising/QUBO vs Google's decoders, shot by shot | Google's 131 published surface-code experiments, 7,000,000 shots |
 
-The intended audience is students, educators and developers investigating small energy-based models. This prototype supports learning and algorithm inspection; it is not a production image-restoration system.
+### Module 1 — QEC Interactive Studio
+* **QEC Lab** — Encode → Inject → Measure → Decode → Correct → Verify with a real Qiskit circuit: choose the
+  logical state, inject X/Y/Z faults, add seeded data and readout noise, compare four decoders on the same
+  syndrome, use physical feed-forward or a Pauli-frame update, and verify with a coherent majority decoder.
+* **Message Lab** — type a message; each UTF-8 bit is carried in a repetition-code block next to an
+  unprotected copy hit by the same physical flips. Animated, clickable down to the bit, never forced to succeed.
+* **Circuit Inspector** — step through the actual circuit (mid-circuit measurement, `if_test` feed-forward),
+  inspect the statevector after every gate, compare with the transpiled circuit and an independent Aer run.
+* **Decoder Explainer** — any syndrome, any declared model, d = 3/5/7: every candidate's data and readout
+  energy terms, rank, posterior, logical-class probabilities, computed Q&A and decision-boundary sensitivity.
+* **Resource Optimizer** — 59 verified compilations of the *same* task, Aer logical-failure estimates with
+  Wilson intervals, hard constraints, normalized cost `J = wQ·Q/Qref + wG·G2/G2ref + wD·D/Dref`, Pareto view.
+* **Simulation Benchmarks** — failure curves, readout robustness, oracle agreement, held-out tests of whether
+  energy gaps predict failures, calibration under matched and mismatched models, runtime, reproducibility.
 
-## What you can explore
+### Module 2 — Google Hardware Analyzer
+* **Dataset Explorer** — 131 experiments with provenance, Google's layout diagrams, DEM statistics and a
+  one-click shot-for-shot reproduction of Google's PyMatching predictions.
+* **Real Shot Explorer** — a single real shot as a rotatable 3D space-time lattice (with a 2D fallback):
+  fired detectors, PyMatching's matched edges, the Ising decoder's inferred mechanisms and the best
+  opposite-outcome explanation, with the recorded logical flip shown separately as the answer key.
+* **Decoder Benchmarks** — failure vs rounds, fitted logical error per round, distance comparison, paired
+  McNemar verdicts, noise-aware vs uniform ablation, held-out ambiguity test, agreement and latency.
+* **Failure Investigator** — disagreements, all-decoders-wrong shots, confident failures, drilled to the shot.
+* **Configuration Advisor** — recommends only experimentally tested configurations, or answers
+  "No tested configuration meets these constraints."
 
-| Feature | What it reveals |
+Plus a methodology & provenance page, sources & limitations, and a 10-beat **presenter mode**.
+
+| QEC Lab: energy-ranked candidates | Decoder Explainer: computed answers |
 |---|---|
-| **Editable memory bank and cue** | Signed Hebbian weights, trusted erasures and soft noisy observations. |
-| **Hopfield recall** | Asynchronous updates, neighbor contributions, local fields and actual energy changes. |
-| **Gibbs sampling** | Temperature-dependent probabilities, seeded draws, uphill moves and an exact thermal reference. |
-| **QAOA circuit playback** | Real Qiskit cost/mixer operations, complex amplitudes, relative phases and interference. |
-| **Finite-shot measurement** | Actual Aer shot-memory prefixes, cumulative histograms, modal reconstructions and ties. |
-| **Interactive Math lab** | Encoding, energy decomposition, Argand diagrams, expectation, variance, basis entropy and inverse participation. |
-| **Linked 3D views** | Pixel networks, signed-weight sculptures, energy terrain and energy/phase/measurement constellations. |
-| **Experiment controls** | Seeds, temperature, circuit depth/angles, bounded optimization, simulator noise and cancellable jobs. |
-| **Comparison and provenance** | Nearest-memory baseline, exact diagnostics, reproducible scenarios, saved/live benchmarks and JSON/CSV exports. |
-| **Presentation and accessibility** | Step/scrub/speed, cinematic camera, Focus 3D, presenter mode, expanded formulas, reduced motion and 2D fallback. |
+| ![QEC Lab decode stage](docs/screenshots/autoqec-lab-decode.jpg) | ![Decoder explainer](docs/screenshots/autoqec-explainer.jpg) |
+| **Circuit Inspector: the real Qiskit circuit** | **Real Shot Explorer: one Google hardware shot** |
+| ![Circuit inspector](docs/screenshots/autoqec-circuit.jpg) | ![Space-time lattice of a real shot](docs/screenshots/autoqec-shot-3d.jpg) |
 
-## Try it in three minutes
+## Headline evidence
 
-1. Open the [live demo](https://qrecall.graysea-2c087476.eastasia.azurecontainerapps.io/) and select **Easy recall** from **Scenario**. Wait for **LIVE COMPUTATION**.
-2. On **Store**, inspect a memory and a matrix cell. On **Damage**, use **Edit input** to erase or restore a pixel.
-3. Press **Play recall**. Pause an update; inspect its local field and energy, then step forward.
-4. Open **Thermal** and play its sampling trace. Open **Quantum**, play the gates and compare a cost operation with a mixer operation.
-5. Open **Measure** to watch actual simulated shots accumulate. Use **Math lab** and **Expand** to inspect the equations.
-6. Visit **Compare**, including the **Quantum worse** scenario, then **Export** to download the actual experiment.
+* **Data integrity:** for all 131 experiments, detection events and observable flips re-derived from Google's
+  raw measurements match the published files bit-for-bit (archive MD5 verified against Zenodo).
+* **Baseline reproduction:** PyMatching 2.4 reproduces Google's published PyMatching predictions shot-for-shot
+  in 73/131 experiments; in the rest, every probed disagreement (53/53) is a near-degenerate shot where our
+  answer equals the exact minimum-weight optimum and the 2022 run's does not.
+* **Published result reproduced:** fitting Google's tensor-network predictions gives **2.914 %** (d = 5) vs
+  **3.028 %** (d = 3) logical error per round — the values reported in *Nature* 614, 676 (2023).
+* **Exact Ising/QUBO decoding on 128,000 real shots** (28 short experiments; held-out pij models): 7.20% logical
+  failure vs 8.36% for PyMatching with the same models (significantly fewer failures in 18 of 28 experiments,
+  never significantly more) — while **Google's tensor-network decoder stays ahead** (7.03%). Uniform weights:
+  9.26%. Details in the [engineering report](docs/autoqec/ENGINEERING_REPORT.md#3-results).
+* **Explanations tested, not assumed:** on held-out simulated trials the energy gap separates failures with
+  AUROC 0.81 and the model posterior is calibrated (ECE 0.002) — but only when the noise model is right
+  (ECE 0.029 under mismatch).
 
-Use **1–8** for chapters, **Space** for play/pause and arrow keys to step. Shortcuts leave text inputs alone. **Present demo** starts a simplified presentation; **Escape** exits. The [quick tour](docs/QUICK_TOUR.md) explains the controls and visual mappings.
+**Not claimed:** quantum advantage, hardware speedup, a new decoding algorithm, hardware-validated circuit
+optimization, or a physical diagnosis from a syndrome. Energy/Ising decoding, matching and noise-aware
+likelihoods are prior research; our contribution is the integrated, explainable, reproducible system.
 
 ## Run locally
 
-**Requirements:** Python **3.12**, Node.js **22** and npm. No cloud account, API key or quantum hardware is required.
+Requirements: Python **3.12**, Node.js **22+**, npm. The real-data subset ships with the repository, so the
+whole app works offline after installation.
 
 ```sh
-git clone https://github.com/Siddhanthkjain2005/QRecall.git
-cd QRecall
+git clone https://github.com/Dinesh373737/QRECALL-AUTOQEC.git
+cd QRECALL-AUTOQEC
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r backend/requirements.lock.txt
 npm ci
 npm run dev
 ```
 
-Open **http://127.0.0.1:5173**. The launcher starts Vite on **5173** and FastAPI on **8000**, checks occupied ports and waits for the scientific engine. **Ctrl+C** stops both processes. Restart after changing Python code.
+On Windows: `py -3.12 -m venv .venv` and `.venv\Scripts\python.exe -m pip install -r backend/requirements.lock.txt`.
 
-On Windows, create the environment with `py -3.12 -m venv .venv`, then install Python dependencies with `.venv\Scripts\python.exe -m pip install -r backend/requirements.lock.txt`. The npm commands are identical.
+Open **http://127.0.0.1:5173**. The launcher starts FastAPI on port 8000 and Vite on 5173 (first start can take
+a minute while Qiskit, Stim and PyMatching load). API docs: http://127.0.0.1:8000/api/docs.
 
-Installation requires internet access. Once installed, the interface, fonts, solvers, presets and recorded evidence operate locally. External source links are optional reading.
+### Full Google archive (optional, 315 MB)
 
-| Local endpoint | Purpose |
-|---|---|
-| `http://127.0.0.1:8000/api/health` | Engine status, runtime versions and problem limits |
-| `http://127.0.0.1:8000/api/docs` | Interactive API schemas |
-| `http://127.0.0.1:8000/api/openapi.json` | Machine-readable API contract |
-| `http://127.0.0.1:8000/api/benchmarks/recorded` | Saved evidence with original provenance |
+```sh
+python -m backend.hardware.pipeline fetch      # download from Zenodo, verify MD5, extract safely
+python -m backend.hardware.pipeline baseline   # all 7,000,000 shots, PyMatching x3 + Google decoders
+python -m backend.hardware.pipeline ising      # exact Ising/QUBO on the short experiments (hours; --resume)
+python -m backend.hardware.pipeline probe      # PyMatching disagreement probe
+python -m backend.generate_qec_results         # Module 1 recorded benchmarks and optimizer runs
+```
+
+With the archive extracted the API uses all shots for live analysis; without it, it uses the subset.
 
 ### Container
 
 ```sh
-docker build -t qrecall .
-docker run --rm -p 8000:8000 qrecall
+docker build -t qrecall-autoqec .
+docker run --rm -p 8000:8000 qrecall-autoqec
 ```
 
-Open **http://127.0.0.1:8000**. The container serves the interface and API together as an unprivileged user, using one worker. `npm run preview` previews only the frontend build; use the full launcher or container for scientific computation.
-
-## Architecture
-
-```mermaid
-flowchart LR
-    User[Editable memory and cue] --> UI[React + TypeScript]
-    UI --> API[FastAPI: validated experiment]
-    API --> Model[NumPy / SciPy: conditioned energy]
-    Model --> Classical[Hopfield + Gibbs + exact references]
-    Model --> Quantum[Qiskit + Aer: QAOA and actual shots]
-    Classical --> Results[Computed traces and diagnostics]
-    Quantum --> Results
-    Results --> Views[Three.js + KaTeX + linked charts]
-    Results --> Export[Reproducible JSON / CSV]
-```
-
-Rendering consumes solver outputs; it does not implement scientific updates. Revision tracking rejects stale results after input changes. Evaluation receives the source-memory identity separately; solvers and the optimizer do not. See [architecture and design](docs/ARCHITECTURE.md).
-
-## Scientific model
-
-Bits and spins use **sᵢ = 1 − 2xᵢ**: filled pixels are **spin +1 / bit 0**. Stored memories produce symmetric, zero-diagonal Hebbian weights normalized by the **total pixel count**. All methods use:
-
-$$E(s) = -\frac{1}{2}s^TWs - b^Ts.$$
-
-Trusted observations stay clamped. Eliminating them produces the conditioned Ising model without changing energy. Noisy observations add reliability-weighted **soft fields** and remain free to change.
-
-Each free pixel maps to one qubit, with at most **eight free qubits / 256 enumerated states**. Qiskit executes cost then mixer gates; Aer supplies measured shots. Gibbs and QAOA reconstruct the **modal sampled state**, resolving count ties by the lowest basis integer.
-
-The [mathematical specification](MATH_SPEC.md) covers conditioning, gate signs, bit order, tie rules, noise and diagnostics. [Primary sources](docs/SOURCES.md) provide the underlying references.
-
-## Measured evidence
-
-Two independently generated **12-case** batches use the same bank and declared budgets. Scenario curation uses a separate seed and does not contribute to these aggregates.
-
-| Method | Batch 1 · seed 7102026 | Batch 2 · seed 7102027 |
-|---|---:|---:|
-| Nearest stored memory | **11 / 12** | **12 / 12** |
-| Hopfield | 10 / 12 | 11 / 12 |
-| Gibbs sample mode | 9 / 12 | 11 / 12 |
-| QAOA sample mode | 5 / 12 | 10 / 12 |
-
-All methods preserved trusted constraints in both batches. QAOA used depth one, up to **24 ideal-energy optimizer evaluations** and **1,024 Aer shots per case**. Per-case configurations, counts, decisions, resources, source digests and uncertainty intervals are in [`results/`](results/) and the [benchmark report](docs/BENCHMARK.md).
-
-These small simulator experiments establish **no quantum advantage or hardware speedup**. Nearest-memory retrieval performs strongly; lower energy can still recover the wrong source. Correlated Gibbs draws and finite circuit shots are not independent benchmark cases. With device noise, phase playback describes the ideal circuit and measurements use the noisy simulation. Basis entropy measures distribution spread, not entanglement or recovery confidence.
+Open http://127.0.0.1:8000. The image serves the interface, the API and the real-data subset.
 
 ## Validation
 
@@ -140,37 +138,19 @@ npm test
 npm run build
 ```
 
-The scientific/API suite contains **166 tests** and the frontend suite **49 tests**, covering energy conditioning, invariant preservation, gate signs, bit order, normalization, seeded replay, real measurement prefixes, evaluation isolation and presentation behavior. The build includes TypeScript checking. GitHub Actions runs these checks on pushes and pull requests.
+Python: 252 tests (the original 166 plus 86 AutoQEC tests covering syndrome tables, exact energies,
+tie-breaking, the recovery convention, Bayes reference, seeds, messages, circuits and Aer agreement,
+optimizer constraints, Google file parsing against Stim, shot alignment, PyMatching reproduction, held-out
+partitioning, Ising MILP vs brute force, QUBO equivalence, timeout handling, per-round fits, the published
+reproduction and the advisor). Frontend: 56 unit tests; the production build type-checks everything.
 
-Optional browser regression tests:
+## The original QRecall
 
-```sh
-npx playwright install chromium
-npm run test:browser
-```
+The associative-memory laboratory (Hopfield, Gibbs, QAOA) is preserved unchanged at `/legacy.html`; its
+documentation remains in [`docs/`](docs/) and [`MATH_SPEC.md`](MATH_SPEC.md).
 
-Recorded local acceptance covers 104 feature scenes with real cursor interaction, including 3D, Math lab, formulas, playback, parameter edits, jobs, benchmarks and import/export. This evidence is distinct from the portable browser suite and public deployment checks. The [validation record](docs/VALIDATION.md) separates executed checks from pending work.
+## Data license and citation
 
-Known boundary: an extreme imported bias such as `1e308` can overflow computation and return an API error. Intended demonstrations use bounded small-model parameters. Automatic reconnection and the complete portable browser suite require separate acceptance checks.
-
-To regenerate scientific artifacts after changing the core:
-
-```sh
-.venv/bin/python -m backend.generate_results
-```
-
-The generator preserves declared seeds and budgets, recomputes actual results and replaces their source digests. Run the recorded-results tests afterward.
-
-## Repository map
-
-| Location | Responsibility |
-|---|---|
-| `backend/core/` | Model, conditioning, classical/quantum solvers, diagnostics and evaluation |
-| `backend/main.py`, `backend/schemas.py` | Validated API, provenance and bounded jobs |
-| `src/` | Interface, 3D scenes, equations, charts and playback |
-| `backend/tests/`, `tests/` | Scientific, API, frontend and browser checks |
-| `results/` | Generated presets and independent benchmark JSON/CSV |
-| `docs/` | Quick tour, architecture, primary references and validation |
-| `.github/workflows/ci.yml` | Automated Python/frontend/build checks |
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development conventions. Dependencies, credentials, local recordings and generated presentation packages are excluded from Git.
+Google Quantum AI, *Data for "Suppressing quantum errors by scaling a surface code logical qubit"*, Zenodo
+(2022), doi:10.5281/zenodo.6804040, CC-BY-4.0; and Google Quantum AI, *Nature* 614, 676–681 (2023).
+`data/google_subset` is a verbatim subset (real shots only) with a SHA-256 manifest.

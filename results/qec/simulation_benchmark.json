@@ -1,0 +1,8574 @@
+{
+ "schema_version": "qec-sim-bench-1",
+ "kind": "simulation",
+ "config": {
+  "shots": 50000,
+  "seed": 20261026,
+  "p": 0.05,
+  "q": 0.02
+ },
+ "logical_vs_p": {
+  "name": "logical_vs_p",
+  "shots_per_point": 50000,
+  "base_seed": 20261026,
+  "points": [
+   {
+    "distance": 3,
+    "p": 0.005,
+    "q": 0.0,
+    "seed": 20261026,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 239,
+      "trials": 50000,
+      "rate": 0.00478,
+      "ci95": [
+       0.004212315654511251,
+       0.0054237731891329235
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4,
+       "trials": 50000,
+       "rate": 8e-05,
+       "ci95": [
+        3.111086355358979e-05,
+        0.00020570011886754752
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4,
+       "trials": 50000,
+       "rate": 8e-05,
+       "ci95": [
+        3.111086355358979e-05,
+        0.00020570011886754752
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4,
+       "trials": 50000,
+       "rate": 8e-05,
+       "ci95": [
+        3.111086355358979e-05,
+        0.00020570011886754752
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "ea6cad499baf4e77"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.01,
+    "q": 0.0,
+    "seed": 20261027,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 520,
+      "trials": 50000,
+      "rate": 0.0104,
+      "ci95": [
+       0.009547630900433425,
+       0.011327594449609358
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 20,
+      "trials": 50000,
+      "rate": 0.0004,
+      "ci95": [
+       0.00025896487722254513,
+       0.0006177969383031394
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 20,
+       "trials": 50000,
+       "rate": 0.0004,
+       "ci95": [
+        0.00025896487722254513,
+        0.0006177969383031394
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 20,
+      "trials": 50000,
+      "rate": 0.0004,
+      "ci95": [
+       0.00025896487722254513,
+       0.0006177969383031394
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 20,
+       "trials": 50000,
+       "rate": 0.0004,
+       "ci95": [
+        0.00025896487722254513,
+        0.0006177969383031394
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 20,
+      "trials": 50000,
+      "rate": 0.0004,
+      "ci95": [
+       0.00025896487722254513,
+       0.0006177969383031394
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 20,
+       "trials": 50000,
+       "rate": 0.0004,
+       "ci95": [
+        0.00025896487722254513,
+        0.0006177969383031394
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "1489603df1c9d4e2"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.02,
+    "q": 0.0,
+    "seed": 20261028,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 976,
+      "trials": 50000,
+      "rate": 0.01952,
+      "ci95": [
+       0.01834378352610489,
+       0.020770040567417485
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 66,
+      "trials": 50000,
+      "rate": 0.00132,
+      "ci95": [
+       0.001037778580200369,
+       0.001678841880500889
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 66,
+       "trials": 50000,
+       "rate": 0.00132,
+       "ci95": [
+        0.001037778580200369,
+        0.001678841880500889
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 66,
+      "trials": 50000,
+      "rate": 0.00132,
+      "ci95": [
+       0.001037778580200369,
+       0.001678841880500889
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 66,
+       "trials": 50000,
+       "rate": 0.00132,
+       "ci95": [
+        0.001037778580200369,
+        0.001678841880500889
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 66,
+      "trials": 50000,
+      "rate": 0.00132,
+      "ci95": [
+       0.001037778580200369,
+       0.001678841880500889
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 66,
+       "trials": 50000,
+       "rate": 0.00132,
+       "ci95": [
+        0.001037778580200369,
+        0.001678841880500889
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "c68b2d45f5b7ed46"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.04,
+    "q": 0.0,
+    "seed": 20261029,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2004,
+      "trials": 50000,
+      "rate": 0.04008,
+      "ci95": [
+       0.03839576406254262,
+       0.041834901057946905
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 205,
+      "trials": 50000,
+      "rate": 0.0041,
+      "ci95": [
+       0.0035767274601555083,
+       0.0046994658631415035
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 205,
+       "trials": 50000,
+       "rate": 0.0041,
+       "ci95": [
+        0.0035767274601555083,
+        0.0046994658631415035
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 205,
+      "trials": 50000,
+      "rate": 0.0041,
+      "ci95": [
+       0.0035767274601555083,
+       0.0046994658631415035
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 205,
+       "trials": 50000,
+       "rate": 0.0041,
+       "ci95": [
+        0.0035767274601555083,
+        0.0046994658631415035
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 205,
+      "trials": 50000,
+      "rate": 0.0041,
+      "ci95": [
+       0.0035767274601555083,
+       0.0046994658631415035
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 205,
+       "trials": 50000,
+       "rate": 0.0041,
+       "ci95": [
+        0.0035767274601555083,
+        0.0046994658631415035
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "8b3080b292f264ff"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.06,
+    "q": 0.0,
+    "seed": 20261030,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2950,
+      "trials": 50000,
+      "rate": 0.059,
+      "ci95": [
+       0.05696837690988626,
+       0.06109938121790962
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 535,
+      "trials": 50000,
+      "rate": 0.0107,
+      "ci95": [
+       0.009835023000675404,
+       0.011640156255402894
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 535,
+       "trials": 50000,
+       "rate": 0.0107,
+       "ci95": [
+        0.009835023000675404,
+        0.011640156255402894
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 535,
+      "trials": 50000,
+      "rate": 0.0107,
+      "ci95": [
+       0.009835023000675404,
+       0.011640156255402894
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 535,
+       "trials": 50000,
+       "rate": 0.0107,
+       "ci95": [
+        0.009835023000675404,
+        0.011640156255402894
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 535,
+      "trials": 50000,
+      "rate": 0.0107,
+      "ci95": [
+       0.009835023000675404,
+       0.011640156255402894
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 535,
+       "trials": 50000,
+       "rate": 0.0107,
+       "ci95": [
+        0.009835023000675404,
+        0.011640156255402894
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "6bcc1418b5b2a30b"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.08,
+    "q": 0.0,
+    "seed": 20261031,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3925,
+      "trials": 50000,
+      "rate": 0.0785,
+      "ci95": [
+       0.07617478237391946,
+       0.08088997964618476
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 941,
+      "trials": 50000,
+      "rate": 0.01882,
+      "ci95": [
+       0.017665340768080837,
+       0.020048590878025345
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 941,
+       "trials": 50000,
+       "rate": 0.01882,
+       "ci95": [
+        0.017665340768080837,
+        0.020048590878025345
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 941,
+      "trials": 50000,
+      "rate": 0.01882,
+      "ci95": [
+       0.017665340768080837,
+       0.020048590878025345
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 941,
+       "trials": 50000,
+       "rate": 0.01882,
+       "ci95": [
+        0.017665340768080837,
+        0.020048590878025345
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 941,
+      "trials": 50000,
+      "rate": 0.01882,
+      "ci95": [
+       0.017665340768080837,
+       0.020048590878025345
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 941,
+       "trials": 50000,
+       "rate": 0.01882,
+       "ci95": [
+        0.017665340768080837,
+        0.020048590878025345
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "78f12d4c6345af9b"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.1,
+    "q": 0.0,
+    "seed": 20261032,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 4874,
+      "trials": 50000,
+      "rate": 0.09748,
+      "ci95": [
+       0.09491098303579948,
+       0.1001108627728182
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1387,
+      "trials": 50000,
+      "rate": 0.02774,
+      "ci95": [
+       0.026336392435160037,
+       0.0292161686837354
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1387,
+       "trials": 50000,
+       "rate": 0.02774,
+       "ci95": [
+        0.026336392435160037,
+        0.0292161686837354
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1387,
+      "trials": 50000,
+      "rate": 0.02774,
+      "ci95": [
+       0.026336392435160037,
+       0.0292161686837354
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1387,
+       "trials": 50000,
+       "rate": 0.02774,
+       "ci95": [
+        0.026336392435160037,
+        0.0292161686837354
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1387,
+      "trials": 50000,
+      "rate": 0.02774,
+      "ci95": [
+       0.026336392435160037,
+       0.0292161686837354
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1387,
+       "trials": 50000,
+       "rate": 0.02774,
+       "ci95": [
+        0.026336392435160037,
+        0.0292161686837354
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "789162023466fdcf"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.13,
+    "q": 0.0,
+    "seed": 20261033,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 6551,
+      "trials": 50000,
+      "rate": 0.13102,
+      "ci95": [
+       0.1280907421375207,
+       0.13400595036586732
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2373,
+      "trials": 50000,
+      "rate": 0.04746,
+      "ci95": [
+       0.04563084486276225,
+       0.04935868634620091
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2373,
+       "trials": 50000,
+       "rate": 0.04746,
+       "ci95": [
+        0.04563084486276225,
+        0.04935868634620091
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2373,
+      "trials": 50000,
+      "rate": 0.04746,
+      "ci95": [
+       0.04563084486276225,
+       0.04935868634620091
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2373,
+       "trials": 50000,
+       "rate": 0.04746,
+       "ci95": [
+        0.04563084486276225,
+        0.04935868634620091
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 2373,
+      "trials": 50000,
+      "rate": 0.04746,
+      "ci95": [
+       0.04563084486276225,
+       0.04935868634620091
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2373,
+       "trials": 50000,
+       "rate": 0.04746,
+       "ci95": [
+        0.04563084486276225,
+        0.04935868634620091
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "19d6ad10faadc299"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.16,
+    "q": 0.0,
+    "seed": 20261034,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 7958,
+      "trials": 50000,
+      "rate": 0.15916,
+      "ci95": [
+       0.15597966015675838,
+       0.16239270873276077
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 3368,
+      "trials": 50000,
+      "rate": 0.06736,
+      "ci95": [
+       0.06519611487568423,
+       0.06959035876696797
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3368,
+       "trials": 50000,
+       "rate": 0.06736,
+       "ci95": [
+        0.06519611487568423,
+        0.06959035876696797
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 3368,
+      "trials": 50000,
+      "rate": 0.06736,
+      "ci95": [
+       0.06519611487568423,
+       0.06959035876696797
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3368,
+       "trials": 50000,
+       "rate": 0.06736,
+       "ci95": [
+        0.06519611487568423,
+        0.06959035876696797
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 3368,
+      "trials": 50000,
+      "rate": 0.06736,
+      "ci95": [
+       0.06519611487568423,
+       0.06959035876696797
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3368,
+       "trials": 50000,
+       "rate": 0.06736,
+       "ci95": [
+        0.06519611487568423,
+        0.06959035876696797
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0030a9290c2171a0"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.2,
+    "q": 0.0,
+    "seed": 20261035,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 9899,
+      "trials": 50000,
+      "rate": 0.19798,
+      "ci95": [
+       0.19451051853719684,
+       0.20149588579331765
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 5201,
+      "trials": 50000,
+      "rate": 0.10402,
+      "ci95": [
+       0.1013744454739589,
+       0.10672639548623299
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5201,
+       "trials": 50000,
+       "rate": 0.10402,
+       "ci95": [
+        0.1013744454739589,
+        0.10672639548623299
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 5201,
+      "trials": 50000,
+      "rate": 0.10402,
+      "ci95": [
+       0.1013744454739589,
+       0.10672639548623299
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5201,
+       "trials": 50000,
+       "rate": 0.10402,
+       "ci95": [
+        0.1013744454739589,
+        0.10672639548623299
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 5201,
+      "trials": 50000,
+      "rate": 0.10402,
+      "ci95": [
+       0.1013744454739589,
+       0.10672639548623299
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5201,
+       "trials": 50000,
+       "rate": 0.10402,
+       "ci95": [
+        0.1013744454739589,
+        0.10672639548623299
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "a80fff745319b63d"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.25,
+    "q": 0.0,
+    "seed": 20261036,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12578,
+      "trials": 50000,
+      "rate": 0.25156,
+      "ci95": [
+       0.24777586847146685,
+       0.25538230347699026
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 7791,
+      "trials": 50000,
+      "rate": 0.15582,
+      "ci95": [
+       0.15266744081241465,
+       0.15902544125657578
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7791,
+       "trials": 50000,
+       "rate": 0.15582,
+       "ci95": [
+        0.15266744081241465,
+        0.15902544125657578
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 7791,
+      "trials": 50000,
+      "rate": 0.15582,
+      "ci95": [
+       0.15266744081241465,
+       0.15902544125657578
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7791,
+       "trials": 50000,
+       "rate": 0.15582,
+       "ci95": [
+        0.15266744081241465,
+        0.15902544125657578
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 7791,
+      "trials": 50000,
+      "rate": 0.15582,
+      "ci95": [
+       0.15266744081241465,
+       0.15902544125657578
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7791,
+       "trials": 50000,
+       "rate": 0.15582,
+       "ci95": [
+        0.15266744081241465,
+        0.15902544125657578
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "fb4f25ab51e175b6"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.3,
+    "q": 0.0,
+    "seed": 20261037,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 14891,
+      "trials": 50000,
+      "rate": 0.29782,
+      "ci95": [
+       0.2938273188334062,
+       0.3018437454257269
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 10804,
+      "trials": 50000,
+      "rate": 0.21608,
+      "ci95": [
+       0.21249438506828944,
+       0.219709238259701
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 10804,
+       "trials": 50000,
+       "rate": 0.21608,
+       "ci95": [
+        0.21249438506828944,
+        0.219709238259701
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 10804,
+      "trials": 50000,
+      "rate": 0.21608,
+      "ci95": [
+       0.21249438506828944,
+       0.219709238259701
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 10804,
+       "trials": 50000,
+       "rate": 0.21608,
+       "ci95": [
+        0.21249438506828944,
+        0.219709238259701
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 10804,
+      "trials": 50000,
+      "rate": 0.21608,
+      "ci95": [
+       0.21249438506828944,
+       0.219709238259701
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 10804,
+       "trials": 50000,
+       "rate": 0.21608,
+       "ci95": [
+        0.21249438506828944,
+        0.219709238259701
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0959dcfcd58dec9d"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.005,
+    "q": 0.0,
+    "seed": 20261038,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 239,
+      "trials": 50000,
+      "rate": 0.00478,
+      "ci95": [
+       0.004212315654511251,
+       0.0054237731891329235
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d7e7faecf0e285de"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.01,
+    "q": 0.0,
+    "seed": 20261039,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 515,
+      "trials": 50000,
+      "rate": 0.0103,
+      "ci95": [
+       0.009451875002392592,
+       0.011223365712305023
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1,
+      "trials": 50000,
+      "rate": 2e-05,
+      "ci95": [
+       3.530499822832098e-06,
+       0.00011328970139120264
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1,
+       "trials": 50000,
+       "rate": 2e-05,
+       "ci95": [
+        3.530499822832098e-06,
+        0.00011328970139120264
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1,
+      "trials": 50000,
+      "rate": 2e-05,
+      "ci95": [
+       3.530499822832098e-06,
+       0.00011328970139120264
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1,
+       "trials": 50000,
+       "rate": 2e-05,
+       "ci95": [
+        3.530499822832098e-06,
+        0.00011328970139120264
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1,
+      "trials": 50000,
+      "rate": 2e-05,
+      "ci95": [
+       3.530499822832098e-06,
+       0.00011328970139120264
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1,
+       "trials": 50000,
+       "rate": 2e-05,
+       "ci95": [
+        3.530499822832098e-06,
+        0.00011328970139120264
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "62e29daaa2cd9007"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.02,
+    "q": 0.0,
+    "seed": 20261040,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 966,
+      "trials": 50000,
+      "rate": 0.01932,
+      "ci95": [
+       0.018149900464528718,
+       0.02056395435830332
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4,
+       "trials": 50000,
+       "rate": 8e-05,
+       "ci95": [
+        3.111086355358979e-05,
+        0.00020570011886754752
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4,
+       "trials": 50000,
+       "rate": 8e-05,
+       "ci95": [
+        3.111086355358979e-05,
+        0.00020570011886754752
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4,
+       "trials": 50000,
+       "rate": 8e-05,
+       "ci95": [
+        3.111086355358979e-05,
+        0.00020570011886754752
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "35ae79a8701588b6"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.04,
+    "q": 0.0,
+    "seed": 20261041,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 1943,
+      "trials": 50000,
+      "rate": 0.03886,
+      "ci95": [
+       0.03720114276073863,
+       0.04058970980853982
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 31,
+      "trials": 50000,
+      "rate": 0.00062,
+      "ci95": [
+       0.00043684042751609265,
+       0.000879887585768968
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 31,
+       "trials": 50000,
+       "rate": 0.00062,
+       "ci95": [
+        0.00043684042751609265,
+        0.000879887585768968
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 31,
+      "trials": 50000,
+      "rate": 0.00062,
+      "ci95": [
+       0.00043684042751609265,
+       0.000879887585768968
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 31,
+       "trials": 50000,
+       "rate": 0.00062,
+       "ci95": [
+        0.00043684042751609265,
+        0.000879887585768968
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 31,
+      "trials": 50000,
+      "rate": 0.00062,
+      "ci95": [
+       0.00043684042751609265,
+       0.000879887585768968
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 31,
+       "trials": 50000,
+       "rate": 0.00062,
+       "ci95": [
+        0.00043684042751609265,
+        0.000879887585768968
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "3a60b47e3c1c18b2"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.06,
+    "q": 0.0,
+    "seed": 20261042,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2904,
+      "trials": 50000,
+      "rate": 0.05808,
+      "ci95": [
+       0.056063607954826775,
+       0.06016429152779354
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 100,
+      "trials": 50000,
+      "rate": 0.002,
+      "ci95": [
+       0.0016448079568066212,
+       0.0024317080242417985
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 100,
+       "trials": 50000,
+       "rate": 0.002,
+       "ci95": [
+        0.0016448079568066212,
+        0.0024317080242417985
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 100,
+      "trials": 50000,
+      "rate": 0.002,
+      "ci95": [
+       0.0016448079568066212,
+       0.0024317080242417985
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 100,
+       "trials": 50000,
+       "rate": 0.002,
+       "ci95": [
+        0.0016448079568066212,
+        0.0024317080242417985
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 100,
+      "trials": 50000,
+      "rate": 0.002,
+      "ci95": [
+       0.0016448079568066212,
+       0.0024317080242417985
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 100,
+       "trials": 50000,
+       "rate": 0.002,
+       "ci95": [
+        0.0016448079568066212,
+        0.0024317080242417985
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "f640675227c91258"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.08,
+    "q": 0.0,
+    "seed": 20261043,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3974,
+      "trials": 50000,
+      "rate": 0.07948,
+      "ci95": [
+       0.07714130183086654,
+       0.08188330961562035
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 220,
+      "trials": 50000,
+      "rate": 0.0044,
+      "ci95": [
+       0.0038567090923703876,
+       0.005019438136962136
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 220,
+       "trials": 50000,
+       "rate": 0.0044,
+       "ci95": [
+        0.0038567090923703876,
+        0.005019438136962136
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 220,
+      "trials": 50000,
+      "rate": 0.0044,
+      "ci95": [
+       0.0038567090923703876,
+       0.005019438136962136
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 220,
+       "trials": 50000,
+       "rate": 0.0044,
+       "ci95": [
+        0.0038567090923703876,
+        0.005019438136962136
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 220,
+      "trials": 50000,
+      "rate": 0.0044,
+      "ci95": [
+       0.0038567090923703876,
+       0.005019438136962136
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 220,
+       "trials": 50000,
+       "rate": 0.0044,
+       "ci95": [
+        0.0038567090923703876,
+        0.005019438136962136
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "b6cdf1c1d01e3791"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.1,
+    "q": 0.0,
+    "seed": 20261044,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 5042,
+      "trials": 50000,
+      "rate": 0.10084,
+      "ci95": [
+       0.09823123187776915,
+       0.10351009767844628
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 403,
+      "trials": 50000,
+      "rate": 0.00806,
+      "ci95": [
+       0.0073131695117964746,
+       0.008882415371169308
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 403,
+       "trials": 50000,
+       "rate": 0.00806,
+       "ci95": [
+        0.0073131695117964746,
+        0.008882415371169308
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 403,
+      "trials": 50000,
+      "rate": 0.00806,
+      "ci95": [
+       0.0073131695117964746,
+       0.008882415371169308
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 403,
+       "trials": 50000,
+       "rate": 0.00806,
+       "ci95": [
+        0.0073131695117964746,
+        0.008882415371169308
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 403,
+      "trials": 50000,
+      "rate": 0.00806,
+      "ci95": [
+       0.0073131695117964746,
+       0.008882415371169308
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 403,
+       "trials": 50000,
+       "rate": 0.00806,
+       "ci95": [
+        0.0073131695117964746,
+        0.008882415371169308
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "577440c74a9789af"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.13,
+    "q": 0.0,
+    "seed": 20261045,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 6531,
+      "trials": 50000,
+      "rate": 0.13062,
+      "ci95": [
+       0.1276946108179228,
+       0.13360214314408456
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 857,
+      "trials": 50000,
+      "rate": 0.01714,
+      "ci95": [
+       0.016038869144626496,
+       0.018315320627680813
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 857,
+       "trials": 50000,
+       "rate": 0.01714,
+       "ci95": [
+        0.016038869144626496,
+        0.018315320627680813
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 857,
+      "trials": 50000,
+      "rate": 0.01714,
+      "ci95": [
+       0.016038869144626496,
+       0.018315320627680813
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 857,
+       "trials": 50000,
+       "rate": 0.01714,
+       "ci95": [
+        0.016038869144626496,
+        0.018315320627680813
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 857,
+      "trials": 50000,
+      "rate": 0.01714,
+      "ci95": [
+       0.016038869144626496,
+       0.018315320627680813
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 857,
+       "trials": 50000,
+       "rate": 0.01714,
+       "ci95": [
+        0.016038869144626496,
+        0.018315320627680813
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "ded6679b78f00387"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.16,
+    "q": 0.0,
+    "seed": 20261046,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 8105,
+      "trials": 50000,
+      "rate": 0.1621,
+      "ci95": [
+       0.15889562009773053,
+       0.1653562970709366
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1560,
+      "trials": 50000,
+      "rate": 0.0312,
+      "ci95": [
+       0.029711744313095204,
+       0.032760285188743146
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1560,
+       "trials": 50000,
+       "rate": 0.0312,
+       "ci95": [
+        0.029711744313095204,
+        0.032760285188743146
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1560,
+      "trials": 50000,
+      "rate": 0.0312,
+      "ci95": [
+       0.029711744313095204,
+       0.032760285188743146
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1560,
+       "trials": 50000,
+       "rate": 0.0312,
+       "ci95": [
+        0.029711744313095204,
+        0.032760285188743146
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1560,
+      "trials": 50000,
+      "rate": 0.0312,
+      "ci95": [
+       0.029711744313095204,
+       0.032760285188743146
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1560,
+       "trials": 50000,
+       "rate": 0.0312,
+       "ci95": [
+        0.029711744313095204,
+        0.032760285188743146
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d2103bea047a6d69"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.2,
+    "q": 0.0,
+    "seed": 20261047,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 10185,
+      "trials": 50000,
+      "rate": 0.2037,
+      "ci95": [
+       0.20019264404643397,
+       0.2072528814258243
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2931,
+      "trials": 50000,
+      "rate": 0.05862,
+      "ci95": [
+       0.056594650636800324,
+       0.06071316587668391
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2931,
+       "trials": 50000,
+       "rate": 0.05862,
+       "ci95": [
+        0.056594650636800324,
+        0.06071316587668391
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2931,
+      "trials": 50000,
+      "rate": 0.05862,
+      "ci95": [
+       0.056594650636800324,
+       0.06071316587668391
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2931,
+       "trials": 50000,
+       "rate": 0.05862,
+       "ci95": [
+        0.056594650636800324,
+        0.06071316587668391
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 2931,
+      "trials": 50000,
+      "rate": 0.05862,
+      "ci95": [
+       0.056594650636800324,
+       0.06071316587668391
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2931,
+       "trials": 50000,
+       "rate": 0.05862,
+       "ci95": [
+        0.056594650636800324,
+        0.06071316587668391
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "7da9545e08d454a2"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.25,
+    "q": 0.0,
+    "seed": 20261048,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12444,
+      "trials": 50000,
+      "rate": 0.24888,
+      "ci95": [
+       0.2451096192260032,
+       0.2526889644952034
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 5213,
+      "trials": 50000,
+      "rate": 0.10426,
+      "ci95": [
+       0.10161170114142486,
+       0.10696910294359542
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5213,
+       "trials": 50000,
+       "rate": 0.10426,
+       "ci95": [
+        0.10161170114142486,
+        0.10696910294359542
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 5213,
+      "trials": 50000,
+      "rate": 0.10426,
+      "ci95": [
+       0.10161170114142486,
+       0.10696910294359542
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5213,
+       "trials": 50000,
+       "rate": 0.10426,
+       "ci95": [
+        0.10161170114142486,
+        0.10696910294359542
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 5213,
+      "trials": 50000,
+      "rate": 0.10426,
+      "ci95": [
+       0.10161170114142486,
+       0.10696910294359542
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5213,
+       "trials": 50000,
+       "rate": 0.10426,
+       "ci95": [
+        0.10161170114142486,
+        0.10696910294359542
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "fc0180070a5ba5f2"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.3,
+    "q": 0.0,
+    "seed": 20261049,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 14973,
+      "trials": 50000,
+      "rate": 0.29946,
+      "ci95": [
+       0.2954608689692242,
+       0.3034899433095698
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 8016,
+      "trials": 50000,
+      "rate": 0.16032,
+      "ci95": [
+       0.1571301292402211,
+       0.163562061419302
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8016,
+       "trials": 50000,
+       "rate": 0.16032,
+       "ci95": [
+        0.1571301292402211,
+        0.163562061419302
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 8016,
+      "trials": 50000,
+      "rate": 0.16032,
+      "ci95": [
+       0.1571301292402211,
+       0.163562061419302
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8016,
+       "trials": 50000,
+       "rate": 0.16032,
+       "ci95": [
+        0.1571301292402211,
+        0.163562061419302
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 8016,
+      "trials": 50000,
+      "rate": 0.16032,
+      "ci95": [
+       0.1571301292402211,
+       0.163562061419302
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8016,
+       "trials": 50000,
+       "rate": 0.16032,
+       "ci95": [
+        0.1571301292402211,
+        0.163562061419302
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "814ea05e0945c1df"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.005,
+    "q": 0.0,
+    "seed": 20261050,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 274,
+      "trials": 50000,
+      "rate": 0.00548,
+      "ci95": [
+       0.004869817985037227,
+       0.006166163306023143
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0549dd8dd58360e8"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.01,
+    "q": 0.0,
+    "seed": 20261051,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 474,
+      "trials": 50000,
+      "rate": 0.00948,
+      "ci95": [
+       0.008667506585185452,
+       0.010367860119681759
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "00ec7e8928219420"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.02,
+    "q": 0.0,
+    "seed": 20261052,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 1036,
+      "trials": 50000,
+      "rate": 0.02072,
+      "ci95": [
+       0.01950775929298677,
+       0.022005880424677656
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "279eaaead07fa002"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.04,
+    "q": 0.0,
+    "seed": 20261053,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2011,
+      "trials": 50000,
+      "rate": 0.04022,
+      "ci95": [
+       0.038532879739337736,
+       0.04197776387063504
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 0,
+       "trials": 50000,
+       "rate": 0.0,
+       "ci95": [
+        0.0,
+        7.682327414500052e-05
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "e2d8ae3b0bc8d2c0"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.06,
+    "q": 0.0,
+    "seed": 20261054,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3031,
+      "trials": 50000,
+      "rate": 0.06062,
+      "ci95": [
+       0.05856189962406446,
+       0.06274560959632319
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 16,
+      "trials": 50000,
+      "rate": 0.00032,
+      "ci95": [
+       0.00019698957251332964,
+       0.000519784534736218
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 16,
+       "trials": 50000,
+       "rate": 0.00032,
+       "ci95": [
+        0.00019698957251332964,
+        0.000519784534736218
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 16,
+      "trials": 50000,
+      "rate": 0.00032,
+      "ci95": [
+       0.00019698957251332964,
+       0.000519784534736218
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 16,
+       "trials": 50000,
+       "rate": 0.00032,
+       "ci95": [
+        0.00019698957251332964,
+        0.000519784534736218
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 16,
+      "trials": 50000,
+      "rate": 0.00032,
+      "ci95": [
+       0.00019698957251332964,
+       0.000519784534736218
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 16,
+       "trials": 50000,
+       "rate": 0.00032,
+       "ci95": [
+        0.00019698957251332964,
+        0.000519784534736218
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0647b96c39f9458a"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.08,
+    "q": 0.0,
+    "seed": 20261055,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3955,
+      "trials": 50000,
+      "rate": 0.0791,
+      "ci95": [
+       0.07676651626247855,
+       0.08149815356969672
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 51,
+      "trials": 50000,
+      "rate": 0.00102,
+      "ci95": [
+       0.0007759341752724038,
+       0.001340732379393341
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 51,
+       "trials": 50000,
+       "rate": 0.00102,
+       "ci95": [
+        0.0007759341752724038,
+        0.001340732379393341
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 51,
+      "trials": 50000,
+      "rate": 0.00102,
+      "ci95": [
+       0.0007759341752724038,
+       0.001340732379393341
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 51,
+       "trials": 50000,
+       "rate": 0.00102,
+       "ci95": [
+        0.0007759341752724038,
+        0.001340732379393341
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 51,
+      "trials": 50000,
+      "rate": 0.00102,
+      "ci95": [
+       0.0007759341752724038,
+       0.001340732379393341
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 51,
+       "trials": 50000,
+       "rate": 0.00102,
+       "ci95": [
+        0.0007759341752724038,
+        0.001340732379393341
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "96753377bf5f05fa"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.1,
+    "q": 0.0,
+    "seed": 20261056,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 5063,
+      "trials": 50000,
+      "rate": 0.10126,
+      "ci95": [
+       0.09864632751487672,
+       0.10393493750978842
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 115,
+      "trials": 50000,
+      "rate": 0.0023,
+      "ci95": [
+       0.0019166319948794464,
+       0.0027598378922044867
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 115,
+       "trials": 50000,
+       "rate": 0.0023,
+       "ci95": [
+        0.0019166319948794464,
+        0.0027598378922044867
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 115,
+      "trials": 50000,
+      "rate": 0.0023,
+      "ci95": [
+       0.0019166319948794464,
+       0.0027598378922044867
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 115,
+       "trials": 50000,
+       "rate": 0.0023,
+       "ci95": [
+        0.0019166319948794464,
+        0.0027598378922044867
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 115,
+      "trials": 50000,
+      "rate": 0.0023,
+      "ci95": [
+       0.0019166319948794464,
+       0.0027598378922044867
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 115,
+       "trials": 50000,
+       "rate": 0.0023,
+       "ci95": [
+        0.0019166319948794464,
+        0.0027598378922044867
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "37cae2d449a8a62a"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.13,
+    "q": 0.0,
+    "seed": 20261057,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 6496,
+      "trials": 50000,
+      "rate": 0.12992,
+      "ci95": [
+       0.12700140307092045,
+       0.13289545844367073
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 354,
+      "trials": 50000,
+      "rate": 0.00708,
+      "ci95": [
+       0.006382006415527073,
+       0.007853729041056034
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 354,
+       "trials": 50000,
+       "rate": 0.00708,
+       "ci95": [
+        0.006382006415527073,
+        0.007853729041056034
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 354,
+      "trials": 50000,
+      "rate": 0.00708,
+      "ci95": [
+       0.006382006415527073,
+       0.007853729041056034
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 354,
+       "trials": 50000,
+       "rate": 0.00708,
+       "ci95": [
+        0.006382006415527073,
+        0.007853729041056034
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 354,
+      "trials": 50000,
+      "rate": 0.00708,
+      "ci95": [
+       0.006382006415527073,
+       0.007853729041056034
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 354,
+       "trials": 50000,
+       "rate": 0.00708,
+       "ci95": [
+        0.006382006415527073,
+        0.007853729041056034
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "317d8deca74f720d"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.16,
+    "q": 0.0,
+    "seed": 20261058,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 7958,
+      "trials": 50000,
+      "rate": 0.15916,
+      "ci95": [
+       0.15597966015675838,
+       0.16239270873276077
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 776,
+      "trials": 50000,
+      "rate": 0.01552,
+      "ci95": [
+       0.014473163049244946,
+       0.016641275630470596
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 776,
+       "trials": 50000,
+       "rate": 0.01552,
+       "ci95": [
+        0.014473163049244946,
+        0.016641275630470596
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 776,
+      "trials": 50000,
+      "rate": 0.01552,
+      "ci95": [
+       0.014473163049244946,
+       0.016641275630470596
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 776,
+       "trials": 50000,
+       "rate": 0.01552,
+       "ci95": [
+        0.014473163049244946,
+        0.016641275630470596
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 776,
+      "trials": 50000,
+      "rate": 0.01552,
+      "ci95": [
+       0.014473163049244946,
+       0.016641275630470596
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 776,
+       "trials": 50000,
+       "rate": 0.01552,
+       "ci95": [
+        0.014473163049244946,
+        0.016641275630470596
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "243fced064bc85d7"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.2,
+    "q": 0.0,
+    "seed": 20261059,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 9939,
+      "trials": 50000,
+      "rate": 0.19878,
+      "ci95": [
+       0.19530515408930102,
+       0.2023011273239749
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1743,
+      "trials": 50000,
+      "rate": 0.03486,
+      "ci95": [
+       0.03328763560907987,
+       0.036503831546391745
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1743,
+       "trials": 50000,
+       "rate": 0.03486,
+       "ci95": [
+        0.03328763560907987,
+        0.036503831546391745
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1743,
+      "trials": 50000,
+      "rate": 0.03486,
+      "ci95": [
+       0.03328763560907987,
+       0.036503831546391745
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1743,
+       "trials": 50000,
+       "rate": 0.03486,
+       "ci95": [
+        0.03328763560907987,
+        0.036503831546391745
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1743,
+      "trials": 50000,
+      "rate": 0.03486,
+      "ci95": [
+       0.03328763560907987,
+       0.036503831546391745
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1743,
+       "trials": 50000,
+       "rate": 0.03486,
+       "ci95": [
+        0.03328763560907987,
+        0.036503831546391745
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "c8bb859ad1deed65"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.25,
+    "q": 0.0,
+    "seed": 20261060,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12582,
+      "trials": 50000,
+      "rate": 0.25164,
+      "ci95": [
+       0.2478554609722036,
+       0.25546269868452964
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 3584,
+      "trials": 50000,
+      "rate": 0.07168,
+      "ci95": [
+       0.06945169833708173,
+       0.07397411155248182
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3584,
+       "trials": 50000,
+       "rate": 0.07168,
+       "ci95": [
+        0.06945169833708173,
+        0.07397411155248182
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 3584,
+      "trials": 50000,
+      "rate": 0.07168,
+      "ci95": [
+       0.06945169833708173,
+       0.07397411155248182
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3584,
+       "trials": 50000,
+       "rate": 0.07168,
+       "ci95": [
+        0.06945169833708173,
+        0.07397411155248182
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 3584,
+      "trials": 50000,
+      "rate": 0.07168,
+      "ci95": [
+       0.06945169833708173,
+       0.07397411155248182
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3584,
+       "trials": 50000,
+       "rate": 0.07168,
+       "ci95": [
+        0.06945169833708173,
+        0.07397411155248182
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "00d9759d11b194f7"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.3,
+    "q": 0.0,
+    "seed": 20261061,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 15256,
+      "trials": 50000,
+      "rate": 0.30512,
+      "ci95": [
+       0.3010990783701096,
+       0.3091708642692211
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 6383,
+      "trials": 50000,
+      "rate": 0.12766,
+      "ci95": [
+       0.12476352614283802,
+       0.13061368261295228
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6383,
+       "trials": 50000,
+       "rate": 0.12766,
+       "ci95": [
+        0.12476352614283802,
+        0.13061368261295228
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 6383,
+      "trials": 50000,
+      "rate": 0.12766,
+      "ci95": [
+       0.12476352614283802,
+       0.13061368261295228
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6383,
+       "trials": 50000,
+       "rate": 0.12766,
+       "ci95": [
+        0.12476352614283802,
+        0.13061368261295228
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 6383,
+      "trials": 50000,
+      "rate": 0.12766,
+      "ci95": [
+       0.12476352614283802,
+       0.13061368261295228
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6383,
+       "trials": 50000,
+       "rate": 0.12766,
+       "ci95": [
+        0.12476352614283802,
+        0.13061368261295228
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "91257e245f7ac194"
+    }
+   }
+  ],
+  "kind": "simulation"
+ },
+ "logical_vs_p_readout": {
+  "name": "logical_vs_p",
+  "shots_per_point": 50000,
+  "base_seed": 20262026,
+  "points": [
+   {
+    "distance": 3,
+    "p": 0.005,
+    "q": 0.02,
+    "seed": 20262026,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 268,
+      "trials": 50000,
+      "rate": 0.00536,
+      "ci95": [
+       0.004756899531170073,
+       0.006039100197476091
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 13,
+      "trials": 50000,
+      "rate": 0.00026,
+      "ci95": [
+       0.00015195813607502405,
+       0.00044482518996742096
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1963,
+       "trials": 50000,
+       "rate": 0.03926,
+       "ci95": [
+        0.03759277310186484,
+        0.0409980180087943
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 9,
+      "trials": 50000,
+      "rate": 0.00018,
+      "ci95": [
+       9.470426823108522e-05,
+       0.00034209134953522313
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 537,
+       "trials": 50000,
+       "rate": 0.01074,
+       "ci95": [
+        0.009873355758715226,
+        0.011681817351501138
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 5,
+      "trials": 50000,
+      "rate": 0.0001,
+      "ci95": [
+       4.2714755136032695e-05,
+       0.0002340931543541388
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 778,
+       "trials": 50000,
+       "rate": 0.01556,
+       "ci95": [
+        0.01451178767104721,
+        0.016682644862806396
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "6f75803ed65873a5"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.01,
+    "q": 0.02,
+    "seed": 20262027,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 519,
+      "trials": 50000,
+      "rate": 0.01038,
+      "ci95": [
+       0.009528478036903872,
+       0.011306750386069878
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 57,
+      "trials": 50000,
+      "rate": 0.00114,
+      "ci95": [
+       0.0008800835072039818,
+       0.001476564609875968
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2043,
+       "trials": 50000,
+       "rate": 0.04086,
+       "ci95": [
+        0.03915976589878513,
+        0.042630779377396746
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 34,
+      "trials": 50000,
+      "rate": 0.00068,
+      "ci95": [
+       0.0004866791290018516,
+       0.0009500396654903117
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1096,
+       "trials": 50000,
+       "rate": 0.02192,
+       "ci95": [
+        0.020672826369152113,
+        0.02324062897265437
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 18,
+      "trials": 50000,
+      "rate": 0.00036,
+      "ci95": [
+       0.00022773887420149275,
+       0.0005690290871861233
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1566,
+       "trials": 50000,
+       "rate": 0.03132,
+       "ci95": [
+        0.029828903001956987,
+        0.03288310806229557
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "8220d93d3929e495"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.02,
+    "q": 0.02,
+    "seed": 20262028,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 946,
+      "trials": 50000,
+      "rate": 0.01892,
+      "ci95": [
+       0.01776223553689355,
+       0.020151680744557803
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 119,
+      "trials": 50000,
+      "rate": 0.00238,
+      "ci95": [
+       0.001989433187064563,
+       0.002847024408295507
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1940,
+       "trials": 50000,
+       "rate": 0.0388,
+       "ci95": [
+        0.03714240237825417,
+        0.04052845940981718
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 91,
+      "trials": 50000,
+      "rate": 0.00182,
+      "ci95": [
+       0.001482734042134067,
+       0.0022338095952930456
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1922,
+       "trials": 50000,
+       "rate": 0.03844,
+       "ci95": [
+        0.036789983152850626,
+        0.0401609339479781
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 55,
+      "trials": 50000,
+      "rate": 0.0011,
+      "ci95": [
+       0.0008452714807754187,
+       0.001431382782166463
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2829,
+       "trials": 50000,
+       "rate": 0.05658,
+       "ci95": [
+        0.05458875334519456,
+        0.05863937660724819
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d73de01e6b4a1520"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.04,
+    "q": 0.02,
+    "seed": 20262029,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 1971,
+      "trials": 50000,
+      "rate": 0.03942,
+      "ci95": [
+       0.03774943866893733,
+       0.04116132785827406
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 397,
+      "trials": 50000,
+      "rate": 0.00794,
+      "ci95": [
+       0.007198980405773176,
+       0.008756622914778401
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2282,
+       "trials": 50000,
+       "rate": 0.04564,
+       "ci95": [
+        0.043845312844430225,
+        0.04750449800125082
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 397,
+      "trials": 50000,
+      "rate": 0.00794,
+      "ci95": [
+       0.007198980405773176,
+       0.008756622914778401
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2282,
+       "trials": 50000,
+       "rate": 0.04564,
+       "ci95": [
+        0.043845312844430225,
+        0.04750449800125082
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 250,
+      "trials": 50000,
+      "rate": 0.005,
+      "ci95": [
+       0.004418639208572702,
+       0.0056574158328308475
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5864,
+       "trials": 50000,
+       "rate": 0.11728,
+       "ci95": [
+        0.1144891137376733,
+        0.12012968986928822
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "08f737c88d27c539"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.06,
+    "q": 0.02,
+    "seed": 20262030,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3029,
+      "trials": 50000,
+      "rate": 0.06058,
+      "ci95": [
+       0.058522548224767705,
+       0.0627049671414819
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 776,
+      "trials": 50000,
+      "rate": 0.01552,
+      "ci95": [
+       0.014473163049244946,
+       0.016641275630470596
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2523,
+       "trials": 50000,
+       "rate": 0.05046,
+       "ci95": [
+        0.048575658698537034,
+        0.05241341157078124
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 776,
+      "trials": 50000,
+      "rate": 0.01552,
+      "ci95": [
+       0.014473163049244946,
+       0.016641275630470596
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2523,
+       "trials": 50000,
+       "rate": 0.05046,
+       "ci95": [
+        0.048575658698537034,
+        0.05241341157078124
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 562,
+      "trials": 50000,
+      "rate": 0.01124,
+      "ci95": [
+       0.010352779093173517,
+       0.012202317193768703
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8530,
+       "trials": 50000,
+       "rate": 0.1706,
+       "ci95": [
+        0.16732821615569463,
+        0.17392239501731208
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "80ae04b1103499a5"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.08,
+    "q": 0.02,
+    "seed": 20262031,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3935,
+      "trials": 50000,
+      "rate": 0.0787,
+      "ci95": [
+       0.0763720225208973,
+       0.08109270876989728
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1197,
+      "trials": 50000,
+      "rate": 0.02394,
+      "ci95": [
+       0.022636252563968326,
+       0.025316892411810607
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2792,
+       "trials": 50000,
+       "rate": 0.05584,
+       "ci95": [
+        0.053861304683747904,
+        0.057886938967140575
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1197,
+      "trials": 50000,
+      "rate": 0.02394,
+      "ci95": [
+       0.022636252563968326,
+       0.025316892411810607
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2792,
+       "trials": 50000,
+       "rate": 0.05584,
+       "ci95": [
+        0.053861304683747904,
+        0.057886938967140575
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 975,
+      "trials": 50000,
+      "rate": 0.0195,
+      "ci95": [
+       0.01832439372423033,
+       0.020749433442223013
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 11083,
+       "trials": 50000,
+       "rate": 0.22166,
+       "ci95": [
+        0.218040705265171,
+        0.22532206071507999
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0d6bceeede2daa40"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.1,
+    "q": 0.02,
+    "seed": 20262032,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 4961,
+      "trials": 50000,
+      "rate": 0.09922,
+      "ci95": [
+       0.09663028199322249,
+       0.10187129647040116
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1659,
+      "trials": 50000,
+      "rate": 0.03318,
+      "ci95": [
+       0.03164560576056995,
+       0.03478611952110279
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3316,
+       "trials": 50000,
+       "rate": 0.06632,
+       "ci95": [
+        0.06417200186612056,
+        0.06853463156894186
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1659,
+      "trials": 50000,
+      "rate": 0.03318,
+      "ci95": [
+       0.03164560576056995,
+       0.03478611952110279
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3316,
+       "trials": 50000,
+       "rate": 0.06632,
+       "ci95": [
+        0.06417200186612056,
+        0.06853463156894186
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1362,
+      "trials": 50000,
+      "rate": 0.02724,
+      "ci95": [
+       0.025849090596273928,
+       0.028703547345895652
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 13542,
+       "trials": 50000,
+       "rate": 0.27084,
+       "ci95": [
+        0.2669625043644741,
+        0.274752705278532
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "f1f5e26af8d66118"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.13,
+    "q": 0.02,
+    "seed": 20262033,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 6529,
+      "trials": 50000,
+      "rate": 0.13058,
+      "ci95": [
+       0.12765499818916087,
+       0.1335617619187084
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2633,
+      "trials": 50000,
+      "rate": 0.05266,
+      "ci95": [
+       0.05073639321764923,
+       0.054652339029262816
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4140,
+       "trials": 50000,
+       "rate": 0.0828,
+       "ci95": [
+        0.08041641281035163,
+        0.08524768852959495
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2633,
+      "trials": 50000,
+      "rate": 0.05266,
+      "ci95": [
+       0.05073639321764923,
+       0.054652339029262816
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4140,
+       "trials": 50000,
+       "rate": 0.0828,
+       "ci95": [
+        0.08041641281035163,
+        0.08524768852959495
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 2303,
+      "trials": 50000,
+      "rate": 0.04606,
+      "ci95": [
+       0.044257289484120235,
+       0.04793245683001052
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 17023,
+       "trials": 50000,
+       "rate": 0.34046,
+       "ci95": [
+        0.33631887402047345,
+        0.34462563874984065
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "e24c087efb41ec35"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.16,
+    "q": 0.02,
+    "seed": 20262034,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 7878,
+      "trials": 50000,
+      "rate": 0.15756,
+      "ci95": [
+       0.1543929051682749,
+       0.16077970955572154
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 3741,
+      "trials": 50000,
+      "rate": 0.07482,
+      "ci95": [
+       0.07254638422398155,
+       0.07715894321542038
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5259,
+       "trials": 50000,
+       "rate": 0.10518,
+       "ci95": [
+        0.10252122204043398,
+        0.10789944068976184
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 3741,
+      "trials": 50000,
+      "rate": 0.07482,
+      "ci95": [
+       0.07254638422398155,
+       0.07715894321542038
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5259,
+       "trials": 50000,
+       "rate": 0.10518,
+       "ci95": [
+        0.10252122204043398,
+        0.10789944068976184
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 3366,
+      "trials": 50000,
+      "rate": 0.06732,
+      "ci95": [
+       0.06515672311087567,
+       0.06954975667763846
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 20083,
+       "trials": 50000,
+       "rate": 0.40166,
+       "ci95": [
+        0.3973707028714459,
+        0.40596440673011286
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d0e0fae6bb2e19a5"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.2,
+    "q": 0.02,
+    "seed": 20262035,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 9893,
+      "trials": 50000,
+      "rate": 0.19786,
+      "ci95": [
+       0.19439132511332466,
+       0.20137509765477565
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 5572,
+      "trials": 50000,
+      "rate": 0.11144,
+      "ci95": [
+       0.10871158683292315,
+       0.1142281140698804
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6978,
+       "trials": 50000,
+       "rate": 0.13956,
+       "ci95": [
+        0.13655026751246155,
+        0.14262511284940407
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 5572,
+      "trials": 50000,
+      "rate": 0.11144,
+      "ci95": [
+       0.10871158683292315,
+       0.1142281140698804
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6978,
+       "trials": 50000,
+       "rate": 0.13956,
+       "ci95": [
+        0.13655026751246155,
+        0.14262511284940407
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 5184,
+      "trials": 50000,
+      "rate": 0.10368,
+      "ci95": [
+       0.10103834087304449,
+       0.10638255232697379
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 24307,
+       "trials": 50000,
+       "rate": 0.48614,
+       "ci95": [
+        0.4817603043400433,
+        0.4905218252011159
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d3ddda3dbef04cd5"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.25,
+    "q": 0.02,
+    "seed": 20262036,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12461,
+      "trials": 50000,
+      "rate": 0.24922,
+      "ci95": [
+       0.2454478639874126,
+       0.2530306674939675
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 8087,
+      "trials": 50000,
+      "rate": 0.16174,
+      "ci95": [
+       0.15853854328418804,
+       0.16499342919723653
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 9415,
+       "trials": 50000,
+       "rate": 0.1883,
+       "ci95": [
+        0.18489721536954382,
+        0.19175067625955813
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 8087,
+      "trials": 50000,
+      "rate": 0.16174,
+      "ci95": [
+       0.15853854328418804,
+       0.16499342919723653
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 9415,
+       "trials": 50000,
+       "rate": 0.1883,
+       "ci95": [
+        0.18489721536954382,
+        0.19175067625955813
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 7742,
+      "trials": 50000,
+      "rate": 0.15484,
+      "ci95": [
+       0.15169568863908975,
+       0.15803734400351802
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 28826,
+       "trials": 50000,
+       "rate": 0.57652,
+       "ci95": [
+        0.5721832983537777,
+        0.5808449446123473
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "160738b5406af00d"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.3,
+    "q": 0.02,
+    "seed": 20262037,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 15127,
+      "trials": 50000,
+      "rate": 0.30254,
+      "ci95": [
+       0.2985289213323568,
+       0.30658141771506836
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 11100,
+      "trials": 50000,
+      "rate": 0.222,
+      "ci95": [
+       0.2183786841243932,
+       0.22566402961603138
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 12267,
+       "trials": 50000,
+       "rate": 0.24534,
+       "ci95": [
+        0.24158808132758977,
+        0.2491310463023977
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 11100,
+      "trials": 50000,
+      "rate": 0.222,
+      "ci95": [
+       0.2183786841243932,
+       0.22566402961603138
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 12267,
+       "trials": 50000,
+       "rate": 0.24534,
+       "ci95": [
+        0.24158808132758977,
+        0.2491310463023977
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 10749,
+      "trials": 50000,
+      "rate": 0.21498,
+      "ci95": [
+       0.2114011390658739,
+       0.2186026532733197
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 32652,
+       "trials": 50000,
+       "rate": 0.65304,
+       "ci95": [
+        0.6488561139772461,
+        0.6572003719550036
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "5a3d8863d1ba9067"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.005,
+    "q": 0.02,
+    "seed": 20262038,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 238,
+      "trials": 50000,
+      "rate": 0.00476,
+      "ci95": [
+       0.0041935745786045,
+       0.00540251733797064
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 29,
+      "trials": 50000,
+      "rate": 0.00058,
+      "ci95": [
+       0.0004038823751079401,
+       0.0008328517840390521
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4011,
+       "trials": 50000,
+       "rate": 0.08022,
+       "ci95": [
+        0.07787119318593533,
+        0.08263330456210585
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 578,
+       "trials": 50000,
+       "rate": 0.01156,
+       "ci95": [
+        0.01065985683032394,
+        0.01253519028972283
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1213,
+       "trials": 50000,
+       "rate": 0.02426,
+       "ci95": [
+        0.022947528176470867,
+        0.025645567632412616
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "14f9650892eaf09a"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.01,
+    "q": 0.02,
+    "seed": 20262039,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 512,
+      "trials": 50000,
+      "rate": 0.01024,
+      "ci95": [
+       0.009394431635012955,
+       0.011160818298477556
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 58,
+      "trials": 50000,
+      "rate": 0.00116,
+      "ci95": [
+       0.000897523186455776,
+       0.001499121857693208
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3907,
+       "trials": 50000,
+       "rate": 0.07814,
+       "ci95": [
+        0.0758197614686112,
+        0.08052505586425042
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 9,
+      "trials": 50000,
+      "rate": 0.00018,
+      "ci95": [
+       9.470426823108522e-05,
+       0.00034209134953522313
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1159,
+       "trials": 50000,
+       "rate": 0.02318,
+       "ci95": [
+        0.021897226758920946,
+        0.024536034988234687
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1,
+      "trials": 50000,
+      "rate": 2e-05,
+      "ci95": [
+       3.530499822832098e-06,
+       0.00011328970139120264
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2468,
+       "trials": 50000,
+       "rate": 0.04936,
+       "ci95": [
+        0.047495666673845076,
+        0.05129357260667632
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "15f995b83107ec20"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.02,
+    "q": 0.02,
+    "seed": 20262040,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 987,
+      "trials": 50000,
+      "rate": 0.01974,
+      "ci95": [
+       0.018557093054097355,
+       0.0209966972371844
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 97,
+      "trials": 50000,
+      "rate": 0.00194,
+      "ci95": [
+       0.0015906906113567054,
+       0.0023658345884846124
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3868,
+       "trials": 50000,
+       "rate": 0.07736,
+       "ci95": [
+        0.07505060000429531,
+        0.07973433717287395
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 16,
+      "trials": 50000,
+      "rate": 0.00032,
+      "ci95": [
+       0.00019698957251332964,
+       0.000519784534736218
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2192,
+       "trials": 50000,
+       "rate": 0.04384,
+       "ci95": [
+        0.0420801870959661,
+        0.04566990031350186
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 4,
+      "trials": 50000,
+      "rate": 8e-05,
+      "ci95": [
+       3.111086355358979e-05,
+       0.00020570011886754752
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4807,
+       "trials": 50000,
+       "rate": 0.09614,
+       "ci95": [
+        0.0935870981454024,
+        0.09875495354958998
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "cd2078cf47fb557a"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.04,
+    "q": 0.02,
+    "seed": 20262041,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 1977,
+      "trials": 50000,
+      "rate": 0.03954,
+      "ci95": [
+       0.037866942839059566,
+       0.04128380525056604
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 212,
+      "trials": 50000,
+      "rate": 0.00424,
+      "ci95": [
+       0.0037072968730800147,
+       0.004848874939700236
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3863,
+       "trials": 50000,
+       "rate": 0.07726,
+       "ci95": [
+        0.07495199459419265,
+        0.07963295794763146
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 145,
+      "trials": 50000,
+      "rate": 0.0029,
+      "ci95": [
+       0.0024653254448642435,
+       0.0034110522542907147
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2509,
+       "trials": 50000,
+       "rate": 0.05018,
+       "ci95": [
+        0.04830072735159961,
+        0.0521283859387522
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 34,
+      "trials": 50000,
+      "rate": 0.00068,
+      "ci95": [
+       0.0004866791290018516,
+       0.0009500396654903117
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 9205,
+       "trials": 50000,
+       "rate": 0.1841,
+       "ci95": [
+        0.1807272113496346,
+        0.1875213255949702
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "5ac7be3fd5bba624"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.06,
+    "q": 0.02,
+    "seed": 20262042,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2960,
+      "trials": 50000,
+      "rate": 0.0592,
+      "ci95": [
+       0.05716508467285801,
+       0.06130264272562823
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 389,
+      "trials": 50000,
+      "rate": 0.00778,
+      "ci95": [
+       0.007046798402255563,
+       0.008588829501743738
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3957,
+       "trials": 50000,
+       "rate": 0.07914,
+       "ci95": [
+        0.07680596661914368,
+        0.08153869706716965
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 306,
+      "trials": 50000,
+      "rate": 0.00612,
+      "ci95": [
+       0.005473309735338194,
+       0.00684257322193127
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2837,
+       "trials": 50000,
+       "rate": 0.05674,
+       "ci95": [
+        0.05474605239080817,
+        0.058802052978186845
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 82,
+      "trials": 50000,
+      "rate": 0.00164,
+      "ci95": [
+       0.001321565397297649,
+       0.002035005896508156
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 13411,
+       "trials": 50000,
+       "rate": 0.26822,
+       "ci95": [
+        0.26435463238521645,
+        0.27212097981174616
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "fd603ac29c452d65"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.08,
+    "q": 0.02,
+    "seed": 20262043,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3996,
+      "trials": 50000,
+      "rate": 0.07992,
+      "ci95": [
+       0.07757528402909725,
+       0.08232925981290842
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 642,
+      "trials": 50000,
+      "rate": 0.01284,
+      "ci95": [
+       0.011889930430097086,
+       0.01386492002236787
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4054,
+       "trials": 50000,
+       "rate": 0.08108,
+       "ci95": [
+        0.07871952044417611,
+        0.08350484516783353
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 508,
+      "trials": 50000,
+      "rate": 0.01016,
+      "ci95": [
+       0.009317852482847588,
+       0.011077409742366788
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3318,
+       "trials": 50000,
+       "rate": 0.06636,
+       "ci95": [
+        0.06421138800638077,
+        0.06857523928281972
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 204,
+      "trials": 50000,
+      "rate": 0.00408,
+      "ci95": [
+       0.0035580878408344044,
+       0.0046781085553935725
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 16974,
+       "trials": 50000,
+       "rate": 0.33948,
+       "ci95": [
+        0.3353418509019295,
+        0.3436428124420019
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "4d2aa60649844abb"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.1,
+    "q": 0.02,
+    "seed": 20262044,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 4885,
+      "trials": 50000,
+      "rate": 0.0977,
+      "ci95": [
+       0.09512835175120143,
+       0.10033346025517562
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 872,
+      "trials": 50000,
+      "rate": 0.01744,
+      "ci95": [
+       0.016329114458885293,
+       0.018625029219457533
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4255,
+       "trials": 50000,
+       "rate": 0.0851,
+       "ci95": [
+        0.08268599547158545,
+        0.08757775248130006
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 750,
+      "trials": 50000,
+      "rate": 0.015,
+      "ci95": [
+       0.013971214199780799,
+       0.01610330437613985
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3761,
+       "trials": 50000,
+       "rate": 0.07522,
+       "ci95": [
+        0.07294069834817282,
+        0.0775645676326098
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 386,
+      "trials": 50000,
+      "rate": 0.00772,
+      "ci95": [
+       0.006989751262415294,
+       0.008525885860376907
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 20365,
+       "trials": 50000,
+       "rate": 0.4073,
+       "ci95": [
+        0.4030006491120769,
+        0.4116135939229495
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "6581fbfea914f3a5"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.13,
+    "q": 0.02,
+    "seed": 20262045,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 6495,
+      "trials": 50000,
+      "rate": 0.1299,
+      "ci95": [
+       0.12698159754939403,
+       0.13287526703812808
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1509,
+      "trials": 50000,
+      "rate": 0.03018,
+      "ci95": [
+       0.028716141111704237,
+       0.031716045109613365
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4785,
+       "trials": 50000,
+       "rate": 0.0957,
+       "ci95": [
+        0.09315242302363105,
+        0.09830969627584257
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1509,
+      "trials": 50000,
+      "rate": 0.03018,
+      "ci95": [
+       0.028716141111704237,
+       0.031716045109613365
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4785,
+       "trials": 50000,
+       "rate": 0.0957,
+       "ci95": [
+        0.09315242302363105,
+        0.09830969627584257
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 898,
+      "trials": 50000,
+      "rate": 0.01796,
+      "ci95": [
+       0.016832413015051947,
+       0.01916165076708577
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 25110,
+       "trials": 50000,
+       "rate": 0.5022,
+       "ci95": [
+        0.49781742905148346,
+        0.5065822329261103
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "b8101244398fd88a"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.16,
+    "q": 0.02,
+    "seed": 20262046,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 7952,
+      "trials": 50000,
+      "rate": 0.15904,
+      "ci95": [
+       0.15586064954134682,
+       0.1622717377857581
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2234,
+      "trials": 50000,
+      "rate": 0.04468,
+      "ci95": [
+       0.042903812437401566,
+       0.04652614590896583
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5330,
+       "trials": 50000,
+       "rate": 0.1066,
+       "ci95": [
+        0.10392517356582484,
+        0.10933527098627244
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2234,
+      "trials": 50000,
+      "rate": 0.04468,
+      "ci95": [
+       0.042903812437401566,
+       0.04652614590896583
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5330,
+       "trials": 50000,
+       "rate": 0.1066,
+       "ci95": [
+        0.10392517356582484,
+        0.10933527098627244
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1545,
+      "trials": 50000,
+      "rate": 0.0309,
+      "ci95": [
+       0.0294188739097299,
+       0.032453201686072936
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 29149,
+       "trials": 50000,
+       "rate": 0.58298,
+       "ci95": [
+        0.578651949758635,
+        0.587295300650788
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0d8b60f8eb169da8"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.2,
+    "q": 0.02,
+    "seed": 20262047,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 10026,
+      "trials": 50000,
+      "rate": 0.20052,
+      "ci95": [
+       0.19703356245196843,
+       0.20405245161631344
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 3650,
+      "trials": 50000,
+      "rate": 0.073,
+      "ci95": [
+       0.07075250008089119,
+       0.07531310699522863
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6584,
+       "trials": 50000,
+       "rate": 0.13168,
+       "ci95": [
+        0.1287443787458126,
+        0.13467221235085355
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 3650,
+      "trials": 50000,
+      "rate": 0.073,
+      "ci95": [
+       0.07075250008089119,
+       0.07531310699522863
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6584,
+       "trials": 50000,
+       "rate": 0.13168,
+       "ci95": [
+        0.1287443787458126,
+        0.13467221235085355
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 2847,
+      "trials": 50000,
+      "rate": 0.05694,
+      "ci95": [
+       0.05494268256355498,
+       0.05900539207613038
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 33527,
+       "trials": 50000,
+       "rate": 0.67054,
+       "ci95": [
+        0.6664072298335023,
+        0.6746465672841523
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "6f0e9af15de577fa"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.25,
+    "q": 0.02,
+    "seed": 20262048,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12588,
+      "trials": 50000,
+      "rate": 0.25176,
+      "ci95": [
+       0.2479748500450151,
+       0.25558329117413237
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 5948,
+      "trials": 50000,
+      "rate": 0.11896,
+      "ci95": [
+       0.11615156408107355,
+       0.12182698139968684
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8655,
+       "trials": 50000,
+       "rate": 0.1731,
+       "ci95": [
+        0.1698089656398184,
+        0.1764412614168176
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 5948,
+      "trials": 50000,
+      "rate": 0.11896,
+      "ci95": [
+       0.11615156408107355,
+       0.12182698139968684
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8655,
+       "trials": 50000,
+       "rate": 0.1731,
+       "ci95": [
+        0.1698089656398184,
+        0.1764412614168176
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 5226,
+      "trials": 50000,
+      "rate": 0.10452,
+      "ci95": [
+       0.10186873310332153,
+       0.10723203103359619
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 38113,
+       "trials": 50000,
+       "rate": 0.76226,
+       "ci95": [
+        0.758508593018131,
+        0.7659711116381145
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "24a0e0fc8aed6262"
+    }
+   },
+   {
+    "distance": 5,
+    "p": 0.3,
+    "q": 0.02,
+    "seed": 20262049,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 14986,
+      "trials": 50000,
+      "rate": 0.29972,
+      "ci95": [
+       0.2957198520695018,
+       0.30375092026118966
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 8826,
+      "trials": 50000,
+      "rate": 0.17652,
+      "ci95": [
+       0.17320303965668266,
+       0.17988666192875818
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 11409,
+       "trials": 50000,
+       "rate": 0.22818,
+       "ci95": [
+        0.2245225561883193,
+        0.23187920801643686
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 8826,
+      "trials": 50000,
+      "rate": 0.17652,
+      "ci95": [
+       0.17320303965668266,
+       0.17988666192875818
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 11409,
+       "trials": 50000,
+       "rate": 0.22818,
+       "ci95": [
+        0.2245225561883193,
+        0.23187920801643686
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 8144,
+      "trials": 50000,
+      "rate": 0.16288,
+      "ci95": [
+       0.1596693059656992,
+       0.1661424913586603
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 41701,
+       "trials": 50000,
+       "rate": 0.83402,
+       "ci95": [
+        0.8307331505292023,
+        0.8372555284507378
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d7fd3ee12ac7abf7"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.005,
+    "q": 0.02,
+    "seed": 20262050,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 251,
+      "trials": 50000,
+      "rate": 0.00502,
+      "ci95": [
+       0.004437411100071178,
+       0.005678640868401406
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 33,
+      "trials": 50000,
+      "rate": 0.00066,
+      "ci95": [
+       0.00047001589226615496,
+       0.0009267059751569742
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5729,
+       "trials": 50000,
+       "rate": 0.11458,
+       "ci95": [
+        0.11181770893549632,
+        0.1174015095171456
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1,
+      "trials": 50000,
+      "rate": 2e-05,
+      "ci95": [
+       3.530499822832098e-06,
+       0.00011328970139120264
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 669,
+       "trials": 50000,
+       "rate": 0.01338,
+       "ci95": [
+        0.01240964383889136,
+        0.014425123644437519
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1680,
+       "trials": 50000,
+       "rate": 0.0336,
+       "ci95": [
+        0.03205601537846501,
+        0.03521564537165744
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "fe2acd3c607a8062"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.01,
+    "q": 0.02,
+    "seed": 20262051,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 483,
+      "trials": 50000,
+      "rate": 0.00966,
+      "ci95": [
+       0.008839553558085437,
+       0.010555785490403083
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 84,
+      "trials": 50000,
+      "rate": 0.00168,
+      "ci95": [
+       0.0013572952749923593,
+       0.002079269872951514
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5686,
+       "trials": 50000,
+       "rate": 0.11372,
+       "ci95": [
+        0.11096692010155536,
+        0.1165324304871181
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1204,
+       "trials": 50000,
+       "rate": 0.02408,
+       "ci95": [
+        0.022772427995700346,
+        0.025460695469561832
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3399,
+       "trials": 50000,
+       "rate": 0.06798,
+       "ci95": [
+        0.0658067155772539,
+        0.07021966280453834
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d32d590359be0061"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.02,
+    "q": 0.02,
+    "seed": 20262052,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 953,
+      "trials": 50000,
+      "rate": 0.01906,
+      "ci95": [
+       0.017897902732878664,
+       0.02029599203805593
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 133,
+      "trials": 50000,
+      "rate": 0.00266,
+      "ci95": [
+       0.0022451442283518788,
+       0.0031512703459746698
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5594,
+       "trials": 50000,
+       "rate": 0.11188,
+       "ci95": [
+        0.10914679842692865,
+        0.11467283487139365
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 3,
+      "trials": 50000,
+      "rate": 6e-05,
+      "ci95": [
+       2.0405619612978105e-05,
+       0.00017640843573912503
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2306,
+       "trials": 50000,
+       "rate": 0.04612,
+       "ci95": [
+        0.04431614672643239,
+        0.04799359036890548
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 0,
+      "trials": 50000,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       7.682327414500052e-05
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6529,
+       "trials": 50000,
+       "rate": 0.13058,
+       "ci95": [
+        0.12765499818916087,
+        0.1335617619187084
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "4026bc21e4443422"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.04,
+    "q": 0.02,
+    "seed": 20262053,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2027,
+      "trials": 50000,
+      "rate": 0.04054,
+      "ci95": [
+       0.038846308204238414,
+       0.042304286238838903
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 278,
+      "trials": 50000,
+      "rate": 0.00556,
+      "ci95": [
+       0.0049451404581900135,
+       0.006250828541146493
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5725,
+       "trials": 50000,
+       "rate": 0.1145,
+       "ci95": [
+        0.11173856366538623,
+        0.11732066707897956
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 48,
+      "trials": 50000,
+      "rate": 0.00096,
+      "ci95": [
+       0.0007242040938313663,
+       0.0012724716796272757
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2760,
+       "trials": 50000,
+       "rate": 0.0552,
+       "ci95": [
+        0.053232239724720666,
+        0.057236102259958725
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 6,
+      "trials": 50000,
+      "rate": 0.00012,
+      "ci95": [
+       5.4998199932506644e-05,
+       0.00026180663662669906
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 12329,
+       "trials": 50000,
+       "rate": 0.24658,
+       "ci95": [
+        0.24282157541479596,
+        0.25037736169347163
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "6109fc55bbcbef51"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.06,
+    "q": 0.02,
+    "seed": 20262054,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3085,
+      "trials": 50000,
+      "rate": 0.0617,
+      "ci95": [
+       0.05962448411026581,
+       0.06384285917184969
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 424,
+      "trials": 50000,
+      "rate": 0.00848,
+      "ci95": [
+       0.007713171583167435,
+       0.009322348768248069
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5750,
+       "trials": 50000,
+       "rate": 0.115,
+       "ci95": [
+        0.11223322871279437,
+        0.11782592520829727
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 129,
+      "trials": 50000,
+      "rate": 0.00258,
+      "ci95": [
+       0.0021719478760799556,
+       0.003064478989970456
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3379,
+       "trials": 50000,
+       "rate": 0.06758,
+       "ci95": [
+        0.06541277355549593,
+        0.06981366628491562
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 21,
+      "trials": 50000,
+      "rate": 0.00042,
+      "ci95": [
+       0.00027473515097850034,
+       0.0006420235916162183
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 17782,
+       "trials": 50000,
+       "rate": 0.35564,
+       "ci95": [
+        0.35145526381452963,
+        0.3598469166011814
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "503e22f895cf1223"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.08,
+    "q": 0.02,
+    "seed": 20262055,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 3911,
+      "trials": 50000,
+      "rate": 0.07822,
+      "ci95": [
+       0.07589865373744697,
+       0.08060615130369078
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 585,
+      "trials": 50000,
+      "rate": 0.0117,
+      "ci95": [
+       0.010794261417265291,
+       0.012680764192264719
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5802,
+       "trials": 50000,
+       "rate": 0.11604,
+       "ci95": [
+        0.11326218593288517,
+        0.11887680819579624
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 254,
+      "trials": 50000,
+      "rate": 0.00508,
+      "ci95": [
+       0.004493741529370347,
+       0.00574230122030934
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3839,
+       "trials": 50000,
+       "rate": 0.07678,
+       "ci95": [
+        0.07447870468020705,
+        0.07914632161196024
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 68,
+      "trials": 50000,
+      "rate": 0.00136,
+      "ci95": [
+       0.0010730303540368875,
+       0.0017235839608024388
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 22072,
+       "trials": 50000,
+       "rate": 0.44144,
+       "ci95": [
+        0.43709221307841567,
+        0.4457967844634521
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0adedd862eb923f0"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.1,
+    "q": 0.02,
+    "seed": 20262056,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 4993,
+      "trials": 50000,
+      "rate": 0.09986,
+      "ci95": [
+       0.09726273056870054,
+       0.10251874956113223
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 789,
+      "trials": 50000,
+      "rate": 0.01578,
+      "ci95": [
+       0.01472425590054998,
+       0.016910142831063
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5862,
+       "trials": 50000,
+       "rate": 0.11724,
+       "ci95": [
+        0.11444953383545096,
+        0.12008927591737249
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 453,
+      "trials": 50000,
+      "rate": 0.00906,
+      "ci95": [
+       0.008266370081921359,
+       0.009929061154496136
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4397,
+       "trials": 50000,
+       "rate": 0.08794,
+       "ci95": [
+        0.08548917068054138,
+        0.09045414091614701
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 138,
+      "trials": 50000,
+      "rate": 0.00276,
+      "ci95": [
+       0.00233678196594817,
+       0.0032596172437235494
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 26107,
+       "trials": 50000,
+       "rate": 0.52214,
+       "ci95": [
+        0.5177601529237074,
+        0.5265164453417136
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "93d249d66fec2845"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.13,
+    "q": 0.02,
+    "seed": 20262057,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 6490,
+      "trials": 50000,
+      "rate": 0.1298,
+      "ci95": [
+       0.12688257028777314,
+       0.13277430966440382
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1120,
+      "trials": 50000,
+      "rate": 0.0224,
+      "ci95": [
+       0.021139138982005343,
+       0.023734242609457962
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6046,
+       "trials": 50000,
+       "rate": 0.12092,
+       "ci95": [
+        0.11809131957379534,
+        0.1238069247597304
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1011,
+      "trials": 50000,
+      "rate": 0.02022,
+      "ci95": [
+       0.019022631361591928,
+       0.021491085179346642
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5488,
+       "trials": 50000,
+       "rate": 0.10976,
+       "ci95": [
+        0.10704999565174972,
+        0.11252996337725496
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 352,
+      "trials": 50000,
+      "rate": 0.00704,
+      "ci95": [
+       0.00634407071728809,
+       0.0078116708851569475
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 31121,
+       "trials": 50000,
+       "rate": 0.62242,
+       "ci95": [
+        0.6181615268119707,
+        0.6266596637775876
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "c3d73cac6b21186a"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.16,
+    "q": 0.02,
+    "seed": 20262058,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 7954,
+      "trials": 50000,
+      "rate": 0.15908,
+      "ci95": [
+       0.15590031967484824,
+       0.16231206150639477
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1713,
+      "trials": 50000,
+      "rate": 0.03426,
+      "ci95": [
+       0.03270107768591647,
+       0.03589048165748411
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6421,
+       "trials": 50000,
+       "rate": 0.12842,
+       "ci95": [
+        0.12551605325978293,
+        0.13138103872463064
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1569,
+      "trials": 50000,
+      "rate": 0.03138,
+      "ci95": [
+       0.029887484585547092,
+       0.03294451725991256
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6125,
+       "trials": 50000,
+       "rate": 0.1225,
+       "ci95": [
+        0.11965517704909977,
+        0.12540282452287968
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 759,
+      "trials": 50000,
+      "rate": 0.01518,
+      "ci95": [
+       0.014144929296338957,
+       0.016289561623203
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 35414,
+       "trials": 50000,
+       "rate": 0.70828,
+       "ci95": [
+        0.7042798509041127,
+        0.7122481475928094
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "6fd1a4aa812bcefa"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.2,
+    "q": 0.02,
+    "seed": 20262059,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 9861,
+      "trials": 50000,
+      "rate": 0.19722,
+      "ci95": [
+       0.19375563528808198,
+       0.20073088581380927
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2637,
+      "trials": 50000,
+      "rate": 0.05274,
+      "ci95": [
+       0.05081498365703278,
+       0.05473373629815541
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7091,
+       "trials": 50000,
+       "rate": 0.14182,
+       "ci95": [
+        0.13878962609186044,
+        0.14490540702880608
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2503,
+      "trials": 50000,
+      "rate": 0.05006,
+      "ci95": [
+       0.04818290467508635,
+       0.05200622705285125
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6969,
+       "trials": 50000,
+       "rate": 0.13938,
+       "ci95": [
+        0.13637192300932416,
+        0.14244348500892018
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1643,
+      "trials": 50000,
+      "rate": 0.03286,
+      "ci95": [
+       0.031332957770647575,
+       0.03445881667792062
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 39501,
+       "trials": 50000,
+       "rate": 0.79002,
+       "ci95": [
+        0.7864277636343181,
+        0.7935676757937468
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "3f204ac82125e028"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.25,
+    "q": 0.02,
+    "seed": 20262060,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12561,
+      "trials": 50000,
+      "rate": 0.25122,
+      "ci95": [
+       0.24743760225885297,
+       0.2550406219294305
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 4629,
+      "trials": 50000,
+      "rate": 0.09258,
+      "ci95": [
+       0.09007066521408397,
+       0.09515193346262033
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8723,
+       "trials": 50000,
+       "rate": 0.17446,
+       "ci95": [
+        0.17115859983055803,
+        0.17781141826677227
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 4629,
+      "trials": 50000,
+      "rate": 0.09258,
+      "ci95": [
+       0.09007066521408397,
+       0.09515193346262033
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8723,
+       "trials": 50000,
+       "rate": 0.17446,
+       "ci95": [
+        0.17115859983055803,
+        0.17781141826677227
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 3538,
+      "trials": 50000,
+      "rate": 0.07076,
+      "ci95": [
+       0.06854521009675398,
+       0.07304074114763402
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 43271,
+       "trials": 50000,
+       "rate": 0.86542,
+       "ci95": [
+        0.862400563277571,
+        0.8683832912007529
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "4c63be478514becc"
+    }
+   },
+   {
+    "distance": 7,
+    "p": 0.3,
+    "q": 0.02,
+    "seed": 20262061,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 15062,
+      "trials": 50000,
+      "rate": 0.30124,
+      "ci95": [
+       0.29723393790485353,
+       0.3052766008830845
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 7381,
+      "trials": 50000,
+      "rate": 0.14762,
+      "ci95": [
+       0.14453784639402542,
+       0.150756295576661
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 11227,
+       "trials": 50000,
+       "rate": 0.22454,
+       "ci95": [
+        0.22090369626365092,
+        0.228218627214541
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 7381,
+      "trials": 50000,
+      "rate": 0.14762,
+      "ci95": [
+       0.14453784639402542,
+       0.150756295576661
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 11227,
+       "trials": 50000,
+       "rate": 0.22454,
+       "ci95": [
+        0.22090369626365092,
+        0.228218627214541
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 6330,
+      "trials": 50000,
+      "rate": 0.1266,
+      "ci95": [
+       0.12371400576865212,
+       0.1295433658524793
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 45948,
+       "trials": 50000,
+       "rate": 0.91896,
+       "ci95": [
+        0.9165356898291189,
+        0.9213199384130094
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "9e77449155a76c33"
+    }
+   }
+  ],
+  "kind": "simulation"
+ },
+ "readout_sweep": {
+  "name": "readout_sweep",
+  "shots_per_point": 50000,
+  "base_seed": 20263026,
+  "points": [
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.0,
+    "seed": 20263026,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2584,
+      "trials": 50000,
+      "rate": 0.05168,
+      "ci95": [
+       0.04977376325633837,
+       0.053655119564190994
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 347,
+      "trials": 50000,
+      "rate": 0.00694,
+      "ci95": [
+       0.006249257720302182,
+       0.007706499246797685
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 347,
+       "trials": 50000,
+       "rate": 0.00694,
+       "ci95": [
+        0.006249257720302182,
+        0.007706499246797685
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 347,
+      "trials": 50000,
+      "rate": 0.00694,
+      "ci95": [
+       0.006249257720302182,
+       0.007706499246797685
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 347,
+       "trials": 50000,
+       "rate": 0.00694,
+       "ci95": [
+        0.006249257720302182,
+        0.007706499246797685
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 347,
+      "trials": 50000,
+      "rate": 0.00694,
+      "ci95": [
+       0.006249257720302182,
+       0.007706499246797685
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 347,
+       "trials": 50000,
+       "rate": 0.00694,
+       "ci95": [
+        0.006249257720302182,
+        0.007706499246797685
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "70171417a61a282a"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.005,
+    "seed": 20263027,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2513,
+      "trials": 50000,
+      "rate": 0.05026,
+      "ci95": [
+       0.04837927748697684,
+       0.052209823511651106
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 397,
+      "trials": 50000,
+      "rate": 0.00794,
+      "ci95": [
+       0.007198980405773176,
+       0.008756622914778401
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 855,
+       "trials": 50000,
+       "rate": 0.0171,
+       "ci95": [
+        0.01600017652254865,
+        0.01827401939562059
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 397,
+      "trials": 50000,
+      "rate": 0.00794,
+      "ci95": [
+       0.007198980405773176,
+       0.008756622914778401
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 855,
+       "trials": 50000,
+       "rate": 0.0171,
+       "ci95": [
+        0.01600017652254865,
+        0.01827401939562059
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 356,
+      "trials": 50000,
+      "rate": 0.00712,
+      "ci95": [
+       0.0064199480379510294,
+       0.007895781272770144
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7177,
+       "trials": 50000,
+       "rate": 0.14354,
+       "ci95": [
+        0.14049409358932516,
+        0.1466406752592783
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "a5dd83485602b727"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.01,
+    "seed": 20263028,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2557,
+      "trials": 50000,
+      "rate": 0.05114,
+      "ci95": [
+       0.04924341701515143,
+       0.05310554877451401
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 444,
+      "trials": 50000,
+      "rate": 0.00888,
+      "ci95": [
+       0.008094591345989437,
+       0.00974086754680675
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1326,
+       "trials": 50000,
+       "rate": 0.02652,
+       "ci95": [
+        0.02514759974148906,
+        0.027965148826195284
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 444,
+      "trials": 50000,
+      "rate": 0.00888,
+      "ci95": [
+       0.008094591345989437,
+       0.00974086754680675
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1326,
+       "trials": 50000,
+       "rate": 0.02652,
+       "ci95": [
+        0.02514759974148906,
+        0.027965148826195284
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 360,
+      "trials": 50000,
+      "rate": 0.0072,
+      "ci95": [
+       0.006495848858581778,
+       0.007979868160415533
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7152,
+       "trials": 50000,
+       "rate": 0.14304,
+       "ci95": [
+        0.13999859324935904,
+        0.14613625242251854
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "be4b011b0b4a61c6"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.02,
+    "seed": 20263029,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2487,
+      "trials": 50000,
+      "rate": 0.04974,
+      "ci95": [
+       0.04786872576661237,
+       0.051680455128220684
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 512,
+      "trials": 50000,
+      "rate": 0.01024,
+      "ci95": [
+       0.009394431635012955,
+       0.011160818298477556
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2360,
+       "trials": 50000,
+       "rate": 0.0472,
+       "ci95": [
+        0.04537572167079684,
+        0.04909384948626887
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 512,
+      "trials": 50000,
+      "rate": 0.01024,
+      "ci95": [
+       0.009394431635012955,
+       0.011160818298477556
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2360,
+       "trials": 50000,
+       "rate": 0.0472,
+       "ci95": [
+        0.04537572167079684,
+        0.04909384948626887
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 345,
+      "trials": 50000,
+      "rate": 0.0069,
+      "ci95": [
+       0.006211343155678935,
+       0.007664419957282864
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7122,
+       "trials": 50000,
+       "rate": 0.14244,
+       "ci95": [
+        0.1394040096920251,
+        0.14553092816778146
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "531f1e54db3458c2"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.04,
+    "seed": 20263030,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2686,
+      "trials": 50000,
+      "rate": 0.05372,
+      "ci95": [
+       0.05177781759706737,
+       0.055730751784503485
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 749,
+      "trials": 50000,
+      "rate": 0.01498,
+      "ci95": [
+       0.013951914945247806,
+       0.01608260670360381
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4223,
+       "trials": 50000,
+       "rate": 0.08446,
+       "ci95": [
+        0.08205440501200677,
+        0.08692944127466963
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 749,
+      "trials": 50000,
+      "rate": 0.01498,
+      "ci95": [
+       0.013951914945247806,
+       0.01608260670360381
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4223,
+       "trials": 50000,
+       "rate": 0.08446,
+       "ci95": [
+        0.08205440501200677,
+        0.08692944127466963
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 382,
+      "trials": 50000,
+      "rate": 0.00764,
+      "ci95": [
+       0.00691370666718541,
+       0.008441942747330655
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7336,
+       "trials": 50000,
+       "rate": 0.14672,
+       "ci95": [
+        0.14364577086304617,
+        0.14984850938953367
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "dc8d324a7a9693c7"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.06,
+    "seed": 20263031,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2495,
+      "trials": 50000,
+      "rate": 0.0499,
+      "ci95": [
+       0.04802581250537494,
+       0.051843343806010384
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 818,
+      "trials": 50000,
+      "rate": 0.01636,
+      "ci95": [
+       0.015284658729124745,
+       0.01750965088749023
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6022,
+       "trials": 50000,
+       "rate": 0.12044,
+       "ci95": [
+        0.11761625476220008,
+        0.12332206332166887
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 585,
+      "trials": 50000,
+      "rate": 0.0117,
+      "ci95": [
+       0.010794261417265291,
+       0.012680764192264719
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5246,
+       "trials": 50000,
+       "rate": 0.10492,
+       "ci95": [
+        0.10226417698349587,
+        0.10763652569480255
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 356,
+      "trials": 50000,
+      "rate": 0.00712,
+      "ci95": [
+       0.0064199480379510294,
+       0.007895781272770144
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7027,
+       "trials": 50000,
+       "rate": 0.14054,
+       "ci95": [
+        0.13752128410500153,
+        0.14361394568324676
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "ffb15c028c4b7431"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.08,
+    "seed": 20263032,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2585,
+      "trials": 50000,
+      "rate": 0.0517,
+      "ci95": [
+       0.0497934068454933,
+       0.053675472902105115
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1033,
+      "trials": 50000,
+      "rate": 0.02066,
+      "ci95": [
+       0.019449533813656772,
+       0.02194411512280056
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8016,
+       "trials": 50000,
+       "rate": 0.16032,
+       "ci95": [
+        0.1571301292402211,
+        0.163562061419302
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 685,
+      "trials": 50000,
+      "rate": 0.0137,
+      "ci95": [
+       0.012717822203435331,
+       0.014756896112998096
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5609,
+       "trials": 50000,
+       "rate": 0.11218,
+       "ci95": [
+        0.10944354137254501,
+        0.1149760458318128
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 398,
+      "trials": 50000,
+      "rate": 0.00796,
+      "ci95": [
+       0.007218008827380799,
+       0.008777591420239815
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7228,
+       "trials": 50000,
+       "rate": 0.14456,
+       "ci95": [
+        0.14150495362373713,
+        0.14766965850538702
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "75059134dd580a71"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.1,
+    "seed": 20263033,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2520,
+      "trials": 50000,
+      "rate": 0.0504,
+      "ci95": [
+       0.04851674345592296,
+       0.05235233603218822
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1202,
+      "trials": 50000,
+      "rate": 0.02404,
+      "ci95": [
+       0.022733519509996605,
+       0.0254196101011275
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 9736,
+       "trials": 50000,
+       "rate": 0.19472,
+       "ci95": [
+        0.1912726089010943,
+        0.19821429631716767
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 780,
+      "trials": 50000,
+      "rate": 0.0156,
+      "ci95": [
+       0.014550414138754506,
+       0.01672401224923717
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5710,
+       "trials": 50000,
+       "rate": 0.1142,
+       "ci95": [
+        0.11144177277350907,
+        0.11701750406482118
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 357,
+      "trials": 50000,
+      "rate": 0.00714,
+      "ci95": [
+       0.006438921055279041,
+       0.007916805182511168
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7080,
+       "trials": 50000,
+       "rate": 0.1416,
+       "ci95": [
+        0.13857162376992294,
+        0.1446834431529842
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "80d59f5e33be6d38"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.15,
+    "seed": 20263034,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2529,
+      "trials": 50000,
+      "rate": 0.05058,
+      "ci95": [
+       0.04869349143764671,
+       0.05253556039408578
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1530,
+      "trials": 50000,
+      "rate": 0.0306,
+      "ci95": [
+       0.029126041529645496,
+       0.03214608016012182
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 14098,
+       "trials": 50000,
+       "rate": 0.28196,
+       "ci95": [
+        0.27803291866440294,
+        0.2859205824289861
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 881,
+      "trials": 50000,
+      "rate": 0.01762,
+      "ci95": [
+       0.016503303923275595,
+       0.018810812098688536
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6420,
+       "trials": 50000,
+       "rate": 0.1284,
+       "ci95": [
+        0.1254962494805497,
+        0.1313608455767948
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 347,
+      "trials": 50000,
+      "rate": 0.00694,
+      "ci95": [
+       0.006249257720302182,
+       0.007706499246797685
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7124,
+       "trials": 50000,
+       "rate": 0.14248,
+       "ci95": [
+        0.13944364802217774,
+        0.14557128369176686
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "8d284486254c7b86"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.2,
+    "seed": 20263035,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2474,
+      "trials": 50000,
+      "rate": 0.04948,
+      "ci95": [
+       0.04761347146340911,
+       0.051415749379526504
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1877,
+      "trials": 50000,
+      "rate": 0.03754,
+      "ci95": [
+       0.03590911099489808,
+       0.0392419443878241
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 18294,
+       "trials": 50000,
+       "rate": 0.36588,
+       "ci95": [
+        0.3616684539137453,
+        0.37011215316131124
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 368,
+      "trials": 50000,
+      "rate": 0.00736,
+      "ci95": [
+       0.006647719463235311,
+       0.008147972972314274
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7108,
+       "trials": 50000,
+       "rate": 0.14216,
+       "ci95": [
+        0.1391265436815471,
+        0.14524843719929303
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 368,
+      "trials": 50000,
+      "rate": 0.00736,
+      "ci95": [
+       0.006647719463235311,
+       0.008147972972314274
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7108,
+       "trials": 50000,
+       "rate": 0.14216,
+       "ci95": [
+        0.1391265436815471,
+        0.14524843719929303
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "d10a433d2d693a23"
+    }
+   },
+   {
+    "distance": 3,
+    "p": 0.05,
+    "q": 0.3,
+    "seed": 20263036,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2521,
+      "trials": 50000,
+      "rate": 0.05042,
+      "ci95": [
+       0.04853638178652526,
+       0.05237269462865495
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2540,
+      "trials": 50000,
+      "rate": 0.0508,
+      "ci95": [
+       0.04890952590196929,
+       0.05275949212752256
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 25625,
+       "trials": 50000,
+       "rate": 0.5125,
+       "ci95": [
+        0.5081179649754235,
+        0.5168801144427229
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 359,
+      "trials": 50000,
+      "rate": 0.00718,
+      "ci95": [
+       0.006476871471636924,
+       0.007958848620291352
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7097,
+       "trials": 50000,
+       "rate": 0.14194,
+       "ci95": [
+        0.13890853750217486,
+        0.1450264771809059
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 359,
+      "trials": 50000,
+      "rate": 0.00718,
+      "ci95": [
+       0.006476871471636924,
+       0.007958848620291352
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7097,
+       "trials": 50000,
+       "rate": 0.14194,
+       "ci95": [
+        0.13890853750217486,
+        0.1450264771809059
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "59b44c2d2fb19e82"
+    }
+   }
+  ],
+  "kind": "simulation"
+ },
+ "asymmetric_sweep": {
+  "name": "asymmetric_sweep",
+  "shots_per_point": 50000,
+  "base_seed": 20264026,
+  "points": [
+   {
+    "distance": 3,
+    "p": [
+     0.01,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.01,
+    "seed": 20264026,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 471,
+      "trials": 50000,
+      "rate": 0.00942,
+      "ci95": [
+       0.00861017477365599,
+       0.010305201150004118
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 317,
+      "trials": 50000,
+      "rate": 0.00634,
+      "ci95": [
+       0.005681210953375544,
+       0.007074638201653298
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2027,
+       "trials": 50000,
+       "rate": 0.04054,
+       "ci95": [
+        0.038846308204238414,
+        0.042304286238838903
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 275,
+      "trials": 50000,
+      "rate": 0.0055,
+      "ci95": [
+       0.004888645381781419,
+       0.006187332836347985
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 1594,
+       "trials": 50000,
+       "rate": 0.03188,
+       "ci95": [
+        0.030375721898164856,
+        0.03345620312402066
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 175,
+      "trials": 50000,
+      "rate": 0.0035,
+      "ci95": [
+       0.0030191097660978963,
+       0.004057175745128089
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5370,
+       "trials": 50000,
+       "rate": 0.1074,
+       "ci95": [
+        0.10471619853169205,
+        0.11014412310316658
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "725b633f4c0736ec"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.03,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.03,
+    "seed": 20264027,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 1478,
+      "trials": 50000,
+      "rate": 0.02956,
+      "ci95": [
+       0.02811119143164629,
+       0.03108109005053126
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 411,
+      "trials": 50000,
+      "rate": 0.00822,
+      "ci95": [
+       0.007465489907820521,
+       0.009050070391697538
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2233,
+       "trials": 50000,
+       "rate": 0.04466,
+       "ci95": [
+        0.04288420025508325,
+        0.04650576116421511
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 411,
+      "trials": 50000,
+      "rate": 0.00822,
+      "ci95": [
+       0.007465489907820521,
+       0.009050070391697538
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2233,
+       "trials": 50000,
+       "rate": 0.04466,
+       "ci95": [
+        0.04288420025508325,
+        0.04650576116421511
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 262,
+      "trials": 50000,
+      "rate": 0.00524,
+      "ci95": [
+       0.0046440617160680864,
+       0.005911956450163873
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 6134,
+       "trials": 50000,
+       "rate": 0.12268,
+       "ci95": [
+        0.11983334792225908,
+        0.1255846259933417
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "097dcf46cea8be64"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.05,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.05,
+    "seed": 20264028,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 2518,
+      "trials": 50000,
+      "rate": 0.05036,
+      "ci95": [
+       0.048477467045761134,
+       0.052311618588211976
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 515,
+      "trials": 50000,
+      "rate": 0.0103,
+      "ci95": [
+       0.009451875002392592,
+       0.011223365712305023
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2335,
+       "trials": 50000,
+       "rate": 0.0467,
+       "ci95": [
+        0.04488514388201263,
+        0.04858450409832722
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 515,
+      "trials": 50000,
+      "rate": 0.0103,
+      "ci95": [
+       0.009451875002392592,
+       0.011223365712305023
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2335,
+       "trials": 50000,
+       "rate": 0.0467,
+       "ci95": [
+        0.04488514388201263,
+        0.04858450409832722
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 356,
+      "trials": 50000,
+      "rate": 0.00712,
+      "ci95": [
+       0.0064199480379510294,
+       0.007895781272770144
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 7241,
+       "trials": 50000,
+       "rate": 0.14482,
+       "ci95": [
+        0.14176263222996957,
+        0.14793193995105205
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "be0ff386ae7a5e67"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.08,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.08,
+    "seed": 20264029,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 4024,
+      "trials": 50000,
+      "rate": 0.08048,
+      "ci95": [
+       0.0781276557467366,
+       0.082896802053202
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 664,
+      "trials": 50000,
+      "rate": 0.01328,
+      "ci95": [
+       0.012313368132667011,
+       0.0143214147153167
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2537,
+       "trials": 50000,
+       "rate": 0.05074,
+       "ci95": [
+        0.04885060641632424,
+        0.05269842083196053
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 664,
+      "trials": 50000,
+      "rate": 0.01328,
+      "ci95": [
+       0.012313368132667011,
+       0.0143214147153167
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2537,
+       "trials": 50000,
+       "rate": 0.05074,
+       "ci95": [
+        0.04885060641632424,
+        0.05269842083196053
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 496,
+      "trials": 50000,
+      "rate": 0.00992,
+      "ci95": [
+       0.009088198880917654,
+       0.01082710021946831
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 8413,
+       "trials": 50000,
+       "rate": 0.16826,
+       "ci95": [
+        0.16500646765754104,
+        0.17156450304838863
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "130903a7675b9830"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.12,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.12,
+    "seed": 20264030,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 5929,
+      "trials": 50000,
+      "rate": 0.11858,
+      "ci95": [
+       0.1157755175784974,
+       0.12144308628795138
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 902,
+      "trials": 50000,
+      "rate": 0.01804,
+      "ci95": [
+       0.016909866252194528,
+       0.01924418523821932
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2646,
+       "trials": 50000,
+       "rate": 0.05292,
+       "ci95": [
+        0.050991816730936106,
+        0.054916875567873384
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 902,
+      "trials": 50000,
+      "rate": 0.01804,
+      "ci95": [
+       0.016909866252194528,
+       0.01924418523821932
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2646,
+       "trials": 50000,
+       "rate": 0.05292,
+       "ci95": [
+        0.050991816730936106,
+        0.054916875567873384
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 689,
+      "trials": 50000,
+      "rate": 0.01378,
+      "ci95": [
+       0.012794889264029236,
+       0.01483981676068033
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 10174,
+       "trials": 50000,
+       "rate": 0.20348,
+       "ci95": [
+        0.19997408024357638,
+        0.20703147903092256
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0bc61af8ad2f6e54"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.16,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.16,
+    "seed": 20264031,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 7965,
+      "trials": 50000,
+      "rate": 0.1593,
+      "ci95": [
+       0.15611850668913896,
+       0.16253384068986343
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1094,
+      "trials": 50000,
+      "rate": 0.02188,
+      "ci95": [
+       0.02063397416451708,
+       0.023199487323151337
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2854,
+       "trials": 50000,
+       "rate": 0.05708,
+       "ci95": [
+        0.05508032787557755,
+        0.05914772525359105
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1094,
+      "trials": 50000,
+      "rate": 0.02188,
+      "ci95": [
+       0.02063397416451708,
+       0.023199487323151337
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2854,
+       "trials": 50000,
+       "rate": 0.05708,
+       "ci95": [
+        0.05508032787557755,
+        0.05914772525359105
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 863,
+      "trials": 50000,
+      "rate": 0.01726,
+      "ci95": [
+       0.01615495659355096,
+       0.018439214741170554
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 12089,
+       "trials": 50000,
+       "rate": 0.24178,
+       "ci95": [
+        0.23804699532430582,
+        0.24555267928739358
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "41da76717db7d24b"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.2,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.2,
+    "seed": 20264032,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 10068,
+      "trials": 50000,
+      "rate": 0.20136,
+      "ci95": [
+       0.19786800353854028,
+       0.20489788146664106
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1359,
+      "trials": 50000,
+      "rate": 0.02718,
+      "ci95": [
+       0.025790622835019688,
+       0.028642024325942785
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2997,
+       "trials": 50000,
+       "rate": 0.05994,
+       "ci95": [
+        0.05789296110382768,
+        0.06205465259621281
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1359,
+      "trials": 50000,
+      "rate": 0.02718,
+      "ci95": [
+       0.025790622835019688,
+       0.028642024325942785
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 2997,
+       "trials": 50000,
+       "rate": 0.05994,
+       "ci95": [
+        0.05789296110382768,
+        0.06205465259621281
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1094,
+      "trials": 50000,
+      "rate": 0.02188,
+      "ci95": [
+       0.02063397416451708,
+       0.023199487323151337
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 14014,
+       "trials": 50000,
+       "rate": 0.28028,
+       "ci95": [
+        0.2763602166075444,
+        0.2842335426120457
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "cf830d66f6a5f9ea"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.25,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.25,
+    "seed": 20264033,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 12596,
+      "trials": 50000,
+      "rate": 0.25192,
+      "ci95": [
+       0.24813403607566412,
+       0.2557440805600356
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1666,
+      "trials": 50000,
+      "rate": 0.03332,
+      "ci95": [
+       0.03178240155829918,
+       0.034929302212856804
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3320,
+       "trials": 50000,
+       "rate": 0.0664,
+       "ci95": [
+        0.064250774373885,
+        0.06861584676945355
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1666,
+      "trials": 50000,
+      "rate": 0.03332,
+      "ci95": [
+       0.03178240155829918,
+       0.034929302212856804
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3320,
+       "trials": 50000,
+       "rate": 0.0664,
+       "ci95": [
+        0.064250774373885,
+        0.06861584676945355
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1321,
+      "trials": 50000,
+      "rate": 0.02642,
+      "ci95": [
+       0.025050191849180288,
+       0.027862572083158885
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 16324,
+       "trials": 50000,
+       "rate": 0.32648,
+       "ci95": [
+        0.32238323187853807,
+        0.33060342887052113
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "f4aee9103c2cd984"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.3,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.3,
+    "seed": 20264034,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 14826,
+      "trials": 50000,
+      "rate": 0.29652,
+      "ci95": [
+       0.2925324752989581,
+       0.30053878870068784
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 1903,
+      "trials": 50000,
+      "rate": 0.03806,
+      "ci95": [
+       0.03641802841578706,
+       0.03977294707073001
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3543,
+       "trials": 50000,
+       "rate": 0.07086,
+       "ci95": [
+        0.068643736136125,
+        0.07314219974360818
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 1903,
+      "trials": 50000,
+      "rate": 0.03806,
+      "ci95": [
+       0.03641802841578706,
+       0.03977294707073001
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3543,
+       "trials": 50000,
+       "rate": 0.07086,
+       "ci95": [
+        0.068643736136125,
+        0.07314219974360818
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 1578,
+      "trials": 50000,
+      "rate": 0.03156,
+      "ci95": [
+       0.030063238243397784,
+       0.03312873594568317
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 18241,
+       "trials": 50000,
+       "rate": 0.36482,
+       "ci95": [
+        0.3606111331274706,
+        0.36904963681292713
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "0ae71db9efa0487e"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.4,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.4,
+    "seed": 20264035,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 19944,
+      "trials": 50000,
+      "rate": 0.39888,
+      "ci95": [
+       0.39459587585430356,
+       0.4031796608846595
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2434,
+      "trials": 50000,
+      "rate": 0.04868,
+      "ci95": [
+       0.046828165120332686,
+       0.05060117863984156
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3960,
+       "trials": 50000,
+       "rate": 0.0792,
+       "ci95": [
+        0.07686514248811958,
+        0.08159951197940087
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2434,
+      "trials": 50000,
+      "rate": 0.04868,
+      "ci95": [
+       0.046828165120332686,
+       0.05060117863984156
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 3960,
+       "trials": 50000,
+       "rate": 0.0792,
+       "ci95": [
+        0.07686514248811958,
+        0.08159951197940087
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 2068,
+      "trials": 50000,
+      "rate": 0.04136,
+      "ci95": [
+       0.03964960128503572,
+       0.043140867167872014
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 22878,
+       "trials": 50000,
+       "rate": 0.45756,
+       "ci95": [
+        0.45319663025464263,
+        0.46192989050486677
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "4307020f1c56e69e"
+    }
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.5,
+     0.05,
+     0.05
+    ],
+    "q": 0.02,
+    "bad_qubit_p": 0.5,
+    "seed": 20264036,
+    "shots": 50000,
+    "results": {
+     "unprotected": {
+      "count": 25016,
+      "trials": 50000,
+      "rate": 0.50032,
+      "ci95": [
+       0.495937531957687,
+       0.5047024188754176
+      ],
+      "interval": "Wilson score"
+     },
+     "lookup": {
+      "count": 2987,
+      "trials": 50000,
+      "rate": 0.05974,
+      "ci95": [
+       0.05769622883636308,
+       0.06185141559298707
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4458,
+       "trials": 50000,
+       "rate": 0.08916,
+       "ci95": [
+        0.08669359245058475,
+        0.09168953169731472
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "energy": {
+      "count": 2987,
+      "trials": 50000,
+      "rate": 0.05974,
+      "ci95": [
+       0.05769622883636308,
+       0.06185141559298707
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 4458,
+       "trials": 50000,
+       "rate": 0.08916,
+       "ci95": [
+        0.08669359245058475,
+        0.09168953169731472
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "exact": {
+      "count": 2467,
+      "trials": 50000,
+      "rate": 0.04934,
+      "ci95": [
+       0.04747603284359415,
+       0.05127320950985822
+      ],
+      "interval": "Wilson score",
+      "not_restored": {
+       "count": 5760,
+       "trials": 50000,
+       "rate": 0.1152,
+       "ci95": [
+        0.11243109946011955,
+        0.11802802373166242
+       ],
+       "interval": "Wilson score"
+      }
+     },
+     "digest": "41d3202363a23140"
+    }
+   }
+  ],
+  "kind": "simulation"
+ },
+ "agreement": {
+  "configs": [
+   {
+    "distance": 3,
+    "p": [
+     0.1,
+     0.1,
+     0.1
+    ],
+    "q": [
+     0.1,
+     0.1
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 1
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.0509,
+     0.2889,
+     0.1878
+    ],
+    "q": [
+     0.0656,
+     0.059
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 4
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.1899,
+     0.1086,
+     0.0985
+    ],
+    "q": [
+     0.0818,
+     0.1439
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 2
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.1406,
+     0.2491,
+     0.1372
+    ],
+    "q": [
+     0.0778,
+     0.0994
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 3
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.2282,
+     0.2373,
+     0.2687
+    ],
+    "q": [
+     0.076,
+     0.0227
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 3
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.2167,
+     0.0782,
+     0.0819
+    ],
+    "q": [
+     0.1755,
+     0.1034
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 2
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.1928,
+     0.2649,
+     0.1145
+    ],
+    "q": [
+     0.076,
+     0.175
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 2
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.1532,
+     0.0273,
+     0.2345
+    ],
+    "q": [
+     0.0646,
+     0.1539
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 1
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.1624,
+     0.2875,
+     0.0491
+    ],
+    "q": [
+     0.1491,
+     0.0361
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 3
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.047,
+     0.2374,
+     0.2932
+    ],
+    "q": [
+     0.0122,
+     0.1526
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 4
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.0953,
+     0.1054,
+     0.1603
+    ],
+    "q": [
+     0.1731,
+     0.0189
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 2
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.0167,
+     0.152,
+     0.0113
+    ],
+    "q": [
+     0.1095,
+     0.0833
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 1
+   },
+   {
+    "distance": 3,
+    "p": [
+     0.2636,
+     0.107,
+     0.1843
+    ],
+    "q": [
+     0.1953,
+     0.1943
+    ],
+    "syndromes": 4,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 2
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.1745,
+     0.1342,
+     0.1536,
+     0.2293,
+     0.16
+    ],
+    "q": [
+     0.048,
+     0.0611,
+     0.0812,
+     0.0336
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 13
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.2355,
+     0.141,
+     0.1032,
+     0.2829,
+     0.1153
+    ],
+    "q": [
+     0.1335,
+     0.1364,
+     0.0773,
+     0.1728
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 11
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.2424,
+     0.1294,
+     0.2236,
+     0.2673,
+     0.264
+    ],
+    "q": [
+     0.1354,
+     0.1766,
+     0.1033,
+     0.1958
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 14
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.0198,
+     0.0944,
+     0.2139,
+     0.2224,
+     0.0839
+    ],
+    "q": [
+     0.0152,
+     0.0216,
+     0.1719,
+     0.0894
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 13
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.163,
+     0.2344,
+     0.0579,
+     0.2161,
+     0.1733
+    ],
+    "q": [
+     0.0881,
+     0.045,
+     0.1933,
+     0.086
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 12
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.0124,
+     0.2929,
+     0.0364,
+     0.1494,
+     0.271
+    ],
+    "q": [
+     0.1122,
+     0.0068,
+     0.0795,
+     0.116
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 10
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.2947,
+     0.1788,
+     0.1456,
+     0.056,
+     0.0995
+    ],
+    "q": [
+     0.1412,
+     0.1095,
+     0.0389,
+     0.0756
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 15
+   },
+   {
+    "distance": 5,
+    "p": [
+     0.2211,
+     0.0639,
+     0.18,
+     0.1316,
+     0.2351
+    ],
+    "q": [
+     0.0052,
+     0.0657,
+     0.0318,
+     0.1168
+    ],
+    "syndromes": 16,
+    "vectorized_vs_reference_mismatches": 0,
+    "energy_vs_bayes_different_corrections": 14
+   }
+  ],
+  "max_abs_energy_minus_neg_log_joint": 3.552713678800501e-15,
+  "all_tables_match_reference": true,
+  "note": "The energy (MAP) decoder and the Bayes reference legitimately differ on some syndromes: MAP picks the single most probable error; the reference maximizes the probability that the logical value survives, which can favour a less likely correction when several explanations share a logical outcome (degeneracy across readout explanations)."
+ },
+ "margin_study": {
+  "validation_seed": 20266026,
+  "held_out_seed": 20266027,
+  "shots_each": 50000,
+  "decoder": "energy (MAP)",
+  "model": "per-trial calibrated",
+  "threshold_rule": "flag the lowest 10% energy gaps on the validation set",
+  "threshold": 0.4509556329490001,
+  "auroc_gap_validation": 0.8049628870821022,
+  "auroc_gap_held_out": 0.8049418261365523,
+  "auroc_logical_margin_held_out": 0.8933254302276482,
+  "validation_flagged": {
+   "count": 504,
+   "trials": 5000,
+   "rate": 0.1008,
+   "ci95": [
+    0.09275913562040936,
+    0.10945379761252427
+   ],
+   "interval": "Wilson score"
+  },
+  "validation_unflagged": {
+   "count": 1741,
+   "trials": 45000,
+   "rate": 0.03868888888888889,
+   "ci95": [
+    0.03694607390753488,
+    0.04051045748679732
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_flagged": {
+   "count": 526,
+   "trials": 5064,
+   "rate": 0.10387045813586097,
+   "ci95": [
+    0.09576558013972186,
+    0.11257587398824379
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_unflagged": {
+   "count": 1742,
+   "trials": 44936,
+   "rate": 0.03876624532668684,
+   "ci95": [
+    0.037020501342493656,
+    0.04059084185765259
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_failure": {
+   "count": 2268,
+   "trials": 50000,
+   "rate": 0.04536,
+   "ci95": [
+    0.04357068532508037,
+    0.04721916854163418
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_by_gap_quintile": [
+   {
+    "gap_range": [
+     0.0001123049839999446,
+     1.0957196287596005
+    ],
+    "count": 1123,
+    "trials": 10000,
+    "rate": 0.1123,
+    "ci95": [
+     0.1062599775321772,
+     0.11863777480444543
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     1.0957196287596005,
+     3.4791852291536007
+    ],
+    "count": 1018,
+    "trials": 10000,
+    "rate": 0.1018,
+    "ci95": [
+     0.09602543417296856,
+     0.10788038212943828
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     3.4791852291536007,
+     4.1401096221716
+    ],
+    "count": 69,
+    "trials": 10000,
+    "rate": 0.0069,
+    "ci95": [
+     0.005456205431184981,
+     0.008722493761976275
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     4.1401096221716,
+     4.840207962714801
+    ],
+    "count": 40,
+    "trials": 10000,
+    "rate": 0.004,
+    "ci95": [
+     0.002939013737731544,
+     0.005441912645979639
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     4.840207962714801,
+     9.269659312714
+    ],
+    "count": 18,
+    "trials": 10000,
+    "rate": 0.0018,
+    "ci95": [
+     0.0011389279915130562,
+     0.0028436879850291027
+    ],
+    "interval": "Wilson score"
+   }
+  ],
+  "held_out_histogram": {
+   "edges": [
+    0.0,
+    0.28172219603663295,
+    0.5634443920732659,
+    0.8451665881098989,
+    1.1268887841465318,
+    1.4086109801831648,
+    1.6903331762197977,
+    1.9720553722564307,
+    2.2537775682930636,
+    2.5354997643296966,
+    2.8172219603663295,
+    3.0989441564029625,
+    3.3806663524395955,
+    3.6623885484762284,
+    3.9441107445128614,
+    4.225832940549495,
+    4.507555136586127,
+    4.78927733262276,
+    5.070999528659393,
+    5.352721724696027,
+    5.634443920732659,
+    5.916166116769292,
+    6.197888312805925,
+    6.479610508842558,
+    6.761332704879191
+   ],
+   "correct": [
+    2883,
+    2616,
+    1988,
+    1565,
+    1378,
+    1259,
+    1067,
+    927,
+    736,
+    585,
+    382,
+    1406,
+    3415,
+    4393,
+    4574,
+    4289,
+    3715,
+    2962,
+    2333,
+    1721,
+    1225,
+    873,
+    549,
+    891
+   ],
+   "failed": [
+    329,
+    317,
+    263,
+    235,
+    234,
+    216,
+    176,
+    145,
+    96,
+    61,
+    37,
+    22,
+    29,
+    32,
+    25,
+    15,
+    16,
+    5,
+    7,
+    3,
+    2,
+    2,
+    1,
+    0
+   ]
+  },
+  "calibration": {
+   "bins": [
+    {
+     "bin": [
+      0.30000000000000004,
+      0.4
+     ],
+     "count": 15,
+     "mean_predicted": 0.3838822350034189,
+     "observed": 0.4666666666666667,
+     "ci95": [
+      0.24809535365737387,
+      0.698830199745016
+     ]
+    },
+    {
+     "bin": [
+      0.4,
+      0.5
+     ],
+     "count": 147,
+     "mean_predicted": 0.4574329680523385,
+     "observed": 0.5034013605442177,
+     "ci95": [
+      0.4235248349971003,
+      0.583104642122905
+     ]
+    },
+    {
+     "bin": [
+      0.5,
+      0.6000000000000001
+     ],
+     "count": 344,
+     "mean_predicted": 0.5575571426417204,
+     "observed": 0.5436046511627907,
+     "ci95": [
+      0.4907765538788484,
+      0.5954696345476567
+     ]
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.7000000000000001
+     ],
+     "count": 725,
+     "mean_predicted": 0.6579472710557748,
+     "observed": 0.6372413793103449,
+     "ci95": [
+      0.6016051522147028,
+      0.6714309073996789
+     ]
+    },
+    {
+     "bin": [
+      0.7000000000000001,
+      0.8
+     ],
+     "count": 1826,
+     "mean_predicted": 0.7583714536732009,
+     "observed": 0.778751369112815,
+     "ci95": [
+      0.7591384639357855,
+      0.7971938866581759
+     ]
+    },
+    {
+     "bin": [
+      0.8,
+      0.9
+     ],
+     "count": 5127,
+     "mean_predicted": 0.8570153741534647,
+     "observed": 0.8531304856641311,
+     "ci95": [
+      0.8431768708025996,
+      0.8625553232364408
+     ]
+    },
+    {
+     "bin": [
+      0.9,
+      1.0
+     ],
+     "count": 41816,
+     "mean_predicted": 0.9860659795631962,
+     "observed": 0.9854122823799503,
+     "ci95": [
+      0.9842177243541096,
+      0.9865176630570122
+     ]
+    }
+   ],
+   "ece": 0.0022455419809520815,
+   "predicted": "model posterior P(logical preserved | syndrome) for the MAP correction"
+  }
+ },
+ "margin_study_mismatched": {
+  "validation_seed": 20266026,
+  "held_out_seed": 20266027,
+  "shots_each": 50000,
+  "decoder": "energy (MAP)",
+  "model": "mismatched: assumes p=0.05, q=0.02",
+  "threshold_rule": "flag the lowest 10% energy gaps on the validation set",
+  "threshold": 0.9473813189440001,
+  "auroc_gap_validation": 0.7794157548447376,
+  "auroc_gap_held_out": 0.7832302594793273,
+  "auroc_logical_margin_held_out": 0.8356437527940245,
+  "validation_flagged": {
+   "count": 1412,
+   "trials": 13653,
+   "rate": 0.10342049366439611,
+   "ci95": [
+    0.0984237706938633,
+    0.10864032002926982
+   ],
+   "interval": "Wilson score"
+  },
+  "validation_unflagged": {
+   "count": 1121,
+   "trials": 36347,
+   "rate": 0.030841610036591742,
+   "ci95": [
+    0.029113214327747227,
+    0.03266916453038319
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_flagged": {
+   "count": 1458,
+   "trials": 13535,
+   "rate": 0.10772072404876247,
+   "ci95": [
+    0.10260859527874891,
+    0.11305546044578194
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_unflagged": {
+   "count": 1104,
+   "trials": 36465,
+   "rate": 0.03027560674619498,
+   "ci95": [
+    0.02856582737027013,
+    0.03208434330537982
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_failure": {
+   "count": 2562,
+   "trials": 50000,
+   "rate": 0.05124,
+   "ci95": [
+    0.0493416248011583,
+    0.053207325623852324
+   ],
+   "interval": "Wilson score"
+  },
+  "held_out_by_gap_quintile": [
+   {
+    "gap_range": [
+     0.9473813189440001,
+     0.9473813189440001
+    ],
+    "count": 1458,
+    "trials": 13535,
+    "rate": 0.10772072404876247,
+    "ci95": [
+     0.10260859527874891,
+     0.11305546044578194
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     0.9473813189440001,
+     6.836259277277
+    ],
+    "count": 2562,
+    "trials": 50000,
+    "rate": 0.05124,
+    "ci95": [
+     0.0493416248011583,
+     0.053207325623852324
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     6.836259277277,
+     6.836259277277
+    ],
+    "count": 120,
+    "trials": 31701,
+    "rate": 0.003785369546701997,
+    "ci95": [
+     0.0031668718507180116,
+     0.00452411310933623
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     6.836259277277,
+     6.836259277277
+    ],
+    "count": 120,
+    "trials": 31701,
+    "rate": 0.003785369546701997,
+    "ci95": [
+     0.0031668718507180116,
+     0.00452411310933623
+    ],
+    "interval": "Wilson score"
+   },
+   {
+    "gap_range": [
+     6.836259277277,
+     6.836259277277
+    ],
+    "count": 120,
+    "trials": 31701,
+    "rate": 0.003785369546701997,
+    "ci95": [
+     0.0031668718507180116,
+     0.00452411310933623
+    ],
+    "interval": "Wilson score"
+   }
+  ],
+  "held_out_histogram": {
+   "edges": [
+    0.0,
+    0.28484413655320834,
+    0.5696882731064167,
+    0.854532409659625,
+    1.1393765462128334,
+    1.4242206827660417,
+    1.70906481931925,
+    1.9939089558724583,
+    2.2787530924256667,
+    2.563597228978875,
+    2.8484413655320835,
+    3.133285502085292,
+    3.4181296386385,
+    3.7029737751917082,
+    3.9878179117449166,
+    4.272662048298125,
+    4.557506184851333,
+    4.842350321404542,
+    5.12719445795775,
+    5.412038594510959,
+    5.696882731064167,
+    5.981726867617375,
+    6.266571004170584,
+    6.551415140723792,
+    6.836259277277
+   ],
+   "correct": [
+    0,
+    0,
+    0,
+    12077,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3780,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    31581
+   ],
+   "failed": [
+    0,
+    0,
+    0,
+    1458,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    984,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    120
+   ]
+  },
+  "calibration": {
+   "bins": [
+    {
+     "bin": [
+      0.9,
+      1.0
+     ],
+     "count": 50000,
+     "mean_predicted": 0.978158870427908,
+     "observed": 0.94876,
+     "ci95": [
+      0.9467926743761477,
+      0.9506583751988418
+     ]
+    }
+   ],
+   "ece": 0.029398870427907897,
+   "predicted": "model posterior P(logical preserved | syndrome) for the MAP correction"
+  }
+ },
+ "runtime": {
+  "none": {
+   "count": 400,
+   "median_us": 4.7,
+   "mean_us": 4.98175,
+   "p95_us": 6.4,
+   "max_us": 14.4,
+   "min_us": 4.4
+  },
+  "lookup": {
+   "count": 400,
+   "median_us": 94.4,
+   "mean_us": 97.11925,
+   "p95_us": 107.71,
+   "max_us": 362.4,
+   "min_us": 80.0
+  },
+  "energy": {
+   "count": 400,
+   "median_us": 732.7,
+   "mean_us": 827.83725,
+   "p95_us": 1179.5099999999998,
+   "max_us": 3460.0,
+   "min_us": 594.3
+  },
+  "exact": {
+   "count": 400,
+   "median_us": 223.4,
+   "mean_us": 232.632,
+   "p95_us": 285.90499999999946,
+   "max_us": 435.7,
+   "min_us": 188.5
+  },
+  "vectorized_batch": {
+   "shots": 200000,
+   "seconds": 0.0728943,
+   "note": "table lookup after one decision-table build per declared model"
+  }
+ },
+ "reproducibility": {
+  "seed": 20261026,
+  "first_digest": "496479bcdfa4e7f1",
+  "second_digest": "496479bcdfa4e7f1",
+  "identical": true
+ },
+ "duration_seconds": 4.1521283,
+ "provenance": {
+  "kind": "simulation",
+  "created_utc": "2026-10-26T16:10:11+00:00",
+  "versions": {
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "qiskit": "2.5.2",
+   "qiskit-aer": "0.17.2"
+  },
+  "generator": "python -m backend.generate_qec_results"
+ }
+}

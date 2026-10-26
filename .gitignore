@@ -50,3 +50,7 @@ playwright-report/
 .coverage
 htmlcov/
 /docs/VISUAL_UPDATE.md
+
+# Google Quantum AI archive (download with: python -m backend.hardware.pipeline fetch).
+# Only the reproducible real-shot subset in data/google_subset is versioned.
+/data/google_qec3v5/

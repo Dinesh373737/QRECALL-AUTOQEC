@@ -2,7 +2,7 @@ FROM node:22-bookworm-slim AS frontend
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
-COPY index.html tsconfig.json vite.config.ts ./
+COPY index.html legacy.html tsconfig.json vite.config.ts ./
 COPY src ./src
 COPY public ./public
 RUN npm run build
@@ -15,6 +15,8 @@ COPY backend/requirements.lock.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend ./backend
 COPY results ./results
+# Real Google shots only (reproducible subset of Zenodo 10.5281/zenodo.6804040; see data/google_subset/manifest.json).
+COPY data/google_subset ./data/google_subset
 COPY --from=frontend /app/dist ./dist
 RUN useradd --uid 10001 --create-home qrecall
 USER qrecall
