@@ -319,6 +319,8 @@ export interface Ranking {
   status: "selected" | "no_feasible_candidate";
   message: string;
   objective: string;
+  weight_sensitivity: { weight: "Q" | "G2" | "D"; direction: "raise" | "lower"; threshold: number;
+    switches_to: { id: string; family: string; Q: number; G2: number; D: number; pL: number } }[];
 }
 
 export interface ExperimentSummary {

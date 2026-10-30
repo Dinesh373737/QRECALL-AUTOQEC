@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Html, Line, OrbitControls } from "@react-three/drei";
+import { Line, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import type { Geometry, Mechanism } from "../lib/types";
 import { BASIS_COLOR } from "./Lattice2D";
@@ -37,12 +37,16 @@ function Pulse({ position, color, size }: { position: [number, number, number]; 
   );
 }
 
-function Scene({ geo, fired, overlay, round, show, reduced }: {
+type Hover = { id: number; x: number; y: number } | null;
+
+// Labels are plain DOM over the canvas: drei's <Html> mounts a separate React root, and unmounting it during a
+// page change makes React 19 throw ("synchronously unmount a root while React was already rendering").
+function Scene({ geo, fired, overlay, round, show, reduced, onHover }: {
   geo: Geometry; fired: Set<number>; overlay: Overlay; round: number | null; show: { pm: boolean; ising: boolean; comp: boolean }; reduced: boolean;
+  onHover: (h: Hover) => void;
 }) {
   const { cx, cy } = useFrameCenter(geo);
   const pos = (x: number, y: number, t: number): [number, number, number] => [x - cx, t * T_SPACING, y - cy];
-  const [hover, setHover] = useState<number | null>(null);
   const quiet = useMemo(() => {
     const arr: number[] = [];
     for (const d of geo.detectors) if (!fired.has(d.id)) arr.push(...pos(d.x, d.y, d.t));
@@ -99,7 +103,8 @@ function Scene({ geo, fired, overlay, round, show, reduced }: {
         return (
           <group key={id}>
             {!reduced && !dim && <Pulse position={p} color={color} size={0.16} />}
-            <mesh position={p} onPointerOver={(e) => { e.stopPropagation(); setHover(id); }} onPointerOut={() => setHover(null)}>
+            <mesh position={p} onPointerOver={(e) => { e.stopPropagation(); onHover({ id, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY }); }}
+              onPointerOut={() => onHover(null)}>
               <sphereGeometry args={[0.17, 20, 20]} />
               <meshStandardMaterial color={color} emissive={color} emissiveIntensity={dim ? 0.15 : 0.9} transparent opacity={dim ? 0.3 : 1} />
             </mesh>
@@ -113,19 +118,6 @@ function Scene({ geo, fired, overlay, round, show, reduced }: {
       })}
       {show.ising && mechLines(overlay.ising).map((pts, i) => <Line key={`is${i}`} points={pts} color="#c7b8ff" lineWidth={2.2} />)}
       {show.comp && mechLines(overlay.complement).map((pts, i) => <Line key={`co${i}`} points={pts} color="#f47c80" lineWidth={1.6} dashed dashSize={0.14} gapSize={0.1} />)}
-      {hover !== null && byId.get(hover) && (() => {
-        const d = byId.get(hover)!;
-        return (
-          <Html position={pos(d.x, d.y, d.t)} style={{ pointerEvents: "none" }}>
-            <div className="chart-tooltip" style={{ position: "static", transform: "translate(12px,-50%)" }}>
-              <b>detector D{d.id}</b><div className="num">({d.x}, {d.y}) · round {d.t} · {d.basis}-type</div>
-            </div>
-          </Html>
-        );
-      })()}
-      <Html position={[0, tMax * T_SPACING + 1.1, 0]} center style={{ pointerEvents: "none" }}>
-        <div className="num muted" style={{ fontSize: 10.5, whiteSpace: "nowrap" }}>time ↑ (rounds 0 – {tMax})</div>
-      </Html>
     </>
   );
 }
@@ -138,12 +130,22 @@ export function SpacetimeLattice3D({ geo, fired, overlay, round, show, reduced, 
   const xs = geo.detectors.map((d) => d.x);
   const span = Math.max(4, Math.max(...xs) - Math.min(...xs));
   const dist = Math.max(span * 1.5, tMax * T_SPACING * 1.05) + 4.5;
+  const [hover, setHover] = useState<Hover>(null);
+  const hovered = hover ? geo.detectors.find((d) => d.id === hover.id) : undefined;
   return (
-    <div style={{ height, borderRadius: 12, overflow: "hidden", background: "radial-gradient(ellipse at 50% 30%, #0e1a30, #05080f 70%)", border: "1px solid var(--line)" }}>
+    <div style={{ position: "relative", height, borderRadius: 12, overflow: "hidden", background: "radial-gradient(ellipse at 50% 30%, #0e1a30, #05080f 70%)", border: "1px solid var(--line)" }}>
       <Canvas camera={{ position: [dist * 0.85, (tMax * T_SPACING) / 2 + dist * 0.35, dist * 0.85], fov: 42 }} dpr={[1, 2]}>
-        <Scene geo={geo} fired={firedSet} overlay={overlay} round={round} show={show} reduced={reduced} />
+        <Scene geo={geo} fired={firedSet} overlay={overlay} round={round} show={show} reduced={reduced} onHover={setHover} />
         <OrbitControls target={[0, (tMax * T_SPACING) / 2, 0]} enableDamping dampingFactor={0.08} autoRotate={!reduced} autoRotateSpeed={0.35} />
       </Canvas>
+      <div className="num muted" style={{ position: "absolute", top: 10, left: 0, right: 0, textAlign: "center", fontSize: 10.5, pointerEvents: "none" }}>
+        time ↑ (rounds 0 – {tMax})
+      </div>
+      {hover && hovered && (
+        <div className="chart-tooltip" style={{ position: "absolute", left: hover.x + 12, top: hover.y, transform: "translateY(-50%)", pointerEvents: "none" }}>
+          <b>detector D{hovered.id}</b><div className="num">({hovered.x}, {hovered.y}) · round {hovered.t} · {hovered.basis}-type</div>
+        </div>
+      )}
     </div>
   );
 }

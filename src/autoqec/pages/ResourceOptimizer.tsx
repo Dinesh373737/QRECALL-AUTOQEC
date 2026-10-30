@@ -149,6 +149,20 @@ export default function ResourceOptimizer() {
                   <div className="field-help" style={{ marginTop: 8 }}>
                     p_L baseline {pct(data.baseline.pL, 2)} [{pct(data.baseline.pL_ci95[0], 2)}, {pct(data.baseline.pL_ci95[1], 2)}] vs selected {pct(sel.pL, 2)} [{pct(sel.pL_ci95[0], 2)}, {pct(sel.pL_ci95[1], 2)}]. {data.comparison?.pL_note}
                   </div>
+                  {(() => {
+                    const name = { Q: "w_Q", G2: "w_G", D: "w_D" };
+                    const shifts = (data.weight_sensitivity ?? []).filter((s) => s.threshold <= 5);
+                    return (
+                      <div className="field-help" style={{ marginTop: 6 }}>
+                        <b>What changes the choice:</b>{" "}
+                        {shifts.length
+                          ? shifts.map((s, i) => (
+                            <span key={`${s.weight}${s.direction}`}>{i > 0 && "; "}{s.direction} {name[s.weight]} {s.direction === "raise" ? "above" : "below"} {s.threshold.toFixed(2)} → Q {s.switches_to.Q} · G₂ {s.switches_to.G2} · D {s.switches_to.D}</span>
+                          ))
+                          : "no single weight between 0 and 5 changes it; tighten a constraint or change the noise model."}
+                      </div>
+                    );
+                  })()}
                 </Card>
               ) : (
                 <Card tone="red" title={<><CircleX style={{ color: "var(--red)" }} />No feasible candidate</>}>

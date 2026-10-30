@@ -274,3 +274,17 @@ def test_advisor_excluded_decoders_are_never_recommended():
     assert without["status"] == "recommended"
     assert without["recommendation"]["method"] != full["recommendation"]["method"]
     assert full["recommendation"]["method"] in without["excluded_methods"]
+
+
+def test_advisor_breaks_score_ties_by_measured_latency():
+    _results_or_skip()
+    # With speed ignored, decoders with the same failure rate on the same patch tie on score.
+    google = ["google_pymatching", "google_correlated_matching", "google_belief_matching",
+              "google_tensor_network_contraction"]
+    res = advisor.recommend({"rounds": 1, "basis": "Z", "target_kind": "per_shot", "exclude_methods": google,
+                             "priorities": {"reliability": 5, "space": 5, "speed": 0}})
+    best = res["recommendation"]
+    tied = [c for c in res["candidates"] if c["score"] == best["score"] and c is not best]
+    assert tied, "expected at least one tie in this configuration"
+    for c in tied:
+        assert (c["latency_us"] or float("inf")) >= best["latency_us"]

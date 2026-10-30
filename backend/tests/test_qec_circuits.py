@@ -128,6 +128,20 @@ def test_pareto_flags_non_dominated_candidates():
     assert {"c1", "c3"} <= pareto
 
 
+def test_weight_sensitivity_predicts_the_switch_point():
+    weights = {"Q": 1, "G2": 1, "D": 1}
+    r = opt.rank(_fake_eval(), weights, {}, conservative=False)
+    raise_d = next(s for s in r["weight_sensitivity"] if s["weight"] == "D" and s["direction"] == "raise")
+    other = raise_d["switches_to"]["id"]
+    assert other != r["selected"]["id"]
+    below = opt.rank(_fake_eval(), {**weights, "D": raise_d["threshold"] - 1e-6}, {}, conservative=False)
+    above = opt.rank(_fake_eval(), {**weights, "D": raise_d["threshold"] + 1e-6}, {}, conservative=False)
+    assert below["selected"]["id"] == r["selected"]["id"]
+    assert above["selected"]["id"] == other
+    # The selected candidate already has the fewest qubits, so no weight on Q can push the choice away from it.
+    assert not any(s["weight"] == "Q" and s["direction"] == "raise" for s in r["weight_sensitivity"])
+
+
 def test_failed_verification_is_never_feasible():
     ev = _fake_eval()
     ev["candidates"][0]["verification"] = {"passed": False, "checks": []}

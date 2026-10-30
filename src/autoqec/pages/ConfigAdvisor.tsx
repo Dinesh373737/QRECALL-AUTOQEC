@@ -68,7 +68,7 @@ export default function ConfigAdvisor() {
           </Card>
           <Card title="Decoders considered" sub="Untick a decoder to see what the advisor recommends without it">
             <div className="col" style={{ gap: 8 }}>
-              {["pymatching_circuit", "pymatching_pij", "pymatching_correlated", "ising_noise_aware", "ising_uniform", "google_correlated_matching", "google_belief_matching", "google_tensor_network_contraction"].map((m) => (
+              {["pymatching_circuit", "pymatching_pij", "pymatching_correlated", "ising_noise_aware", "ising_uniform", "google_pymatching", "google_correlated_matching", "google_belief_matching", "google_tensor_network_contraction"].map((m) => (
                 <label key={m} className="toggle" style={{ gap: 10 }}>
                   <input type="checkbox" checked={!excluded.includes(m)} onChange={(e) => setExcluded(e.target.checked ? excluded.filter((x) => x !== m) : [...excluded, m])} />
                   <span style={{ color: methodColor(m) }}>●</span>{methodLabel(m)}

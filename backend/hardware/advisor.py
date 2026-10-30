@@ -146,7 +146,9 @@ def recommend(req: dict) -> dict:
         f["score_terms"] = terms
         f["latency_scored_pessimistically"] = not measured
         f["score"] = sum(terms.values())
-    feasible.sort(key=lambda f: (f["score"], f["metric"], f["experiment"], f["method"]))
+    # Equal scores (e.g. with the speed weight at 0) go to the faster decoder, never to alphabetical order.
+    feasible.sort(key=lambda f: (f["score"], f["metric"], f["latency_us"] if f["latency_us"] else math.inf,
+                                 f["experiment"], f["method"]))
     best = feasible[0]
     why = [f"Meets every constraint with logical failure {'(95% upper bound) ' if conservative else ''}"
            f"{best['metric']:.4f} {'per round' if target_kind == 'per_round' else 'per shot'} "

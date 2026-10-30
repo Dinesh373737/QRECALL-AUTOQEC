@@ -324,6 +324,7 @@ def rank(evaluation: dict, weights: dict, limits: dict, conservative: bool = Tru
     if selected:
         others = [r for r in feasible if r is not selected]
         dominates_all = bool(others) and all(all(selected[k] <= o[k] for k in ("Q", "G2", "D")) for o in others)
+    sensitivity = _weight_sensitivity(selected, feasible, w, refs) if selected else []
     reason = None
     if selected:
         reason = (f"Lowest normalized cost J = {selected['J']:.3f} among {len(feasible)} feasible candidate(s) "
@@ -337,9 +338,39 @@ def rank(evaluation: dict, weights: dict, limits: dict, conservative: bool = Tru
             "weights": w, "limits": limits, "conservative_pL": conservative, "candidates": rows,
             "feasible_count": len(feasible), "selected": selected, "baseline": next(r for r in rows if r["id"] == baseline["id"]),
             "comparison": comparison, "status": "selected" if selected else "no_feasible_candidate",
-            "selected_dominates_all": dominates_all,
+            "selected_dominates_all": dominates_all, "weight_sensitivity": sensitivity,
             "message": reason or "No feasible candidate: every candidate violates at least one hard constraint.",
             "objective": "J(c) = wQ·Q/Qref + wG·G2/G2ref + wD·D/Dref (hard constraints applied first)"}
+
+
+def _weight_sensitivity(selected: dict, feasible: list[dict], w: dict, refs: dict, w_max: float = 10.0) -> list[dict]:
+    """For each weight alone, the value at which another feasible candidate first takes over.
+
+    J is linear in each weight, so J_c - J_sel = gap + (t - w_k) * slope with slope = (c_k - sel_k) / ref_k;
+    the first crossing in each direction is the nearest switch point. Other weights stay as they are.
+    """
+    out = []
+    for k in ("Q", "G2", "D"):
+        for direction in ("raise", "lower"):
+            best = None
+            for c in feasible:
+                if c is selected:
+                    continue
+                slope = (c[k] - selected[k]) / refs[k]
+                gap = c["J"] - selected["J"]
+                if direction == "raise" and slope < 0:
+                    t = w[k] + gap / -slope
+                    if t <= w_max and (best is None or t < best[0]):
+                        best = (t, c)
+                elif direction == "lower" and slope > 0:
+                    t = w[k] - gap / slope
+                    if t >= 0 and (best is None or t > best[0]):
+                        best = (t, c)
+            if best:
+                c = best[1]
+                out.append({"weight": k, "direction": direction, "threshold": best[0],
+                            "switches_to": {key: c[key] for key in ("id", "family", "Q", "G2", "D", "pL")}})
+    return out
 
 
 def _dominates(a: dict, b: dict) -> bool:
