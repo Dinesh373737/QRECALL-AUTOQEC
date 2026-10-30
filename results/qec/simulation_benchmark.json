@@ -8517,39 +8517,39 @@
  "runtime": {
   "none": {
    "count": 400,
-   "median_us": 4.7,
-   "mean_us": 4.98175,
-   "p95_us": 6.4,
-   "max_us": 14.4,
-   "min_us": 4.4
+   "median_us": 7.2,
+   "mean_us": 7.781750000000001,
+   "p95_us": 9.309999999999992,
+   "max_us": 39.4,
+   "min_us": 6.6
   },
   "lookup": {
    "count": 400,
-   "median_us": 94.4,
-   "mean_us": 97.11925,
-   "p95_us": 107.71,
-   "max_us": 362.4,
-   "min_us": 80.0
+   "median_us": 160.35000000000002,
+   "mean_us": 642.20975,
+   "p95_us": 4300.715,
+   "max_us": 11240.6,
+   "min_us": 139.6
   },
   "energy": {
    "count": 400,
-   "median_us": 732.7,
-   "mean_us": 827.83725,
-   "p95_us": 1179.5099999999998,
-   "max_us": 3460.0,
-   "min_us": 594.3
+   "median_us": 5657.1,
+   "mean_us": 5108.18275,
+   "p95_us": 9540.2,
+   "max_us": 21764.5,
+   "min_us": 934.5
   },
   "exact": {
    "count": 400,
-   "median_us": 223.4,
-   "mean_us": 232.632,
-   "p95_us": 285.90499999999946,
-   "max_us": 435.7,
-   "min_us": 188.5
+   "median_us": 403.7,
+   "mean_us": 1463.9725,
+   "p95_us": 6533.619999999999,
+   "max_us": 8583.4,
+   "min_us": 334.5
   },
   "vectorized_batch": {
    "shots": 200000,
-   "seconds": 0.0728943,
+   "seconds": 0.4017512,
    "note": "table lookup after one decision-table build per declared model"
   }
  },
@@ -8559,10 +8559,10 @@
   "second_digest": "496479bcdfa4e7f1",
   "identical": true
  },
- "duration_seconds": 4.1521283,
+ "duration_seconds": 45.3473825,
  "provenance": {
   "kind": "simulation",
-  "created_utc": "2026-10-26T16:10:11+00:00",
+  "created_utc": "2026-10-29T09:18:00+00:00",
   "versions": {
    "numpy": "2.5.3",
    "scipy": "1.18.1",

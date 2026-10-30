@@ -27,7 +27,7 @@ export function ci(c: [number, number] | number[] | null | undefined, digits = 2
 }
 
 export function us(x: number | null | undefined): string {
-  if (x === null || x === undefined || !Number.isFinite(x)) return "not measured";
+  if (x === null || x === undefined || !Number.isFinite(x)) return "—";
   if (x < 1000) return `${x.toFixed(x < 10 ? 2 : 1)} µs`;
   if (x < 1e6) return `${(x / 1000).toFixed(x < 1e4 ? 2 : 1)} ms`;
   return `${(x / 1e6).toFixed(2)} s`;

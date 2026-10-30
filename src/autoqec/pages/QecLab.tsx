@@ -265,6 +265,7 @@ export default function QecLab({ query }: { query: URLSearchParams }) {
           <Tech title="Logical success and degeneracy (the recovery convention)">
             <p>Success is judged on the residual r = e ⊕ ê after an ideal final round (noiseless readout + majority vote), the convention of memory experiments. r = 000 restores the codeword; weight(r) ≤ 1 keeps the logical value recoverable; otherwise a logical X̄ was applied. Two different candidates can therefore lead to the same logical outcome. We do not use an even/odd-weight rule: it would count a single leftover flip as a logical error.</p>
             <p>The exact reference maximizes P(logical value survives | y) by enumerating every candidate; it can differ from the energy decoder when several less-likely explanations share a logical outcome.</p>
+            <p>Scope: the bit-flip code corrects one X error. Z errors leave the syndrome at 00 and flip the logical phase — inject Z on |+⟩ to see it.</p>
           </Tech>
         </div>
 
@@ -273,7 +274,6 @@ export default function QecLab({ query }: { query: URLSearchParams }) {
             <>
               <Card title="Same syndrome, every decoder" sub={`observed ${data.syndrome.observed} · click a row to switch`}>
                 <DecoderTable decisions={data.decisions} active={data.input.decoder} onPick={setDecoder} />
-                <div className="field-help" style={{ marginTop: 8 }}>P(keep | model) is the model posterior that the logical value survives — calibrated only if the model is right (tested in Simulation Benchmarks).</div>
               </Card>
               <Card title="The circuit used in this trial" icon={<CircuitBoard />} right={<a className="btn sm" href={circuitLink}>Inspect</a>}>
                 <CircuitViewer ops={data.circuit.operations} qubits={data.circuit.qubits}
@@ -286,17 +286,6 @@ export default function QecLab({ query }: { query: URLSearchParams }) {
                   <span className="chip">depth {data.circuit.metrics.depth}</span>
                 </div>
               </Card>
-              <Card title="Provenance">
-                <div className="kv">
-                  <dt>kind</dt><dd>simulation (Qiskit statevector)</dd>
-                  <dt>seed</dt><dd>{data.provenance.seed} (data and readout streams)</dd>
-                  <dt>model</dt><dd>{data.input.model_matches_simulation ? "matches simulation" : "declared mismatch"}</dd>
-                  <dt>p (sim / model)</dt><dd>{data.input.p.map((v) => v.toFixed(3)).join(", ")} / {data.input.model_p.map((v) => v.toFixed(3)).join(", ")}</dd>
-                  <dt>q (sim / model)</dt><dd>{data.input.q.map((v) => v.toFixed(3)).join(", ")} / {data.input.model_q.map((v) => v.toFixed(3)).join(", ")}</dd>
-                  <dt>computed in</dt><dd>{data.provenance.duration_ms.toFixed(0)} ms</dd>
-                </div>
-              </Card>
-              <Callout tone="warn">The three-qubit bit-flip code corrects a single X error only. It does not protect against Z (phase) errors — inject Z on |+⟩ to see an uncorrectable logical phase flip.</Callout>
             </>
           )}
         </div>

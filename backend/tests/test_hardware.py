@@ -263,3 +263,14 @@ def test_recorded_ising_benchmark_is_internally_consistent():
         for method, test in (e.get("paired_all") or {}).items():
             # paired discordant counts reproduce the difference in failure counts
             assert test["only_a_wrong"] - test["only_b_wrong"] == m["ising_noise_aware"]["count"] - m[method]["count"]
+
+
+def test_advisor_excluded_decoders_are_never_recommended():
+    _results_or_skip()
+    req = {"rounds": 5, "target_kind": "per_shot", "priorities": {"reliability": 1, "space": 0.5, "speed": 0}}
+    full = advisor.recommend(req)
+    assert full["status"] == "recommended"
+    without = advisor.recommend({**req, "exclude_methods": [full["recommendation"]["method"]]})
+    assert without["status"] == "recommended"
+    assert without["recommendation"]["method"] != full["recommendation"]["method"]
+    assert full["recommendation"]["method"] in without["excluded_methods"]

@@ -51,41 +51,41 @@
 
 ### Real-data decoder comparison
 Exact Ising/QUBO decoding of real Google shots (first 5,000 shots for d = 3, 2,000 for d = 5, of every
-surface-code experiment with ≤ 5 rounds). **Recorded so far: 28 of the 30 experiments (128,000 shots); the two
-remaining d = 5 Z-basis runs (3 and 5 rounds) are still computing and will be added by `pipeline ising --resume`.**
+surface-code experiment with ≤ 5 rounds). **All 30 experiments recorded (132,000 shots).** A per-case breakdown is in the
+[benchmark report](BENCHMARK_REPORT.md).
 All methods are scored on identical shots; pij-based methods use the complementary-parity model.
 
 | Method | Failures | Shots | Pooled rate |
 |---|---:|---:|---:|
-| Google tensor network (supplied) | 9,004 | 128,000 | 7.03% |
-| **Noise-aware Ising/QUBO (exact MLE, ours)** | **9,214** | 128,000 | **7.20%** |
-| Google belief matching (supplied) | 9,385 | 128,000 | 7.33% |
-| PyMatching correlated · pij DEM | 9,821 | 128,000 | 7.67% |
-| Google correlated matching (supplied) | 10,185 | 128,000 | 7.96% |
-| PyMatching · held-out pij DEM | 10,695 | 128,000 | 8.36% |
-| PyMatching · circuit DEM | 11,010 | 128,000 | 8.60% |
-| Uniform-weight Ising/QUBO (ablation) | 11,859 | 128,000 | 9.26% |
+| Google tensor network (supplied) | 9,325 | 132,000 | 7.06% |
+| **Noise-aware Ising/QUBO (exact MLE, ours)** | **9,569** | 132,000 | **7.25%** |
+| Google belief matching (supplied) | 9,722 | 132,000 | 7.37% |
+| PyMatching correlated · pij DEM | 10,177 | 132,000 | 7.71% |
+| Google correlated matching (supplied) | 10,560 | 132,000 | 8.00% |
+| PyMatching · held-out pij DEM | 11,097 | 132,000 | 8.41% |
+| PyMatching · circuit DEM | 11,425 | 132,000 | 8.66% |
+| Uniform-weight Ising/QUBO (ablation) | 12,368 | 132,000 | 9.37% |
 
 Paired per-experiment verdicts for the noise-aware Ising decoder (exact McNemar, p < 0.05):
 
 | Compared with | Ising significantly better | Ising significantly worse | Not resolved | Net failures |
 |---|---:|---:|---:|---:|
-| PyMatching · circuit DEM | 19 | 0 | 9 | −1,796 |
-| PyMatching · held-out pij DEM (same model) | 18 | 0 | 10 | −1,481 |
-| Google correlated matching | 15 | 0 | 13 | −971 |
-| PyMatching correlated | 10 | 0 | 18 | −607 |
-| Google belief matching | 1 | 0 | 27 | −171 |
-| Google tensor network | 0 | 6 | 22 | +210 |
+| PyMatching · circuit DEM | 20 | 0 | 10 | −1,856 |
+| PyMatching · held-out pij DEM (same model) | 19 | 0 | 11 | −1,528 |
+| Google correlated matching | 15 | 0 | 15 | −991 |
+| PyMatching correlated | 10 | 0 | 20 | −608 |
+| Google belief matching | 1 | 1 | 28 | −153 |
+| Google tensor network | 0 | 7 | 23 | +244 |
 
 * The differences are unresolved at r = 1 (the problem is essentially graph-like) and resolved in favour of the
   exact decoder for most multi-round runs versus matching.
-* **Google's tensor-network decoder remains better** (6 experiments significantly, 0 the other way): it
+* **Google's tensor-network decoder remains better** (7 experiments significantly, 0 the other way): it
   approximates maximum-likelihood decoding over logical classes, while our decoder finds the single most likely
   error — the same distinction as Module 1's exact Bayes reference versus the energy decoder.
-* Ablation: noise-aware weights beat uniform weights in 24 of 28 experiments (0 worse).
+* Ablation: noise-aware weights beat uniform weights in 26 of 30 experiments (0 worse).
 * Ambiguity: the complementary gap, thresholded on even shots and tested on odd shots, has held-out AUROC
-  0.818–0.981 (median 0.882); pooled held-out failure is 30.6% for flagged shots vs 4.6% for the rest.
-* Solver: 127,922 of 128,000 noise-aware solves proven optimal; 78 time-limited incumbents used and flagged;
+  0.754–0.981 (median 0.88); pooled held-out failure is 30.8% for flagged shots vs 4.6% for the rest.
+* Solver: 131,803 of 132,000 noise-aware solves proven optimal; 197 time-limited incumbents (all at d = 5, r = 5) used and flagged;
   median 27 ms per shot (offline tool, not real time).
 
 ### Noise-model sensitivity (all shots, 131 experiments)

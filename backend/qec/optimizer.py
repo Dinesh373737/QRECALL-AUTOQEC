@@ -46,7 +46,8 @@ SEEDS = (11, 23)
 BASELINE = {"family": "two_ancilla_sequential", "optimization_level": 0, "layout_method": "trivial",
             "routing_method": "basic", "seed": 11}
 DURATIONS_NS = {"sx": 35, "x": 35, "rz": 0, "id": 35, "cx": 300, "measure": 800, "reset": 400, "barrier": 0}
-DEFAULT_NOISE = {"p1": 0.001, "p2": 0.01, "p_meas": 0.02, "p_idle": 0.002}
+DEFAULT_NOISE = {"p1": 0.001, "p2": 0.01, "p_meas": 0.02, "p_idle": 0.001}
+IDLE_QUANTUM_NS = 100  # one idle marker per started 100 ns that an active qubit waits
 
 
 def memory_circuit(family: str, logical_bit: int, inject: int | None = None) -> QuantumCircuit:
@@ -131,7 +132,12 @@ def duration_ns(qc: QuantumCircuit) -> float:
 
 
 def with_idle_markers(qc: QuantumCircuit) -> QuantumCircuit:
-    """Insert explicit ``id`` gates on active qubits idling inside the schedule (ASAP layers)."""
+    """Insert ``id`` markers on active qubits that wait inside the schedule (ASAP layers).
+
+    Idling is charged per unit of time, not per layer: a qubit waiting through a layer receives one marker
+    per started ``IDLE_QUANTUM_NS`` of that layer's duration (the longest operation in it, from the declared
+    gate times). Slow mid-circuit measurement and reset therefore cost real idle error on the data qubits.
+    """
     dag = circuit_to_dag(qc)
     active = {qc.find_bit(q).index for inst in qc.data for q in inst.qubits}
     first: dict[int, int] = {}
@@ -150,9 +156,12 @@ def with_idle_markers(qc: QuantumCircuit) -> QuantumCircuit:
             out.append(node.op, [out.qubits[qc.find_bit(q).index] for q in node.qargs],
                        [out.clbits[qc.find_bit(c).index] for c in node.cargs])
             busy |= {qc.find_bit(q).index for q in node.qargs}
+        layer_ns = max((DURATIONS_NS.get(node.op.name, 50) for node in layer["graph"].op_nodes()), default=0)
+        markers = int(np.ceil(layer_ns / IDLE_QUANTUM_NS)) if layer_ns > 0 else 0
         for q in sorted(active - busy):
             if first[q] < li < last[q]:
-                out.id(out.qubits[q])
+                for _ in range(markers):
+                    out.id(out.qubits[q])
     return out
 
 
@@ -266,8 +275,8 @@ def evaluate(cfg: dict, progress=None, cancel=None) -> dict:
             "task": "One QEC cycle of the 3-qubit bit-flip memory (|0_L⟩ and |1_L⟩), lookup Pauli frame + majority readout",
             "target": {"coupling": coupling, "coupling_label": coupling_maps()[coupling]["label"],
                        "coupling_edges": coupling_maps()[coupling]["edges"], "basis": TARGET_BASIS},
-            "noise": noise, "noise_text": ("Depolarizing p1 on sx/x, p2 on cx, p_idle on every idle layer slot of an "
-                                           "active qubit (explicit id markers), symmetric readout error p_meas."),
+            "noise": noise, "noise_text": ("Depolarizing p1 on sx/x, p2 on cx, p_idle per 100 ns that an active qubit idles (explicit id "
+                                           "markers sized by each layer's duration), symmetric readout error p_meas."),
             "shots_per_logical_input": shots, "seed": seed, "grid_size": len(grid),
             "unique_candidates": len(candidates), "baseline_settings": BASELINE,
             "durations_ns": DURATIONS_NS, "candidates": candidates,
@@ -311,15 +320,24 @@ def rank(evaluation: dict, weights: dict, limits: dict, conservative: bool = Tru
                       for k in ("Q", "G2", "D", "pL", "duration_ns")}
         comparison["pL_note"] = ("Logical failure rates are Monte Carlo estimates with 95% Wilson intervals; overlapping "
                                  "intervals mean the difference is not resolved at this shot count.")
+    dominates_all = False
+    if selected:
+        others = [r for r in feasible if r is not selected]
+        dominates_all = bool(others) and all(all(selected[k] <= o[k] for k in ("Q", "G2", "D")) for o in others)
     reason = None
     if selected:
         reason = (f"Lowest normalized cost J = {selected['J']:.3f} among {len(feasible)} feasible candidate(s) "
                   f"(J = {' + '.join(f'{k}: {v:.3f}' for k, v in selected['cost_terms'].items())}).")
+        if dominates_all:
+            reason += (" It is no worse than every other feasible candidate on qubits, two-qubit gates and depth at "
+                       "the same time, so changing the weights cannot change this choice; tighten a constraint or "
+                       "change the noise model to explore trade-offs.")
     return {"references": refs, "reference_source": f"baseline candidate {baseline['id']} "
                                                    f"({BASELINE['family']}, opt level 0, trivial layout, basic routing)",
             "weights": w, "limits": limits, "conservative_pL": conservative, "candidates": rows,
             "feasible_count": len(feasible), "selected": selected, "baseline": next(r for r in rows if r["id"] == baseline["id"]),
             "comparison": comparison, "status": "selected" if selected else "no_feasible_candidate",
+            "selected_dominates_all": dominates_all,
             "message": reason or "No feasible candidate: every candidate violates at least one hard constraint.",
             "objective": "J(c) = wQ·Q/Qref + wG·G2/G2ref + wD·D/Dref (hard constraints applied first)"}
 

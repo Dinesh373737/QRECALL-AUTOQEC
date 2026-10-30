@@ -73,14 +73,14 @@ export function DecoderVerdicts({ ev }: { ev: ShotEvidence }) {
             <tr key={k}>
               <td>
                 <div style={{ color: "var(--text)", fontWeight: 560 }}>{d.label}</div>
-                <div className="field-help">{d.source.startsWith("supplied") ? "Google-supplied prediction" : d.source}</div>
+                <div className="field-help">{d.source}</div>
               </td>
               <td className="num">{d.prediction === null ? "—" : d.prediction ? "flip" : "no flip"}</td>
               <td>{d.correct === null ? <span className="badge neutral">{d.status ?? "n/a"}</span> : d.correct ? <span className="badge pass"><CircleCheck />Correct</span> : <span className="badge fail"><CircleX />Wrong</span>}</td>
               <td className="num" style={{ fontSize: 11.5 }}>
                 {d.edges ? `${d.edges.length} matched edge(s), weight ${fix(d.total_weight, 2)}, ${us(d.decode_us)}` : null}
                 {d.mechanisms ? `${d.mechanisms.length} mechanism(s), E = ${fix(d.objective, 2)}, ${fix(d.solve_ms, 0)} ms, ${d.status}` : null}
-                {!d.edges && !d.mechanisms ? "no internal evidence published" : null}
+                {!d.edges && !d.mechanisms ? "prediction only" : null}
               </td>
             </tr>
           ))}

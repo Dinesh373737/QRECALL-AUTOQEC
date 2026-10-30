@@ -93,7 +93,7 @@ class NoiseParams(Strict):
     p1: Annotated[float, Field(ge=0, le=0.05)] = 0.001
     p2: Annotated[float, Field(ge=0, le=0.1)] = 0.01
     p_meas: Annotated[float, Field(ge=0, le=0.1)] = 0.02
-    p_idle: Annotated[float, Field(ge=0, le=0.05)] = 0.002
+    p_idle: Annotated[float, Field(ge=0, le=0.05)] = 0.001
 
 
 class OptimizerEvaluateRequest(Strict):
@@ -127,6 +127,7 @@ class AdvisorRequest(Strict):
     max_latency_us: Annotated[float, Field(gt=0)] | None = None
     conservative: bool = True
     priorities: dict[Literal["reliability", "space", "speed"], Annotated[float, Field(ge=0, le=10)]] = {}
+    exclude_methods: Annotated[list[Annotated[str, Field(max_length=64)]], Field(max_length=16)] = []
 
 
 class ReproduceRequest(Strict):

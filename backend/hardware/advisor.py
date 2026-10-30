@@ -9,6 +9,7 @@ change the hardware's qubit count, gate count or circuit depth.
 from __future__ import annotations
 
 import json
+import math
 from functools import lru_cache
 
 from . import dataset as ds
@@ -34,42 +35,45 @@ def load_results() -> dict:
 
 
 def configurations() -> list[dict]:
+    """Every evaluated (experiment, decoder) operating point.
+
+    Where the exact Ising benchmark exists (surface code, <= 5 rounds), ALL decoders are taken from that
+    benchmark, i.e. scored on the identical shot subset, so their rates and intervals are directly comparable.
+    Elsewhere, decoders are scored on all shots. Per-round fits always use all shots.
+    """
     data = load_results()
     fits = {(f["distance"], f["basis"], f["center"], f["method"]): f["fit"]
             for f in data["baseline"]["per_round_fits"]}
+    ising = {e["experiment"]["id"]: e for e in data["ising"].get("experiments", [])}
     rows = []
     for res in data["baseline"]["experiments"]:
         info = res["experiment"]
         if info["code"] != "surface_code":
             continue
         center = f"{info['center'][0]}_{info['center'][1]}"
-        for method, entry in res["methods"].items():
-            fit = fits.get((info["distance"], info["basis"], center, method))
+        paired = ising.get(info["id"])
+        methods = paired["methods"] if paired else res["methods"]
+        for method, entry in methods.items():
+            base_entry = res["methods"].get(method, {})
+            latency = (entry.get("runtime") or {}).get("median_us") or base_entry.get("per_shot_us")
+            if method.startswith("ising"):
+                latency_source = "median single-shot MILP solve time (this machine)"
+            else:
+                latency_source = "measured in this pipeline (batch decode, this machine)" if latency else None
             rows.append({"experiment": info["id"], "distance": info["distance"], "basis": info["basis"],
                          "rounds": info["rounds"], "center": center, "physical_qubits": info["physical_qubits"],
                          "method": method, "label": entry["label"], "source": entry.get("source"),
                          "shots": entry["trials"], "failures": entry["count"], "rate": entry["rate"],
-                         "ci95": entry["ci95"], "latency_us": entry.get("per_shot_us"),
-                         "latency_source": "measured in this pipeline (batch decode, this machine)"
-                         if entry.get("per_shot_us") else "not measured (Google-supplied predictions)",
-                         "per_round": fit, "evaluation": "all shots"})
-    for res in data["ising"].get("experiments", []):
-        info = res["experiment"]
-        center = f"{info['center'][0]}_{info['center'][1]}"
-        for method in ("ising_noise_aware", "ising_uniform"):
-            entry = res["methods"][method]
-            rows.append({"experiment": info["id"], "distance": info["distance"], "basis": info["basis"],
-                         "rounds": info["rounds"], "center": center, "physical_qubits": info["physical_qubits"],
-                         "method": method, "label": entry["label"], "source": "computed in this pipeline",
-                         "shots": entry["trials"], "failures": entry["count"], "rate": entry["rate"],
-                         "ci95": entry["ci95"], "latency_us": entry["runtime"]["median_us"],
-                         "latency_source": "median single-shot MILP solve time (this machine)",
-                         "per_round": None, "evaluation": f"first {entry['trials']} shots (subset)"})
+                         "ci95": entry["ci95"], "latency_us": latency, "latency_source": latency_source,
+                         "per_round": fits.get((info["distance"], info["basis"], center, method)),
+                         "evaluation": (f"first {entry['trials']:,} shots, identical for every decoder" if paired
+                                        else "all shots")})
     return rows
 
 
 def recommend(req: dict) -> dict:
-    rows = configurations()
+    excluded = set(req.get("exclude_methods") or [])
+    rows = [r for r in configurations() if r["method"] not in excluded]
     rounds = req.get("rounds")
     basis = req.get("basis", "any")
     target_kind = req.get("target_kind", "per_shot")
@@ -117,7 +121,7 @@ def recommend(req: dict) -> dict:
             reasons.append(f"{r['physical_qubits']} physical qubits > budget {max_qubits}")
         if max_latency is not None:
             if r["latency_us"] is None:
-                reasons.append("decoder latency not measured")
+                reasons.append("no latency figure for this decoder")
             elif r["latency_us"] > max_latency:
                 reasons.append(f"latency {r['latency_us']:.1f} µs > {max_latency} µs")
         row ={**r, "metric": metric, "feasible": not reasons, "violations": reasons}
@@ -131,13 +135,14 @@ def recommend(req: dict) -> dict:
     min_q = min(f["physical_qubits"] for f in feasible)
     lat = [f["latency_us"] for f in feasible if f["latency_us"]]
     min_lat = min(lat) if lat else None
+    # Latencies span several orders of magnitude, so speed is scored on a log scale: 1 + log10(latency / fastest).
     worst_ratio = (max(lat) / min_lat) if lat else 1.0
     for f in feasible:
         measured = bool(f["latency_us"] and min_lat)
         ratio = f["latency_us"] / min_lat if measured else worst_ratio
         terms = {"reliability": w["reliability"] * f["metric"] / best_rel,
                  "space": w["space"] * f["physical_qubits"] / min_q,
-                 "speed": w["speed"] * ratio}
+                 "speed": w["speed"] * (1 + math.log10(max(ratio, 1.0)))}
         f["score_terms"] = terms
         f["latency_scored_pessimistically"] = not measured
         f["score"] = sum(terms.values())
@@ -148,9 +153,8 @@ def recommend(req: dict) -> dict:
            f"on {best['shots']} real shots ({best['evaluation']}).",
            f"Uses {best['physical_qubits']} physical qubits (distance {best['distance']}, {best['rounds']} rounds, "
            f"{best['basis']}-basis memory, patch centered at {best['center'].replace('_', ', ')}).",
-           f"Decoder: {best['label']}; latency "
-           + (f"{best['latency_us']:.1f} µs per shot ({best['latency_source']})." if best["latency_us"]
-              else "not measured (Google-supplied predictions).")]
+           f"Decoder: {best['label']}"
+           + (f"; latency {best['latency_us']:.1f} µs per shot ({best['latency_source']})." if best["latency_us"] else ".")]
     tradeoffs = []
     for alt in feasible[1:6]:
         tradeoffs.append({"experiment": alt["experiment"], "method": alt["method"], "label": alt["label"],
@@ -159,10 +163,11 @@ def recommend(req: dict) -> dict:
                           "difference": _diff(best, alt)})
     return {"status": "recommended", "recommendation": best, "why": why, "tradeoffs": tradeoffs,
             "feasible": len(feasible), "evaluated": len(evaluated), "weights": w, "conservative": conservative,
+            "excluded_methods": sorted(excluded),
             "target_kind": target_kind, "tested_rounds": tested_rounds,
             "candidates": feasible[:40],
             "boundaries": ["Only experimentally evaluated configurations are considered; nothing is extrapolated.",
-                           "Decoders without measured latency are scored with the slowest measured latency ratio.",
+                           "Speed is scored on a log scale (1 + log10 of latency relative to the fastest); decoders without measured latency get the slowest measured value.",
                            "Choosing a decoder re-analyzes recorded measurements; it does not change the chip's "
                            "physical qubits, gates or depth.",
                            "Latencies are software timings on this machine, not real-time hardware decoding."]}

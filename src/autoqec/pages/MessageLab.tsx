@@ -179,7 +179,7 @@ export default function MessageLab({ query }: { query: URLSearchParams }) {
                   <dt>correction</dt><dd>{data.resources.circuit_mode}</dd>
                 </div>
               </Card>
-              <Callout tone="sim">{data.scientific_boundary} Under high noise the protected copy fails too — two flips in one block beat a distance-3 code.</Callout>
+              <div className="field-help">Classical bits stored in |0_L⟩ / |1_L⟩ — not transmission of an unknown quantum state. Two flips in one block defeat a distance-3 code, so protection can fail.</div>
             </div>
           </div>
 

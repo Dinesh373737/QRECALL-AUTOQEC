@@ -82,7 +82,7 @@ def baseline_experiment(exp: ds.Experiment, methods=("pymatching_circuit", "pyma
         key = f"google_{decoder}"
         preds[key] = values
         result["methods"][key] = {**score(values, actual), "label": METHOD_LABELS[key],
-                                  "source": "Google-supplied predictions (Zenodo archive)",
+                                  "source": "Google decoder predictions (Zenodo archive)",
                                   "partition": ds.GOOGLE_DECODERS[decoder]["dem"], "per_shot_us": None}
     if "pymatching_circuit" in preds and "pymatching" in google:
         disagree = int(np.sum(preds["pymatching_circuit"] != google["pymatching"]))

@@ -156,7 +156,7 @@ def shot_evidence(experiment_id: str, shot: int, live_ising: bool = True) -> dic
                             "weight_meaning": explained["weight_meaning"]}
     for name, pred in supplied.items():
         decoders[f"google_{name}"] = {"label": ds.GOOGLE_DECODERS[name]["label"],
-                                      "source": "supplied by Google (no internal evidence published)",
+                                      "source": "Google decoder prediction (Zenodo archive)",
                                       "dem": ds.GOOGLE_DECODERS[name]["dem"], "prediction": pred,
                                       "correct": pred == actual}
     pij_kind = mt.dem_kind_for_shot("pymatching_pij", shot)

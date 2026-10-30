@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.0
+
+- Module 1 consolidated into three features: QEC Lab (experiment, decoder explainer, simulation benchmarks as tabs), Message Lab, and Circuits & Resources (inspector and optimizer as tabs). Old links redirect.
+- More spacious layout; repeated callouts removed or folded into the technical panels.
+- Resource optimizer: idle noise is now charged per 100 ns of idle time, so slower layers cost more; the result says when one candidate dominates all others (weights cannot change it). Stale-noise warning and CSV/JSON export added.
+- Configuration advisor: decoders can be excluded; every decoder is compared on identical shots where the Ising benchmark exists; speed is scored on a log scale.
+- Shot Explorer: explanation first, then the lattice, then predictions vs the answer key.
+- Exact Ising benchmark extended to all 1-, 3- and 5-round surface-code experiments; new [benchmark report](docs/autoqec/BENCHMARK_REPORT.md).
+
 ## 2.0.0 — QRecall AutoQEC (Q-Hack India 2026)
 
 - New product focus: explainable quantum error correction with two connected modules; the original memory lab is preserved at `/legacy.html`.

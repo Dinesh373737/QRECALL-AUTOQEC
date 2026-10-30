@@ -1,17 +1,14 @@
 import {
   ArrowRight,
   ChartColumn,
-  ChartLine,
   CircuitBoard,
   Cpu,
   Database,
   FlaskConical,
   MessageSquareText,
-  Microscope,
   Orbit,
   ScanSearch,
   ShieldCheck,
-  SlidersHorizontal,
   Target,
 } from "lucide-react";
 import { href } from "../lib/router";
@@ -57,12 +54,9 @@ function HeroArt() {
 }
 
 const M1 = [
-  { path: "/lab", icon: FlaskConical, label: "QEC Lab", text: "Encode → inject → measure → decode → correct → verify, with real Qiskit states." },
+  { path: "/lab", icon: FlaskConical, label: "QEC Lab", text: "Run the bit-flip code end to end, see every candidate error's energy, and check the decoder against the exact reference on benchmarks." },
   { path: "/message", icon: MessageSquareText, label: "Message Lab", text: "Send a message through noisy qubits with and without protection." },
-  { path: "/circuit", icon: CircuitBoard, label: "Circuit Inspector", text: "Step through the actual circuit, feed-forward and transpiled form." },
-  { path: "/explainer", icon: Microscope, label: "Decoder Explainer", text: "Every candidate error, its energy terms, and why one wins." },
-  { path: "/optimizer", icon: SlidersHorizontal, label: "Resource Optimizer", text: "Hard constraints + normalized cost over verified compilations." },
-  { path: "/sim-benchmarks", icon: ChartLine, label: "Simulation Benchmarks", text: "Failure curves, oracle agreement and held-out margin tests." },
+  { path: "/circuit", icon: CircuitBoard, label: "Circuits & Resources", text: "Step through the real circuit, then pick the cheapest compilation under your constraints." },
 ];
 const M2 = [
   { path: "/dataset", icon: Database, label: "Dataset Explorer", text: "131 Google surface-code experiments, verified and reproducible." },
@@ -124,7 +118,7 @@ export default function Home() {
 
       <div className="grid g2">
         <section className="module-card">
-          <div className="row"><span className="badge sim">Module 1 · Simulation</span><span className="num-badge">6 pages</span></div>
+          <div className="row"><span className="badge sim">Module 1 · Simulation</span><span className="num-badge">3 features</span></div>
           <h3>QEC Interactive Studio</h3>
           <p style={{ marginTop: 6 }}>Shows <b style={{ color: "var(--text)" }}>how decoding works</b>: a three-qubit bit-flip code, an explicit likelihood (energy) decoder with exact references, and resource-aware circuit selection.</p>
           <div className="col" style={{ gap: 2, marginTop: 12 }}>

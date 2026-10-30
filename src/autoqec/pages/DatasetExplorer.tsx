@@ -165,10 +165,6 @@ export default function DatasetExplorer({ query }: { query: URLSearchParams }) {
           )}
         </div>
       </div>
-      <div className="grid g2 mt">
-        <Callout tone="hw">Integrity: for every experiment, detection events and observable flips were re-derived from the raw <code>measurements.b8</code> and <code>sweep.b8</code> with Stim's measurement-to-detection converter and matched the published files bit-for-bit.</Callout>
-        <Callout tone="info">Split methodology: Google's pij models were estimated from detection events of one shot parity; we always decode the complementary parity (even model → odd shots, odd model → even shots). No method sees the observable flips it predicts.</Callout>
-      </div>
       {archive && verification && <div className="field-help mt">Archive {archive.name}: {(archive.bytes / 1e6).toFixed(1)} MB · MD5 {archive.md5} · verification artifact SHA-256 {verification.sha256.slice(0, 16)}…</div>}
     </div>
   );

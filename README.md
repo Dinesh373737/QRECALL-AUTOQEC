@@ -7,7 +7,7 @@
 An interactive, scientifically defensible quantum error-correction laboratory — from a three-qubit code you can
 step through gate by gate, to genuine shots measured on Google's superconducting processor.
 
-[Scientific documentation](docs/autoqec/SCIENCE.md) · [Dataset pipeline](docs/autoqec/DATASET.md) · [API](docs/autoqec/API.md) · [Judge demo](docs/autoqec/DEMO_GUIDE.md) · [Engineering report](docs/autoqec/ENGINEERING_REPORT.md) · [Architecture](docs/autoqec/ARCHITECTURE.md)
+[Scientific documentation](docs/autoqec/SCIENCE.md) · [Dataset pipeline](docs/autoqec/DATASET.md) · [API](docs/autoqec/API.md) · [Judge demo](docs/autoqec/DEMO_GUIDE.md) · [Engineering report](docs/autoqec/ENGINEERING_REPORT.md) · [Benchmark report](docs/autoqec/BENCHMARK_REPORT.md) · [Architecture](docs/autoqec/ARCHITECTURE.md)
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -34,19 +34,17 @@ Quantum AI's published hardware data.
 | **2 · Google Hardware Analyzer** | *How* decoding performs on real hardware: PyMatching vs exact Ising/QUBO vs Google's decoders, shot by shot | Google's 131 published surface-code experiments, 7,000,000 shots |
 
 ### Module 1 — QEC Interactive Studio
-* **QEC Lab** — Encode → Inject → Measure → Decode → Correct → Verify with a real Qiskit circuit: choose the
-  logical state, inject X/Y/Z faults, add seeded data and readout noise, compare four decoders on the same
-  syndrome, use physical feed-forward or a Pauli-frame update, and verify with a coherent majority decoder.
+* **QEC Lab** (tabs: Experiment · Decoder explainer · Benchmarks) — prepare a logical state, inject X/Y/Z
+  faults, add seeded data and readout noise, compare four decoders on the same syndrome, use feed-forward or a
+  Pauli-frame update and verify with a coherent majority decoder; for any syndrome at d = 3/5/7, see every
+  candidate's energy terms, posterior and decision boundary; seeded failure curves, oracle agreement and
+  held-out gap tests.
 * **Message Lab** — type a message; each UTF-8 bit is carried in a repetition-code block next to an
   unprotected copy hit by the same physical flips. Animated, clickable down to the bit, never forced to succeed.
-* **Circuit Inspector** — step through the actual circuit (mid-circuit measurement, `if_test` feed-forward),
-  inspect the statevector after every gate, compare with the transpiled circuit and an independent Aer run.
-* **Decoder Explainer** — any syndrome, any declared model, d = 3/5/7: every candidate's data and readout
-  energy terms, rank, posterior, logical-class probabilities, computed Q&A and decision-boundary sensitivity.
-* **Resource Optimizer** — 59 verified compilations of the *same* task, Aer logical-failure estimates with
-  Wilson intervals, hard constraints, normalized cost `J = wQ·Q/Qref + wG·G2/G2ref + wD·D/Dref`, Pareto view.
-* **Simulation Benchmarks** — failure curves, readout robustness, oracle agreement, held-out tests of whether
-  energy gaps predict failures, calibration under matched and mismatched models, runtime, reproducibility.
+* **Circuits & Resources** (tabs: Inspector · Optimizer) — step through the actual circuit (mid-circuit
+  measurement, `if_test` feed-forward) with the statevector after every gate, transpiled form and an Aer
+  cross-check; then pick among 59 verified compilations of the *same* task under hard constraints with
+  `J = wQ·Q/Qref + wG·G2/G2ref + wD·D/Dref`, Aer p_L with Wilson intervals and a Pareto view.
 
 ### Module 2 — Google Hardware Analyzer
 * **Dataset Explorer** — 131 experiments with provenance, Google's layout diagrams, DEM statistics and a
@@ -77,10 +75,10 @@ Plus a methodology & provenance page, sources & limitations, and a 10-beat **pre
   answer equals the exact minimum-weight optimum and the 2022 run's does not.
 * **Published result reproduced:** fitting Google's tensor-network predictions gives **2.914 %** (d = 5) vs
   **3.028 %** (d = 3) logical error per round — the values reported in *Nature* 614, 676 (2023).
-* **Exact Ising/QUBO decoding on 128,000 real shots** (28 short experiments; held-out pij models): 7.20% logical
-  failure vs 8.36% for PyMatching with the same models (significantly fewer failures in 18 of 28 experiments,
-  never significantly more) — while **Google's tensor-network decoder stays ahead** (7.03%). Uniform weights:
-  9.26%. Details in the [engineering report](docs/autoqec/ENGINEERING_REPORT.md#3-results).
+* **Exact Ising/QUBO decoding on 132,000 real shots** (30 short experiments; held-out pij models): 7.25% logical
+  failure vs 8.41% for PyMatching with the same models (significantly fewer failures in 19 of 30 experiments,
+  never significantly more) — while **Google's tensor-network decoder stays ahead** (7.06%). Uniform weights:
+  9.37%. Which decoder wins in which case: [benchmark report](docs/autoqec/BENCHMARK_REPORT.md). Details in the [engineering report](docs/autoqec/ENGINEERING_REPORT.md#3-results).
 * **Explanations tested, not assumed:** on held-out simulated trials the energy gap separates failures with
   AUROC 0.81 and the model posterior is calibrated (ECE 0.002) — but only when the noise model is right
   (ECE 0.029 under mismatch).

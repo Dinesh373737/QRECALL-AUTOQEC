@@ -84,7 +84,7 @@ export default function HardwareBenchmarks({ query }: { query: URLSearchParams }
                 </div>}>
                 <LineChart series={series} xLabel="QEC rounds" yLabel="logical failure per shot" yFmt={(v) => pct(v, 0)} height={340}
                   onPointClick={(s, p) => window.location.assign(href("/failures", { exp: `surface_code_b${basis}_d${distance}_r${String(p.x).padStart(2, "0")}_center_${distance === 5 ? "5_5" : center}` }))} />
-                <div className="field-help">Click a point to investigate that experiment's failures. Dashed lines are Google-supplied predictions; solid lines were computed in this pipeline.</div>
+                <div className="field-help">Click a point to investigate that experiment's failures. Dashed lines: Google's decoder predictions; solid lines: computed here.</div>
               </Card>
               {bs?.model_sensitivity && (
                 <Card title="Noise-model sensitivity (all 131 experiments, all shots)" icon={<Scale />} sub={bs.model_sensitivity.meaning}>
@@ -144,7 +144,7 @@ export default function HardwareBenchmarks({ query }: { query: URLSearchParams }
                   const v = is.pooled[m];
                   return { label: methodLabel(m), value: v.rate, lo: v.ci95[0], hi: v.ci95[1], color: methodColor(m) };
                 })} />
-                <div className="field-help">Google-supplied decoders are internal to Google; their predictions are scored here on the same shots. The tensor-network decoder approximates maximum-likelihood decoding over logical classes, while our Ising decoder finds the single most likely error — the same distinction as Module 1's exact Bayes reference vs the energy decoder.</div>
+                <div className="field-help">The tensor-network decoder approximates maximum-likelihood decoding over logical classes, while our Ising decoder finds the single most likely error — the same distinction as Module 1's exact Bayes reference vs the energy decoder.</div>
               </Card>
               <Card title="Every method on identical real shots" sub="First 5,000 (d = 3) or 2,000 (d = 5) shots of each surface-code experiment with ≤ 5 rounds · click a row">
                 <div className="table-wrap" style={{ maxHeight: 520, overflowY: "auto" }}>

@@ -3,7 +3,6 @@ import type { ComponentType, ErrorInfo, LazyExoticComponent, ReactNode } from "r
 import {
   BookOpen,
   ChartColumn,
-  ChartLine,
   CircuitBoard,
   Database,
   Fingerprint,
@@ -12,11 +11,9 @@ import {
   LayoutDashboard,
   Menu,
   MessageSquareText,
-  Microscope,
   Orbit,
   Presentation,
   ScanSearch,
-  SlidersHorizontal,
   Target,
   Accessibility,
 } from "lucide-react";
@@ -25,17 +22,22 @@ import { get } from "./lib/api";
 import { Loading } from "./components/ui";
 import { Presenter } from "./components/Presenter";
 
-type Page = LazyExoticComponent<ComponentType<{ query: URLSearchParams }>>;
-const page = (loader: () => Promise<{ default: ComponentType<{ query: URLSearchParams }> }>): Page => lazy(loader);
+type PageProps = { query: URLSearchParams; path: string };
+type Page = LazyExoticComponent<ComponentType<PageProps>>;
+const page = (loader: () => Promise<{ default: ComponentType<PageProps> }>): Page => lazy(loader);
+const labHub = page(() => import("./pages/Hub").then((m) => ({ default: m.LabHub })));
+const circuitsHub = page(() => import("./pages/Hub").then((m) => ({ default: m.CircuitsHub })));
+// Former stand-alone Module 1 pages now live as tabs of two hubs; their old routes still work.
+const ALIASES: Record<string, string> = { "/explainer": "/lab", "/sim-benchmarks": "/lab", "/optimizer": "/circuit" };
 
 const PAGES: Record<string, Page> = {
   "/": page(() => import("./pages/Home")),
-  "/lab": page(() => import("./pages/QecLab")),
+  "/lab": labHub,
   "/message": page(() => import("./pages/MessageLab")),
-  "/circuit": page(() => import("./pages/CircuitInspector")),
-  "/explainer": page(() => import("./pages/DecoderExplainer")),
-  "/optimizer": page(() => import("./pages/ResourceOptimizer")),
-  "/sim-benchmarks": page(() => import("./pages/SimBenchmarks")),
+  "/circuit": circuitsHub,
+  "/explainer": labHub,
+  "/optimizer": circuitsHub,
+  "/sim-benchmarks": labHub,
   "/dataset": page(() => import("./pages/DatasetExplorer")),
   "/shots": page(() => import("./pages/ShotExplorer")),
   "/hw-benchmarks": page(() => import("./pages/HardwareBenchmarks")),
@@ -53,10 +55,7 @@ const NAV: { section: string; tone?: string; module?: 1 | 2; items: NavItem[] }[
     items: [
       { path: "/lab", label: "QEC Lab", icon: FlaskConical },
       { path: "/message", label: "Message Lab", icon: MessageSquareText },
-      { path: "/circuit", label: "Circuit Inspector", icon: CircuitBoard },
-      { path: "/explainer", label: "Decoder Explainer", icon: Microscope },
-      { path: "/optimizer", label: "Resource Optimizer", icon: SlidersHorizontal },
-      { path: "/sim-benchmarks", label: "Simulation Benchmarks", icon: ChartLine },
+      { path: "/circuit", label: "Circuits & Resources", icon: CircuitBoard },
     ],
   },
   {
@@ -99,7 +98,8 @@ class PageBoundary extends Component<{ children: ReactNode; resetKey: string }, 
   }
 }
 
-function titleFor(path: string) {
+function titleFor(raw: string) {
+  const path = ALIASES[raw] ?? raw;
   for (const s of NAV) for (const i of s.items) if (i.path === path) return { section: s.section, label: i.label };
   return { section: "QRecall AutoQEC", label: "Not found" };
 }
@@ -165,7 +165,8 @@ export default function App() {
   useEffect(() => setMenu(false), [route.path]);
   const Page = PAGES[route.path];
   const t = titleFor(route.path);
-  const module = NAV.find((s) => s.items.some((i) => i.path === route.path))?.module;
+  const navPath = ALIASES[route.path] ?? route.path;
+  const module = NAV.find((s) => s.items.some((i) => i.path === navPath))?.module;
   return (
     <div className="shell">
       <nav className={`sidebar ${menu ? "open" : ""}`} aria-label="Primary">
@@ -176,8 +177,8 @@ export default function App() {
             {s.items.map((i) => {
               const Icon = i.icon;
               return (
-                <a key={i.path} href={href(i.path)} className={`nav-item ${s.module === 2 ? "m2" : ""} ${route.path === i.path ? "active" : ""}`}
-                  aria-current={route.path === i.path ? "page" : undefined}>
+                <a key={i.path} href={href(i.path)} className={`nav-item ${s.module === 2 ? "m2" : ""} ${navPath === i.path ? "active" : ""}`}
+                  aria-current={navPath === i.path ? "page" : undefined}>
                   <Icon />{i.label}
                 </a>
               );
@@ -221,7 +222,7 @@ export default function App() {
           )}
           <PageBoundary resetKey={route.path}>
             <Suspense fallback={<Loading label="Loading page…" />}>
-              {Page ? <Page query={route.query} /> : (
+              {Page ? <Page query={route.query} path={route.path} /> : (
                 <div className="state-box"><b>Page not found.</b><a href={href("/")}>Back to the overview</a></div>
               )}
             </Suspense>

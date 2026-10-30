@@ -203,6 +203,11 @@ def ising_pairs(args):
         ps = res["per_shot"]
         valid = np.isin(np.array(ps["na_status"]), ["optimal", "time_limit"])
         na_wrong = (np.array(ps["ising_noise_aware"], dtype=bool) != actual) | ~valid
+        for key, entry in res["methods"].items():  # display labels follow the current code
+            if key.startswith("google_"):
+                entry["label"] = "Google · " + {"pymatching": "PyMatching", "correlated_matching": "correlated matching",
+                                                "belief_matching": "belief matching",
+                                                "tensor_network_contraction": "tensor network"}[key[7:]]
         res["paired_all"] = {}
         for key, values in preds.items():
             wrong = values != actual

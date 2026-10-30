@@ -130,7 +130,7 @@ export default function CircuitInspector({ query }: { query: URLSearchParams }) 
               </Field>
               <Slider label="Decoder model p" value={p} min={0.001} max={0.4} step={0.001} onChange={setP} format={(v) => v.toFixed(3)} />
               <Slider label="Decoder model q" value={q} min={0} max={0.4} step={0.001} onChange={setQ} format={(v) => v.toFixed(3)} tone="violet" />
-              <Field label="Correction style">
+              <Field label="Correction style" help={mode === "physical" ? "X gates applied inside if_test blocks (classical feed-forward)." : "No gates: the correction is tracked classically and applied to the readout."}>
                 <Seg full value={mode} onChange={setMode} options={[{ value: "physical", label: "Feed-forward gates" }, { value: "pauli_frame", label: "Pauli frame" }]} />
               </Field>
             </div>
@@ -227,7 +227,7 @@ export default function CircuitInspector({ query }: { query: URLSearchParams }) 
                   </table>
                 </div>
               </Card>
-              <div className="grid g2">
+              <div className="col">
                 <Card title="Aer cross-check" sub={`${data.aer_cross_check.shots} shots, seed ${data.aer_cross_check.seed} — independent of the step-through simulator`}>
                   <div className="col">
                     {Object.entries(data.aer_cross_check.counts).sort((a, b) => b[1] - a[1]).map(([k, n]) => (
@@ -240,10 +240,7 @@ export default function CircuitInspector({ query }: { query: URLSearchParams }) 
                     <div className="field-help">{data.aer_cross_check.key_format}</div>
                   </div>
                 </Card>
-                <Card title="Feed-forward vs Pauli frame">
-                  <p>{data.frame_note}</p>
-                  <div className="field-help" style={{ marginTop: 8 }}>Feed-forward table for the selected decoder: {Object.entries(data.decision_table).map(([s, c]) => `${s}→${c}`).join(" · ")}</div>
-                </Card>
+
               </div>
             </>
           )}

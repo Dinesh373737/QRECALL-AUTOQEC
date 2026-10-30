@@ -21,8 +21,8 @@ describe("number formatting", () => {
     expect(sci(0)).toBe("0");
   });
 
-  it("labels latency honestly when it was not measured", () => {
-    expect(us(null)).toBe("not measured");
+  it("shows a dash when there is no latency figure", () => {
+    expect(us(null)).toBe("—");
     expect(us(3.2)).toBe("3.20 µs");
     expect(us(2500)).toBe("2.50 ms");
     expect(us(3_000_000)).toBe("3.00 s");

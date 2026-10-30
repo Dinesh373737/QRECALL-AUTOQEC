@@ -21,11 +21,12 @@ export default function ConfigAdvisor() {
   const [latency, setLatency] = useState(50);
   const [conservative, setConservative] = useState(true);
   const [w, setW] = useState({ reliability: 1, space: 0.5, speed: 0.1 });
+  const [excluded, setExcluded] = useState<string[]>([]);
   const body = useMemo(() => ({
     rounds: kind === "per_shot" ? rounds : null, basis, target_kind: kind,
     target: useTarget ? (kind === "per_shot" ? target : targetRound) : null,
-    max_qubits: useQubits ? qubits : null, max_latency_us: useLatency ? latency : null, conservative, priorities: w,
-  }), [rounds, basis, kind, useTarget, target, targetRound, useQubits, qubits, useLatency, latency, conservative, w]);
+    max_qubits: useQubits ? qubits : null, max_latency_us: useLatency ? latency : null, conservative, priorities: w, exclude_methods: excluded,
+  }), [rounds, basis, kind, useTarget, target, targetRound, useQubits, qubits, useLatency, latency, conservative, w, excluded]);
   const deb = useDebounced(body, 200);
   const { data, error, reload } = useApi<any>("/google/advisor", deb);
   const rec = data?.recommendation;
@@ -65,6 +66,17 @@ export default function ConfigAdvisor() {
               {useLatency && <Slider label="max µs per shot (measured)" value={latency} min={1} max={5000} step={1} onChange={setLatency} format={(v) => us(v)} tone="violet" />}
             </div>
           </Card>
+          <Card title="Decoders considered" sub="Untick a decoder to see what the advisor recommends without it">
+            <div className="col" style={{ gap: 8 }}>
+              {["pymatching_circuit", "pymatching_pij", "pymatching_correlated", "ising_noise_aware", "ising_uniform", "google_correlated_matching", "google_belief_matching", "google_tensor_network_contraction"].map((m) => (
+                <label key={m} className="toggle" style={{ gap: 10 }}>
+                  <input type="checkbox" checked={!excluded.includes(m)} onChange={(e) => setExcluded(e.target.checked ? excluded.filter((x) => x !== m) : [...excluded, m])} />
+                  <span style={{ color: methodColor(m) }}>●</span>{methodLabel(m)}
+                </label>
+              ))}
+              {kind === "per_round" && <div className="field-help">Ising decoders were evaluated only up to 5 rounds, which is too few for a per-round fit; use “Failure per shot” at 1, 3 or 5 rounds to include them.</div>}
+            </div>
+          </Card>
           <Card title="Priorities">
             <div className="col">
               <Slider label="Reliability" value={w.reliability} min={0} max={3} step={0.05} onChange={(v) => setW({ ...w, reliability: v })} format={(v) => v.toFixed(2)} tone="teal" />
@@ -99,7 +111,7 @@ export default function ConfigAdvisor() {
                   <div className="metric"><div className="label">Physical qubits</div><div className="value">{rec.physical_qubits}</div><div className="hint">from the experiment's circuit</div></div>
                   <div className="metric green"><div className="label">{kind === "per_round" ? "Error per round" : "Failure per shot"}</div><div className="value" style={{ fontSize: 20 }}>{pct(kind === "per_round" ? rec.per_round?.epsilon : rec.rate, 2)}</div>
                     <div className="hint">{kind === "per_round" && rec.per_round ? ci(rec.per_round.ci95, 2) : ci(rec.ci95, 2)} · {rec.shots.toLocaleString()} shots</div></div>
-                  <div className="metric violet"><div className="label">Decoder</div><div className="value" style={{ fontSize: 16, lineHeight: 1.3 }}>{methodLabel(rec.method)}</div><div className="hint">{rec.latency_us ? `${us(rec.latency_us)} / shot` : "latency not measured"}</div></div>
+                  <div className="metric violet"><div className="label">Decoder</div><div className="value" style={{ fontSize: 16, lineHeight: 1.3 }}>{methodLabel(rec.method)}</div><div className="hint">{rec.latency_us ? `${us(rec.latency_us)} / shot` : ""}</div></div>
                 </div>
                 <ul style={{ margin: "12px 0 0", paddingLeft: 18, color: "var(--text-2)", lineHeight: 1.6 }}>{data.why.map((x: string, i: number) => <li key={i}>{x}</li>)}</ul>
                 <div className="row" style={{ marginTop: 12 }}>
@@ -126,7 +138,7 @@ export default function ConfigAdvisor() {
               <Scatter points={pts} xLabel="physical qubits" yLabel={kind === "per_round" ? "error per round" : "failure per shot"} yFmt={(v) => pct(v, 1)} xFmt={(v) => String(Math.round(v))} height={300} />
             </Card>
           )}
-          {data?.boundaries && <Callout tone="hw"><ul style={{ margin: 0, paddingLeft: 18 }}>{data.boundaries.map((b: string, i: number) => <li key={i}>{b}</li>)}</ul></Callout>}
+          {data?.boundaries && <div className="field-help">Only experimentally evaluated configurations are considered — nothing is extrapolated. Decoders are compared on identical shots wherever the Ising benchmark exists; speed is scored on a log scale.</div>}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import katex from "katex";
 import {
@@ -258,7 +258,12 @@ export function Bits({ value, compare, highlight = "err", size = 24 }: { value: 
   );
 }
 
+/** True when a page is rendered inside a hub tab: its own title block is replaced by the hub's. */
+export const EmbedContext = createContext(false);
+
 export function PageHead({ kicker, title, lede, right, module = 1 }: { kicker: string; title: ReactNode; lede?: ReactNode; right?: ReactNode; module?: 1 | 2 | 0 }) {
+  const embedded = useContext(EmbedContext);
+  if (embedded) return right ? <div className="row wrap embed-actions">{right}</div> : null;
   return (
     <div className="page-head">
       <div>

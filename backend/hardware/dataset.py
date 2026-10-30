@@ -44,15 +44,15 @@ EXPERIMENT_PATTERN = re.compile(
     r"_center_(?P<row>\d+)_(?P<col>\d+)$")
 
 GOOGLE_DECODERS = {
-    "pymatching": {"label": "PyMatching (Google run)", "dem": "circuit_detector_error_model.dem for all shots",
+    "pymatching": {"label": "Google · PyMatching", "dem": "circuit_detector_error_model.dem for all shots",
                    "kind": "minimum-weight perfect matching"},
-    "correlated_matching": {"label": "Correlated matching (Google internal)",
+    "correlated_matching": {"label": "Google · correlated matching",
                             "dem": "circuit_detector_error_model.dem for all shots",
                             "kind": "matching with X/Z correlation reweighting"},
-    "belief_matching": {"label": "Belief matching (Google internal)",
+    "belief_matching": {"label": "Google · belief matching",
                         "dem": "pij_from_even_for_odd.dem on odd shots, pij_from_odd_for_even.dem on even shots",
                         "kind": "belief propagation + matching"},
-    "tensor_network_contraction": {"label": "Tensor-network contraction (Google internal)",
+    "tensor_network_contraction": {"label": "Google · tensor network",
                                    "dem": "pij_from_even_for_odd.dem on odd shots, pij_from_odd_for_even.dem on even shots",
                                    "kind": "approximate maximum-likelihood decoding"},
 }

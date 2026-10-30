@@ -44,7 +44,7 @@ export default function ResourceOptimizer() {
   const [conservative, setConservative] = useState(true);
   const [xAxis, setXAxis] = useState<"G2" | "D" | "Q" | "duration_ns">("G2");
   const [detail, setDetail] = useState<string | null>(null);
-  const [noise, setNoise] = useState({ p1: 0.001, p2: 0.01, p_meas: 0.02, p_idle: 0.002 });
+  const [noise, setNoise] = useState({ p1: 0.001, p2: 0.01, p_meas: 0.02, p_idle: 0.001 });
   const [shots, setShots] = useState(4000);
   const job = useJob<{ evaluation_id: string }>();
   const [evaluationId, setEvaluationId] = useState<string | null>(null);
@@ -106,7 +106,7 @@ export default function ResourceOptimizer() {
               <Slider label="p₁ (1-qubit depolarizing)" value={noise.p1} min={0} max={0.01} step={0.0005} onChange={(v) => setNoise({ ...noise, p1: v })} format={(v) => v.toFixed(4)} />
               <Slider label="p₂ (CX depolarizing)" value={noise.p2} min={0} max={0.05} step={0.001} onChange={(v) => setNoise({ ...noise, p2: v })} format={(v) => v.toFixed(3)} />
               <Slider label="p_meas (readout)" value={noise.p_meas} min={0} max={0.05} step={0.001} onChange={(v) => setNoise({ ...noise, p_meas: v })} format={(v) => v.toFixed(3)} />
-              <Slider label="p_idle (per idle layer)" value={noise.p_idle} min={0} max={0.01} step={0.0005} onChange={(v) => setNoise({ ...noise, p_idle: v })} format={(v) => v.toFixed(4)} />
+              <Slider label="p_idle (per 100 ns idle)" value={noise.p_idle} min={0} max={0.01} step={0.0005} onChange={(v) => setNoise({ ...noise, p_idle: v })} format={(v) => v.toFixed(4)} />
               <Field label="Shots per logical input"><Seg full value={shots} onChange={setShots} options={[{ value: 1000, label: "1k" }, { value: 4000, label: "4k" }, { value: 10000, label: "10k" }]} /></Field>
               <button className="btn violet" disabled={job.running} onClick={() => job.start("/qec/optimizer/evaluate", { coupling: target, noise, shots, seed: 1234 })}><Play />Evaluate candidates</button>
               <JobProgress job={job.job} error={job.error} onCancel={job.cancel} />
@@ -119,6 +119,11 @@ export default function ResourceOptimizer() {
           {!data && !error && <Card><Loading label="Ranking verified candidates…" /></Card>}
           {data && (
             <>
+              {(() => {
+                const ev = data.evaluation.noise as Record<string, number> | undefined;
+                const stale = ev && (["p1", "p2", "p_meas", "p_idle"] as const).some((k) => Math.abs((ev[k] ?? 0) - noise[k]) > 1e-12);
+                return stale ? <Callout tone="warn">The noise sliders differ from the model these results were computed with (p₂ = {ev!.p2}, p_meas = {ev!.p_meas}, p_idle = {ev!.p_idle}). Press <b>Evaluate candidates</b> to re-simulate every candidate under your settings.</Callout> : null;
+              })()}
               {sel ? (
                 <Card tone="green" title={<><CircleCheck style={{ color: "var(--green)" }} />Selected implementation · {FAMILY_LABEL[sel.family]}</>}
                   sub={data.message} right={<button className="btn sm" onClick={() => setDetail(sel.id)}>Details</button>}>
@@ -182,13 +187,10 @@ export default function ResourceOptimizer() {
                   </table>
                 </div>
               </Card>
-              <div className="grid g2">
-                <Callout tone="warn"><b>Fewer gates ≠ lower logical error.</b> p_L is measured by Monte-Carlo simulation under the declared model (depolarizing gates, idle noise per layer, readout error) rather than assumed from gate counts; candidates with similar G₂ can differ because of idle exposure and where errors land.</Callout>
-                <Callout tone="info"><b>Depth vs time.</b> Depth counts gate layers. The duration column uses declared gate times (1q 35 ns, CX 300 ns, measure 800 ns, reset 400 ns) on the critical path — a model estimate, not a hardware measurement.</Callout>
-              </div>
               <Tech title="Objective, references and boundaries">
                 <Eq tex={String.raw`J(c) = w_Q\frac{Q}{Q_{\mathrm{ref}}} + w_G\frac{G_2}{G_{2,\mathrm{ref}}} + w_D\frac{D}{D_{\mathrm{ref}}},\quad \text{subject to } Q\le Q_{\max},\ G_2\le G_{2,\max},\ D\le D_{\max},\ p_L\le p_{L,\max}`} />
                 <p>References are the metrics of the documented baseline compilation (two ancillas, sequential schedule, optimization level 0, trivial layout, basic routing, seed 11). Hard constraints are applied before ranking; ties break on p_L then candidate id. Every candidate passed noiseless functional checks for |0_L⟩, |1_L⟩ and each single-X injection before being eligible.</p>
+                <p>p_L is simulated (depolarizing gates, idle error per 100 ns of waiting, readout error), not inferred from gate counts — fewer gates do not always mean lower p_L. Duration uses declared gate times (1q 35 ns, CX 300 ns, measure 800 ns, reset 400 ns) on the critical path; depth counts layers, not time.</p>
                 <p>This normalized score is the project's own multi-objective proxy. It is <b>not</b> Google's FLASQ cost model (arXiv:2511.08508, implemented in Qualtran), which estimates lattice-surgery spacetime volume for fault-tolerant algorithms — a different regime from choosing compilations of a small physical circuit. The “spacetime proxy” Q × duration shown in details is likewise our simplified proxy.</p>
               </Tech>
             </>
